@@ -848,14 +848,18 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
 .service-card__body {
   position: absolute;
   bottom: 0; left: 0; right: 0;
-  padding: 24px 20px;
+  padding: 16px 14px 14px;
+  background: linear-gradient(to top, rgba(11,19,43,0.98) 0%, rgba(11,19,43,0.92) 65%, transparent 100%);
+  z-index: 6;
 }
 .service-card__title {
   font-family: var(--font-heading);
-  font-size: 1.1rem;
-  font-weight: 700;
+  font-size: 1.05rem;
+  font-weight: 800;
   color: #FFFFFF;
+  line-height: 1.2;
   margin-bottom: 6px;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.8);
 }
 .service-card__location {
   display: inline-flex;
@@ -1669,10 +1673,15 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
 
 @media (max-width: 480px) {
   .services-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-  .service-card__body { padding: 14px 10px; }
-  .service-card__title { font-size: 0.92rem; line-height: 1.25; margin-bottom: 4px; }
-  .service-card__location { font-size: 0.65rem; margin-bottom: 2px; }
-  .service-card__cta { font-size: 0.72rem; }
+  .service-card { aspect-ratio: 3/4.2; }
+  .service-card__placeholder { padding: 34px 8px 0; }
+  .placeholder-title { font-size: 0.8rem; line-height: 1.15; }
+  .placeholder-icon svg { width: 22px; height: 22px; }
+  .placeholder-badge { font-size: 0.58rem; padding: 2px 6px; top: 6px; left: 6px; }
+  .service-card__body { padding: 10px 8px 8px; }
+  .service-card__title { font-size: 0.82rem; line-height: 1.2; margin-bottom: 2px; }
+  .service-card__location { font-size: 0.58rem; padding: 2px 6px; margin-bottom: 3px; }
+  .service-card__cta { font-size: 0.68rem; opacity: 1; transform: none; }
   .stats-grid { grid-template-columns: 1fr 1fr; }
   .gallery-full-grid { grid-template-columns: 1fr; }
   .gallery-grid { grid-template-columns: 1fr; }
@@ -2645,15 +2654,15 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
   border-radius: 16px;
   overflow: hidden;
   aspect-ratio: 3/4;
-  background: #0F172A;
+  background: #0B132B;
   box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1.5px solid rgba(217, 119, 6, 0.35);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 .service-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 20px 40px -10px rgba(217, 119, 6, 0.25);
-  border-color: rgba(217, 119, 6, 0.4);
+  box-shadow: 0 20px 40px -10px rgba(217, 119, 6, 0.35);
+  border-color: #FBBF24;
 }
 .service-card__placeholder {
   position: absolute;
@@ -2662,10 +2671,11 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
   height: 100%;
   background: linear-gradient(145deg, #0B132B 0%, #131F37 50%, #1E293B 100%);
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   text-align: center;
-  padding: 20px 20px 90px;
+  padding: 44px 14px 0;
   box-sizing: border-box;
 }
 .service-card__placeholder::before {
@@ -2674,38 +2684,45 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
   inset: 0;
   background: radial-gradient(circle at 50% 36%, rgba(217, 119, 6, 0.22) 0%, transparent 68%);
 }
+.placeholder-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: auto;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #D97706;
+  border: 1px solid #FBBF24;
+  color: #0F172A;
+  font-size: 0.64rem;
+  font-weight: 900;
+  padding: 3px 8px;
+  border-radius: 50px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
 .placeholder-content {
   position: relative;
   z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 6px;
+  margin-top: 4px;
 }
 .placeholder-icon {
   color: #D97706;
-  filter: drop-shadow(0 4px 14px rgba(217, 119, 6, 0.6));
+  filter: drop-shadow(0 2px 8px rgba(217, 119, 6, 0.6));
 }
 .placeholder-title {
   color: #FFFFFF;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   font-weight: 800;
   letter-spacing: -0.01em;
-}
-.placeholder-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: #D97706;
-  border: 1.5px solid #FBBF24;
-  color: #0F172A;
-  font-size: 0.78rem;
-  font-weight: 900;
-  padding: 6px 14px;
-  border-radius: 50px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
 }
 .gallery-item {
   position: relative;
