@@ -455,36 +455,53 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
   color: #FFFFFF;
   font-size: 0.82rem;
   font-weight: 700;
-  padding: 8px 14px;
-  min-height: 36px;
-  line-height: 1.25;
+  padding: 6px 12px;
+  min-height: 32px;
+  line-height: 1;
   text-align: center;
   position: relative;
   z-index: 999;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 8px;
-  letter-spacing: 0.02em;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  gap: 6px;
+  letter-spacing: 0.01em;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   margin-top: 0;
+  overflow: hidden;
 }
 .sub-nav-banner .stars {
   color: #F59E0B;
-  font-size: 0.88rem;
-  letter-spacing: 1px;
+  font-size: 0.86rem;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+.sub-nav-banner svg {
+  flex-shrink: 0;
 }
 @media (max-width: 480px) {
   .sub-nav-banner {
-    font-size: 0.76rem;
-    padding: 7px 10px;
-    gap: 6px;
-    min-height: 32px;
+    font-size: 0.72rem;
+    padding: 6px 8px;
+    gap: 4px;
+    min-height: 30px;
   }
   .sub-nav-banner .stars {
-    font-size: 0.8rem;
-    letter-spacing: 0.5px;
+    font-size: 0.78rem;
+    letter-spacing: 0px;
+  }
+  .sub-nav-banner svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+@media (max-width: 360px) {
+  .sub-nav-banner {
+    font-size: 0.68rem;
+    padding: 5px 6px;
+    gap: 3px;
   }
 }
 
