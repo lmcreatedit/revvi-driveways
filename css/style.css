@@ -1634,8 +1634,8 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
 @media (max-width: 992px) {
   :root { --section-gap: 56px; }
   .nav__links { display: none; }
-  .nav__cta .btn { display: none; }
-  .nav__phone span { display: none; }
+  .nav__cta { display: none !important; }
+  .nav__phone { display: none !important; }
   .nav__burger { display: flex; }
   .services-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .pillars-grid { grid-template-columns: 1fr; }
