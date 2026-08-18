@@ -55,11 +55,11 @@
 
 /* ── RESET ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 16px; }
+html { scroll-behavior: smooth; font-size: 16px; background: #0B132B; }
 body {
   font-family: var(--font-body);
   color: var(--text-dark);
-  background: var(--bg-white);
+  background: #0B132B;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
@@ -468,7 +468,7 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
   gap: 8px;
   letter-spacing: 0.02em;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  margin-top: 76px;
+  margin-top: 0;
 }
 .sub-nav-banner .stars {
   color: #F59E0B;
