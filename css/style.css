@@ -481,27 +481,25 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
 .sub-nav-banner svg {
   flex-shrink: 0;
 }
+@media (max-width: 600px) {
+  .sub-nav-banner .sub-nav-prefix {
+    display: none;
+  }
+}
 @media (max-width: 480px) {
   .sub-nav-banner {
-    font-size: 0.72rem;
-    padding: 6px 8px;
-    gap: 4px;
-    min-height: 30px;
+    font-size: 0.78rem;
+    padding: 7px 10px;
+    gap: 6px;
+    min-height: 32px;
   }
   .sub-nav-banner .stars {
-    font-size: 0.78rem;
-    letter-spacing: 0px;
+    font-size: 0.84rem;
+    letter-spacing: 0.5px;
   }
   .sub-nav-banner svg {
     width: 14px;
     height: 14px;
-  }
-}
-@media (max-width: 360px) {
-  .sub-nav-banner {
-    font-size: 0.68rem;
-    padding: 5px 6px;
-    gap: 3px;
   }
 }
 
