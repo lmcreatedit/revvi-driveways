@@ -1,0 +1,67 @@
+{
+    "lastUpdated": "2026-05-06",
+    "projects": [
+        {
+            "id": "p1",
+            "image": "patio-decking-1.jpg",
+            "location": "Marlow",
+            "service": "Landscape Design & Build",
+            "placement": "gallery-main"
+        },
+        {
+            "id": "p2",
+            "image": "patio-pergola-1.jpg",
+            "location": "Wokingham",
+            "service": "Pergolas",
+            "placement": "gallery-main"
+        },
+        {
+            "id": "p3",
+            "image": "patio-wall-lights-1.jpg",
+            "location": "Slough",
+            "service": "Fencing & Gates",
+            "placement": "gallery-main"
+        },
+        {
+            "id": "p4",
+            "image": "block-paving-expert-work.jpg",
+            "location": "Maidenhead",
+            "service": "Summerhouse Builds",
+            "placement": "gallery-main"
+        },
+        {
+            "id": "p5",
+            "image": "garden-paving-detail.jpg",
+            "location": "Reading",
+            "service": "Garden Maintenance",
+            "placement": "gallery-main"
+        },
+        {
+            "id": "p6",
+            "image": "artificial-lawn-thumbnail.jpg",
+            "location": "Maidenhead",
+            "service": "Artificial & Real Turf Lawns",
+            "placement": "gallery-main"
+        },
+        {
+            "id": "p7",
+            "image": "sliding-door-patio-view.jpg",
+            "location": "Ascot",
+            "service": "Garage & Loft Conversions",
+            "placement": "gallery-main"
+        },
+        { "id": "p8", "image": "authentic-lawn-installation.png", "location": "", "service": "", "placement": "hidden" },
+        { "id": "p9", "image": "commercial-landscaping-example.jpg", "location": "", "service": "", "placement": "hidden" },
+        { "id": "p10", "image": "cotswold-garden-transformation.jpg", "location": "", "service": "", "placement": "hidden" },
+        { "id": "p11", "image": "cotswolds-landscaping-1.jpg", "location": "", "service": "", "placement": "hidden" },
+        { "id": "p12", "image": "domestic-garden-upgrade.jpg", "location": "", "service": "", "placement": "hidden" },
+        { "id": "p13", "image": "driveway-lighting-1.jpg", "location": "", "service": "", "placement": "hidden" },
+        { "id": "p14", "image": "driveway-transformation-1.jpg", "location": "", "service": "", "placement": "hidden" },
+        { "id": "p15", "image": "fenced-lawn-installation.png", "location": "", "service": "", "placement": "hidden" },
+        { "id": "p16", "image": "finished-lawn-maidenhead.jpg", "location": "", "service": "", "placement": "hidden" },
+        { "id": "p17", "image": "full-site-clearance-build.jpg", "location": "", "service": "", "placement": "hidden" },
+        { "id": "p18", "image": "garden-maintenance-results.jpg", "location": "", "service": "", "placement": "hidden" },
+        { "id": "p19", "image": "high-end-patio-finish.jpg", "location": "", "service": "", "placement": "hidden" },
+        { "id": "p20", "image": "large-patio-1.jpg", "location": "", "service": "", "placement": "hidden" }
+    ]
+}

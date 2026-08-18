@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Specifically whitelist AI Crawlers for AEO citations
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://sjlandscapes.services/sitemap.xml

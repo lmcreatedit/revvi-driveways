@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://formspree.io; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com; media-src 'self'; frame-src 'self' https://www.google.com;">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us &amp; Get a Free Estimate | Revvi Driveways Wokingham</title>
+  <meta name="description" content="Contact Mike at Revvi Driveways for a free on-site survey and written estimate. Block paving, resin bound, and tarmacadam across Berkshire. Call 07760 356450.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact Us &amp; Free Estimates | Revvi Driveways">
+  <meta property="og:description" content="Book a free on-site survey and quote with Mike. Block paving, resin bound, and tarmacadam across Berkshire.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://revvidriveways.services/contact.html">
+  <meta property="og:image" content="https://revvidriveways.services/assets/og-image.jpg">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://revvidriveways.services/contact.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+
+  <!-- Google Fonts preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .contact-page-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+    @media (max-width: 960px) {
+      .contact-page-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+    .contact-form-card {
+      background: #FFFFFF;
+      color: #0F172A;
+      border-radius: 24px;
+      padding: 44px 38px;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+    }
+    .contact-info-card {
+      background: #111C38;
+      border: 1.5px solid rgba(217,119,6,0.35);
+      border-radius: 24px;
+      padding: 38px 32px;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+    }
+    .contact-label {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #475569;
+      margin-bottom: 6px;
+    }
+    .contact-input,
+    .contact-select,
+    .contact-textarea {
+      width: 100%;
+      background: #F8FAFC;
+      border: 1.5px solid #E2E8F0;
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-family: var(--font-body);
+      font-size: 0.94rem;
+      color: #0F172A;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+    .contact-input:focus,
+    .contact-select:focus,
+    .contact-textarea:focus {
+      border-color: #D97706;
+      background: #FFFFFF;
+      box-shadow: 0 0 0 3px rgba(217,119,6,0.15);
+    }
+    .contact-textarea {
+      min-height: 96px;
+      resize: vertical;
+    }
+  </style>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+</head>
+<body>
+
+  <!-- ══════════════════════════════
+       NAV
+  ══════════════════════════════ -->
+  <nav class="nav scrolled" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" style="display:flex; align-items:center; gap:12px; text-decoration:none;">
+        <img src="assets/revvi-brick-transparent.png" alt="Revvi Driveways Emblem" style="height:32px; width:auto; filter:drop-shadow(0 2px 10px rgba(217,119,6,0.6)); flex-shrink:0; display:block;">
+        <span style="font-weight:900; font-size:1.25rem; letter-spacing:-0.01em; color:#FFFFFF;">REVVI <span style="color:var(--gold);">DRIVEWAYS</span></span>
+      </a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Recent Work</a></li>
+        <li><a href="about.html">Why Us</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+
+      <div class="nav__cta">
+        <a href="tel:07760356450" class="nav__phone" aria-label="Call Revvi Driveways">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <span>07760 356450</span>
+        </a>
+        <a href="contact.html" class="btn btn--primary">Get Free Estimate</a>
+      </div>
+
+      <button class="nav__burger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="nav__mobile" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <button class="nav__mobile-close" aria-label="Close menu">&times;</button>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Recent Work</a>
+    <a href="about.html">Why Us</a>
+    <a href="contact.html">Contact</a>
+    <a href="tel:07760356450" class="btn btn--primary" style="margin-top:20px;">Call 07760 356450</a>
+  </div>
+
+  <!-- ══════════════════════════════
+       BLUE BIRD SUB-NAV ANNOUNCEMENT STRIP
+  ══════════════════════════════ -->
+  <div class="sub-nav-banner">
+    <span>Our Customers Rate Us</span>
+    <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+    <span>Based on 37+ Reviews on</span>
+    <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" style="vertical-align:middle;">
+      <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+      <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+      <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+      <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+    </svg>
+    <span>Google</span>
+  </div>
+
+  <main>
+
+    <!-- ══════════════════════════════
+         PAGE HERO
+    ══════════════════════════════ -->
+    <section class="contact-hero" aria-label="Contact hero" style="background:#080D1C; color:white; padding:48px 0 36px; border-bottom:1px solid rgba(255,255,255,0.08);">
+      <div class="container">
+        <span class="section-eyebrow" style="color:var(--gold) !important; font-weight:800;">GET IN TOUCH &middot; WOKINGHAM, READING, BRACKNELL &amp; BERKSHIRE</span>
+        <h1 style="font-family:var(--font-heading); font-size:clamp(2.2rem,5vw,3.6rem); font-weight:900; color:#FFFFFF; letter-spacing:-0.02em; line-height:1.1; margin-bottom:16px; max-width:760px;">Let's Talk About Your Driveway or Patio</h1>
+        <p style="font-size:1.08rem; color:rgba(255,255,255,0.8); max-width:620px; line-height:1.75;">Book a free on-site survey and laser measurement with Mike. Clear written quote, direct contractor rates, and zero sales pressure.</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         MAIN CONTACT & FORM SECTION
+    ══════════════════════════════ -->
+    <section class="section" aria-labelledby="contact-heading" style="background:#0B132B; padding:80px 0;">
+      <div class="container">
+        <h2 class="visually-hidden" id="contact-heading">Get in touch with Revvi Driveways</h2>
+
+        <div class="contact-page-grid">
+
+          <!-- Left: Instant WhatsApp Form Card -->
+          <div class="contact-form-card">
+            <h2 style="font-size:1.6rem; font-weight:900; color:#0F172A; margin-bottom:8px; line-height:1.2; text-align:center;">Get Your Free Estimate Today</h2>
+            
+            <!-- Proof badge formatted identically to homepage -->
+            <div style="display:flex; justify-content:center; align-items:center; gap:8px; margin-bottom:24px; font-size:0.86rem; color:#475569;">
+              <span style="color:#F59E0B; font-size:0.92rem; letter-spacing:1px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <span style="display:inline-flex; align-items:center; gap:5px;">
+                <svg width="15" height="15" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                <span>Rated <strong>5.0</strong> on Google &amp; Facebook</span>
+              </span>
+            </div>
+
+            <form onsubmit="handleContactPageSubmit(event)">
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px;">
+                <div>
+                  <label class="contact-label">Full Name <span style="color:#EF4444; font-weight:800;">*</span></label>
+                  <input type="text" id="contact_name" class="contact-input" placeholder="e.g. John Smith" required>
+                </div>
+                <div>
+                  <label class="contact-label">Phone <span style="color:#EF4444; font-weight:800;">*</span></label>
+                  <input type="tel" id="contact_phone" class="contact-input" placeholder="e.g. 07123 456789" required>
+                </div>
+              </div>
+
+              <div style="margin-bottom:16px;">
+                <label class="contact-label">Postcode / Town in Berkshire <span style="color:#EF4444; font-weight:800;">*</span></label>
+                <input type="text" id="contact_postcode" class="contact-input" placeholder="e.g. RG40, Wokingham, Reading" required>
+              </div>
+
+              <div style="margin-bottom:16px;">
+                <label class="contact-label">Service Required <span style="color:#EF4444; font-weight:800;">*</span></label>
+                <select id="contact_service" class="contact-select" required>
+                  <option value="" disabled selected>Select Service Required...</option>
+                  <option value="Block Paving & Driveways">Block Paving &amp; Driveways</option>
+                  <option value="UV-Stable Resin Bound">UV-Stable Resin Bound</option>
+                  <option value="Tarmacadam & Asphalt">Tarmacadam &amp; Asphalt</option>
+                  <option value="Porcelain & Natural Stone Patios">Porcelain &amp; Natural Stone Patios</option>
+                  <option value="Gravel & Stabilised Shingle">Gravel &amp; Stabilised Shingle</option>
+                  <option value="Dropped Kerbs & Drainage">Dropped Kerbs &amp; Drainage</option>
+                  <option value="Multiple / Not Sure Yet">Multiple / Not Sure Yet</option>
+                </select>
+              </div>
+
+              <div style="margin-bottom:24px;">
+                <label class="contact-label">Tell Us About Your Project</label>
+                <textarea id="contact_notes" class="contact-textarea" placeholder="Tell us about your project (e.g. 2-car block paving driveway, resin overlay on existing tarmac, porcelain patio size)..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn--primary" style="width:100%; padding:16px; font-size:1.05rem; font-weight:800; border-radius:12px; justify-content:center; display:flex;">
+                Get My Free Estimate &rarr;
+              </button>
+
+              <div style="display:flex; flex-direction:column; align-items:center; gap:6px; margin-top:14px; text-align:center;">
+                <span style="font-size:0.78rem; font-weight:700; color:#B45309;">
+                  &bull; Note: You can send project photos directly via WhatsApp
+                </span>
+                <span style="font-size:0.75rem; color:#64748B; font-weight:600;">
+                  100% Free &middot; No Obligation &middot; Direct Contractor Quote
+                </span>
+              </div>
+            </form>
+          </div>
+
+          <!-- Right: Contact Information & Map Card -->
+          <div class="contact-info-card">
+            <span class="section-eyebrow" style="color:var(--gold); display:block; margin-bottom:8px;">Direct Contractor Details</span>
+            <h3 style="font-size:1.5rem; font-weight:800; color:#FFFFFF; margin-bottom:18px;">Talk Directly with Mike</h3>
+
+            <p style="font-size:0.95rem; color:rgba(255,255,255,0.78); line-height:1.65; margin-bottom:24px;">
+              No call centres, salesmen, or middleman fees. Speak directly with Mike for technical driveway advice, measurements, and guaranteed quotes.
+            </p>
+
+            <div style="display:flex; flex-direction:column; gap:18px; margin-bottom:28px;">
+              
+              <!-- Item 1: Phone -->
+              <div style="display:flex; align-items:center; gap:14px;">
+                <div style="width:44px; height:44px; border-radius:12px; background:rgba(217,119,6,0.18); border:1px solid rgba(217,119,6,0.35); display:flex; align-items:center; justify-content:center; color:var(--gold); flex-shrink:0;">
+                  <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                </div>
+                <div>
+                  <div style="font-size:0.75rem; color:#94A3B8; text-transform:uppercase; font-weight:700; letter-spacing:0.05em;">Phone</div>
+                  <a href="tel:07760356450" style="font-size:1.15rem; font-weight:800; color:#FFFFFF; text-decoration:none;">07760 356450</a>
+                </div>
+              </div>
+
+              <!-- Item 2: Instant WhatsApp Button -->
+              <div style="display:flex; align-items:center; gap:14px;">
+                <div style="width:44px; height:44px; border-radius:12px; background:rgba(37,211,102,0.18); border:1px solid rgba(37,211,102,0.35); display:flex; align-items:center; justify-content:center; color:#25D366; flex-shrink:0;">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                </div>
+                <div>
+                  <div style="font-size:0.75rem; color:#94A3B8; text-transform:uppercase; font-weight:700; letter-spacing:0.05em; margin-bottom:4px;">Instant WhatsApp</div>
+                  <a href="https://wa.me/447760356450?text=Hi%20Mike,%20I'd%20like%20to%20get%20a%20free%20driveway/patio%20estimate." style="display:inline-flex; align-items:center; gap:6px; background:#25D366; color:#0B100E; font-size:0.88rem; font-weight:800; padding:6px 14px; border-radius:6px; text-decoration:none;" target="_blank" rel="noopener">
+                    Chat to Mike &rarr;
+                  </a>
+                </div>
+              </div>
+
+              <!-- Item 3: Operating Hours -->
+              <div style="display:flex; align-items:center; gap:14px;">
+                <div style="width:44px; height:44px; border-radius:12px; background:rgba(217,119,6,0.18); border:1px solid rgba(217,119,6,0.35); display:flex; align-items:center; justify-content:center; color:var(--gold); flex-shrink:0;">
+                  <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div>
+                  <div style="font-size:0.75rem; color:#94A3B8; text-transform:uppercase; font-weight:700; letter-spacing:0.05em;">Operating Hours</div>
+                  <div style="font-size:0.95rem; font-weight:700; color:#FFFFFF;">Mon–Sat: 7:30am – 6:00pm</div>
+                </div>
+              </div>
+
+              <!-- Item 4: Location / Base -->
+              <div style="display:flex; align-items:center; gap:14px;">
+                <div style="width:44px; height:44px; border-radius:12px; background:rgba(217,119,6,0.18); border:1px solid rgba(217,119,6,0.35); display:flex; align-items:center; justify-content:center; color:var(--gold); flex-shrink:0;">
+                  <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <div style="font-size:0.75rem; color:#94A3B8; text-transform:uppercase; font-weight:700; letter-spacing:0.05em;">Location</div>
+                  <div style="font-size:0.95rem; font-weight:700; color:#FFFFFF;">Based in Reading / Wokingham</div>
+                  <div style="font-size:0.78rem; color:rgba(255,255,255,0.65);">Covering all Berkshire</div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Mini Map Embed -->
+            <div style="border-radius:14px; overflow:hidden; border:1px solid rgba(255,255,255,0.15); height:160px; box-shadow:0 8px 24px rgba(0,0,0,0.4);">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79836.87768564286!2d-0.793!3d51.522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876615b16f1c4e7%3A0xffebcf125b2820d8!2sWokingham!5e0!3m2!1sen!2suk!4v1700000000000!5m2!1sen!2suk" 
+                style="width:100%; height:100%; border:0; filter:invert(90%) hue-rotate(180deg);" 
+                allowfullscreen="" 
+                loading="lazy">
+              </iframe>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════
+       FOOTER
+  ══════════════════════════════ -->
+  <footer class="footer" style="background:#060913; padding:72px 0 32px; color:rgba(255,255,255,0.75);">
+    <div class="container">
+      <div class="footer__grid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:40px; margin-bottom:56px;">
+
+        <!-- Column 1: Brand & Google Maps Widget -->
+        <div class="footer__brand">
+          <div style="margin-bottom:18px;">
+            <div class="footer-brand-card" style="width:170px; background:linear-gradient(145deg, #1E293B 0%, #0F172A 100%); border:1.5px solid rgba(217,119,6,0.45); border-radius:14px; padding:16px 14px; text-align:center; box-shadow:0 8px 24px rgba(0,0,0,0.5); display:inline-flex; flex-direction:column; align-items:center; gap:8px;">
+              <img src="assets/revvi-brick-transparent.png" alt="Revvi Driveways" style="height:36px; width:auto; filter:drop-shadow(0 2px 8px rgba(217,119,6,0.6));">
+              <div style="font-weight:900; font-size:1.05rem; letter-spacing:0.02em; color:#FFFFFF; line-height:1.1;">
+                REVVI <span style="color:#F1F5F9; font-weight:400; text-shadow:0 0 1px rgba(255,255,255,0.7);">DRIVEWAYS</span>
+              </div>
+              <div style="font-size:0.58rem; font-weight:800; color:#D97706; letter-spacing:0.06em; text-transform:uppercase; line-height:1.2;">
+                Block Paving Tarmac &amp; Patios
+              </div>
+            </div>
+          </div>
+          <p style="font-size:0.92rem; line-height:1.6; margin-bottom:16px; color:rgba(255,255,255,0.7);">
+            Berkshire's trusted driveway &amp; patio specialists. Direct local contractor pricing, heavy-duty 200mm excavation depths, and guaranteed workmanship.
+          </p>
+        </div>
+
+        <!-- Column 2: Specialist Trades -->
+        <div>
+          <h3 class="footer__heading" style="color:#fff; font-size:1.05rem; font-weight:700; margin-bottom:20px; text-transform:uppercase; letter-spacing:0.05em;">Our Specialist Trades</h3>
+          <ul class="footer__links" role="list" style="list-style:none; padding:0; display:flex; flex-direction:column; gap:10px; font-size:0.92rem;">
+            <li><a href="services.html#block-paving" style="color:inherit; text-decoration:none;">Block Paving &amp; Driveways</a></li>
+            <li><a href="services.html#tarmac" style="color:inherit; text-decoration:none;">Tarmacadam &amp; Asphalt</a></li>
+            <li><a href="services.html#resin-bound" style="color:inherit; text-decoration:none;">UV-Stable Resin Bound</a></li>
+            <li><a href="services.html#patios" style="color:inherit; text-decoration:none;">Porcelain &amp; Natural Stone Patios</a></li>
+            <li><a href="services.html#gravel" style="color:inherit; text-decoration:none;">Gravel &amp; Stabilised Shingle</a></li>
+            <li><a href="services.html#drainage" style="color:inherit; text-decoration:none;">Dropped Kerbs &amp; Drainage</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Navigation -->
+        <div>
+          <h3 class="footer__heading" style="color:#fff; font-size:1.05rem; font-weight:700; margin-bottom:20px; text-transform:uppercase; letter-spacing:0.05em;">Quick Links</h3>
+          <ul class="footer__links" role="list" style="list-style:none; padding:0; display:flex; flex-direction:column; gap:10px; font-size:0.92rem;">
+            <li><a href="index.html" style="color:inherit; text-decoration:none;">Home</a></li>
+            <li><a href="services.html" style="color:inherit; text-decoration:none;">All Services</a></li>
+            <li><a href="gallery.html" style="color:inherit; text-decoration:none;">Recent Work</a></li>
+            <li><a href="about.html" style="color:inherit; text-decoration:none;">Why Choose Us</a></li>
+            <li><a href="contact.html" style="color:inherit; text-decoration:none;">Contact &amp; Quotes</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Direct Contact -->
+        <div>
+          <h3 class="footer__heading" style="color:#fff; font-size:1.05rem; font-weight:700; margin-bottom:20px; text-transform:uppercase; letter-spacing:0.05em;">Direct Contact</h3>
+          <p style="font-size:0.92rem; line-height:1.6; margin-bottom:14px;">Speak directly with Mike for surveys, advice &amp; written quotes:</p>
+          <a href="tel:07760356450" style="display:block; font-size:1.15rem; font-weight:800; color:var(--gold); text-decoration:none; margin-bottom:8px;">07760 356450</a>
+          <p style="font-size:0.85rem; color:rgba(255,255,255,0.6); margin-bottom:16px;">Wokingham, RG40 &middot; Covering all Berkshire</p>
+          <a href="https://wa.me/447760356450?text=Hi%20Mike,%20I'd%20like%20to%20get%20a%20free%20quote%20for%20a%20driveway%20in%20Berkshire." class="btn btn--primary" style="font-size:0.88rem; padding:10px 20px;" target="_blank" rel="noopener">WhatsApp Mike Direct &rarr;</a>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom" style="border-top:1px solid rgba(255,255,255,0.1); padding-top:28px; text-align:center; font-size:0.84rem; color:rgba(255,255,255,0.5);">
+        &copy; 2026 Revvi Driveways. All rights reserved. &middot; Specialist Block Paving, Resin &amp; Tarmac in Berkshire.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    function handleContactPageSubmit(event) {
+      event.preventDefault();
+      const name = document.getElementById('contact_name').value.trim();
+      const phone = document.getElementById('contact_phone').value.trim();
+      const postcode = document.getElementById('contact_postcode').value.trim();
+      const service = document.getElementById('contact_service').value;
+      const notes = document.getElementById('contact_notes') ? document.getElementById('contact_notes').value.trim() : '';
+
+      let text = "Hi Mike, I've come from the website and would like to get a free estimate:\n\n" +
+                 "Name: " + name + "\n\n" +
+                 "Phone: " + phone + "\n\n" +
+                 "Location / Postcode: " + postcode + "\n\n" +
+                 "Service Required: " + service;
+      if (notes) {
+        text += "\n\nProject Details:\n" + notes;
+      }
+
+      const encoded = encodeURIComponent(text);
+      const url = "https://wa.me/447760356450?text=" + encoded;
+      window.open(url, '_blank');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Revvi Driveways — Service Portfolio Manager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --forest: #1A3A1A;
+      --forest-dark: #0D1612;
+      --gold: #C9A84C;
+      --gold-hover: #E5C368;
+      --bg-dark: #080D0A;
+      --card-bg: #111A14;
+      --border: rgba(201, 168, 76, 0.25);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg-dark);
+      color: #FFFFFF;
+      padding-bottom: 120px;
+    }
+    header {
+      background: var(--forest-dark);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 28px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      backdrop-filter: blur(12px);
+    }
+    .logo {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .badge {
+      background: rgba(201,168,76,0.15);
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .container {
+      max-width: 1500px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    
+    /* Service Tabs */
+    .tabs-bar {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+      background: var(--card-bg);
+      padding: 12px 16px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      position: sticky;
+      top: 72px;
+      z-index: 900;
+      backdrop-filter: blur(10px);
+    }
+    .tab-btn {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #A3B59D;
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .tab-btn:hover, .tab-btn.active {
+      background: var(--gold);
+      color: #080D0A;
+      border-color: var(--gold);
+      font-weight: 700;
+    }
+    
+    /* Active Service Panel */
+    .service-panel {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 32px;
+    }
+    .service-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding-bottom: 14px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .service-header h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.4rem;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    /* Layout Preview Box */
+    .live-layout-preview {
+      background: #080D0A;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px;
+      margin-bottom: 28px;
+    }
+    .live-layout-title {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+      margin-bottom: 14px;
+      font-weight: 700;
+    }
+    .layout-slots-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 16px;
+    }
+    @media (max-width: 860px) {
+      .layout-slots-grid { grid-template-columns: 1fr; }
+    }
+    .preview-hero-card {
+      background: #111A14;
+      border: 1px dashed var(--gold);
+      border-radius: 10px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .preview-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    .preview-slot-card {
+      background: #111A14;
+      border: 1px dashed rgba(255,255,255,0.2);
+      border-radius: 8px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .slot-thumb {
+      aspect-ratio: 16/10;
+      border-radius: 6px;
+      overflow: hidden;
+      background: #000;
+    }
+    .slot-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .slot-label {
+      font-size: 0.72rem;
+      color: var(--gold);
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    
+    /* Photos Assigned to this service */
+    .assigned-photos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .photo-card {
+      background: #080D0A;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .photo-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-2px);
+    }
+    .photo-thumb-wrap {
+      aspect-ratio: 16/11;
+      background: #000;
+      position: relative;
+    }
+    .photo-thumb-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .photo-name {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0,0,0,0.8);
+      padding: 4px 8px;
+      font-size: 0.7rem;
+      color: #A3B59D;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .card-actions {
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .slot-buttons {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6px;
+    }
+    .action-btn {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: #FFF;
+      padding: 6px 8px;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.15s;
+    }
+    .action-btn:hover {
+      background: rgba(201,168,76,0.25);
+      color: var(--gold);
+      border-color: var(--gold);
+    }
+    .action-btn.hero-btn {
+      grid-column: span 2;
+      background: rgba(201,168,76,0.15);
+      color: var(--gold);
+      border-color: var(--gold);
+      font-weight: 700;
+    }
+    .action-btn.hero-btn:hover {
+      background: var(--gold);
+      color: #080D0A;
+    }
+    .remove-btn {
+      background: rgba(255,70,70,0.12);
+      border: 1px solid rgba(255,70,70,0.3);
+      color: #ff8787;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      cursor: pointer;
+      margin-top: 4px;
+      text-align: center;
+    }
+    .remove-btn:hover {
+      background: #ff5252;
+      color: #FFF;
+    }
+    
+    .btn {
+      padding: 10px 22px;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      font-size: 0.88rem;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn--primary { background: var(--gold); color: #080D0A; }
+    .btn--primary:hover { background: var(--gold-hover); transform: translateY(-1px); }
+    .export-box {
+      margin-top: 36px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <span>🌲 Revvi Driveways</span>
+      <span class="badge">Service Portfolio Manager</span>
+    </div>
+    <div style="display:flex; gap:12px; align-items:center;">
+      <a href="gallery.html" class="btn" style="background:rgba(255,255,255,0.08); color:#FFF; text-decoration:none;">&larr; View Gallery</a>
+      <button onclick="exportJSON()" class="btn btn--primary">💾 Save &amp; Generate Code</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <h1 style="font-family:'Outfit', sans-serif; font-size:1.8rem; margin-bottom:6px;">Organize Service Page Photos &amp; Thumbnails</h1>
+    <p style="color:#A3B59D; margin-bottom:20px; font-size:0.95rem;">Select a service below to view its assigned real photos. Click <strong>[⭐ Set as Hero]</strong> or <strong>[Slot 1-4]</strong> to assign the exact layout order.</p>
+
+    <!-- SERVICE TABS -->
+    <div class="tabs-bar" id="tabsBar"></div>
+
+    <!-- ACTIVE SERVICE PANEL -->
+    <div id="servicePanelContainer"></div>
+
+    <!-- EXPORT SECTION -->
+    <div class="export-box" id="exportBox" style="display:none;">
+      <h3 style="color:var(--gold); margin-bottom:8px;">Generated Service Slots Configuration</h3>
+      <p style="color:#A3B59D; font-size:0.85rem; margin-bottom:10px;">Configuration copied to clipboard! Paste it into the chat to deploy to the website:</p>
+      <textarea id="configOutput" style="width:100%; height:160px; background:#000; color:#00FF88; font-family:monospace; border:1px solid rgba(255,255,255,0.2); border-radius:8px; padding:12px;" readonly></textarea>
+    </div>
+  </div>
+
+  <script>
+    const servicesMeta = [{"id": "patios", "name": "Porcelain & Natural Stone Patios", "icon": "\ud83c\udf3f"}, {"id": "driveways", "name": "Block Paving & Driveways", "icon": "\ud83e\uddf1"}, {"id": "design", "name": "Garden Design & Build", "icon": "\ud83c\udfe1"}, {"id": "fencing", "name": "Timber & Closeboard Fencing", "icon": "\ud83e\udeb5"}, {"id": "lawns", "name": "Artificial Grass & Real Turf", "icon": "\ud83c\udf31"}, {"id": "pergolas", "name": "Pergolas & Composite Decking", "icon": "\u26e9\ufe0f"}, {"id": "walls", "name": "Retaining Walls & Steps", "icon": "\ud83e\uddf1"}, {"id": "summerhouses", "name": "Summerhouses & Garden Rooms", "icon": "\ud83c\udfe0"}];
+    const initialPool = {"patios": ["assets/images/projects/454c1ced-e054-462e-a098-07ed5c5f7bd0.jpg", "assets/images/projects/6532df78-9045-47c0-a336-d50ec7624b09.jpg", "assets/images/projects/f359d934-e66c-460e-8cbb-eb9926debfdc.jpg", "assets/images/projects/fc5b2676-0a94-46e1-bee6-dfce1f8218d3.jpg", "assets/images/projects/finished-lawn-maidenhead.jpg", "assets/images/projects/full-site-clearance-build.jpg", "assets/images/projects/good-pic-3.jpg", "assets/images/projects/large-patio-1.jpg", "assets/images/projects/luxury-garden-design.jpg", "assets/images/projects/natural-stone-specialists-1.jpg", "assets/images/projects/project-image-41.jpg", "assets/images/projects/project-image-45.jpg", "assets/images/projects/project-image-47.jpg", "assets/images/projects/project-image-53.jpg", "assets/images/projects/stone-wall-paving-integration.jpg", "assets/images/projects/raised-patio-night-1.jpg", "assets/images/projects/raised-patio-steps-1.jpg", "assets/images/projects/sandstone-driveway-1.jpg", "assets/images/projects/project-image-40.jpg", "assets/images/projects/project-image-32.jpg"], "driveways": ["assets/images/projects/driveway-lighting-1.jpg", "assets/images/projects/project-image-51.jpg", "assets/images/projects/sandstone-driveway-1.jpg", "assets/images/projects/good-pic-3.jpg"], "design": ["assets/images/projects/garden-paving-detail.jpg", "assets/images/projects/sliding-door-patio-view.jpg", "assets/images/projects/full-site-clearance-build.jpg", "assets/images/projects/luxury-garden-design.jpg"], "fencing": ["assets/images/projects/4c34366d-e440-47c5-b59d-e3e91d4af91b.jpg", "assets/images/projects/cotswolds-landscaping-1.jpg", "assets/images/projects/good-pic-1.jpg", "assets/images/projects/large-scale-landscaping.jpg"], "lawns": ["assets/images/projects/artificial-lawn-thumbnail.jpg", "assets/images/projects/garden-paving-detail.jpg", "assets/images/projects/project-image-46.jpg", "assets/images/projects/finished-lawn-maidenhead.jpg"], "pergolas": ["assets/images/projects/5a31035c-5e6c-4d32-af89-3ae75053a464.jpg", "assets/images/projects/high-end-patio-finish.jpg", "assets/images/projects/project-image-34.jpg", "assets/images/projects/project-image-47.jpg"], "walls": ["assets/images/projects/stone-wall-paving-integration.jpg", "assets/images/projects/raised-patio-night-1.jpg", "assets/images/projects/raised-patio-steps-1.jpg", "assets/images/projects/project-image-40.jpg"], "summerhouses": ["assets/images/projects/block-paving-expert-work.jpg", "assets/images/projects/driveway-transformation-1.jpg", "assets/images/projects/large-scale-landscaping.jpg", "assets/images/projects/cotswolds-landscaping-1.jpg"]};
+
+    // Load state from localStorage or initialize
+    let servicePool = JSON.parse(localStorage.getItem('sj_service_pool') || JSON.stringify(initialPool));
+    
+    // Layout slots tracking for each service: hero + slot1..4
+    let layoutSlots = JSON.parse(localStorage.getItem('sj_layout_slots') || '{}');
+
+    // Initialize layout slots if empty
+    servicesMeta.forEach(s => {
+      if (!layoutSlots[s.id]) {
+        const pool = servicePool[s.id] || [];
+        layoutSlots[s.id] = {
+          hero: pool[0] || '',
+          slot1: pool[0] || '',
+          slot2: pool[1] || pool[0] || '',
+          slot3: pool[2] || pool[0] || '',
+          slot4: pool[3] || pool[0] || ''
+        };
+      }
+    });
+
+    let activeServiceId = 'patios';
+
+    function renderTabs() {
+      const tabsBar = document.getElementById('tabsBar');
+      tabsBar.innerHTML = '';
+
+      servicesMeta.forEach(s => {
+        const count = (servicePool[s.id] || []).length;
+        const btn = document.createElement('button');
+        btn.className = 'tab-btn' + (s.id === activeServiceId ? ' active' : '');
+        btn.innerHTML = `<span>${s.icon}</span> ${s.name} (${count})`;
+        btn.onclick = () => {
+          activeServiceId = s.id;
+          renderTabs();
+          renderPanel();
+        };
+        tabsBar.appendChild(btn);
+      });
+    }
+
+    function renderPanel() {
+      const container = document.getElementById('servicePanelContainer');
+      const svc = servicesMeta.find(s => s.id === activeServiceId);
+      const pool = servicePool[svc.id] || [];
+      const slots = layoutSlots[svc.id] || { hero: '', slot1: '', slot2: '', slot3: '', slot4: '' };
+
+      container.innerHTML = `
+        <div class="service-panel">
+          <div class="service-header">
+            <h2><span>${svc.icon}</span> ${svc.name}</h2>
+            <a href="services/${svc.id === 'patios' ? 'porcelain-patios.html' : (svc.id === 'driveways' ? 'block-paving-driveways.html' : (svc.id === 'design' ? 'landscape-design.html' : (svc.id === 'fencing' ? 'timber-fencing.html' : (svc.id === 'lawns' ? 'artificial-grass-turfing.html' : (svc.id === 'pergolas' ? 'garden-pergolas-decking.html' : (svc.id === 'walls' ? 'retaining-walls-steps.html' : 'summerhouses-garden-rooms.html'))))))}" target="_blank" style="font-size:0.85rem; color:var(--gold); text-decoration:none;">View Live Page &rarr;</a>
+          </div>
+
+          <!-- LIVE LAYOUT PREVIEW -->
+          <div class="live-layout-preview">
+            <div class="live-layout-title">Active Page Layout (Hero &amp; 4 Gallery Slots)</div>
+            <div class="layout-slots-grid">
+              <div class="preview-hero-card">
+                <div class="slot-label">Hero Background Photo</div>
+                <div class="slot-thumb">
+                  <img src="${slots.hero}" onerror="this.src='assets/favicon.png'">
+                </div>
+                <span style="font-size:0.72rem; color:#888;">${slots.hero.split('/').pop() || 'None'}</span>
+              </div>
+              <div class="preview-gallery-grid">
+                <div class="preview-slot-card">
+                  <div class="slot-label">Gallery Slot 1</div>
+                  <div class="slot-thumb"><img src="${slots.slot1}" onerror="this.src='assets/favicon.png'"></div>
+                  <span style="font-size:0.7rem; color:#888;">${slots.slot1.split('/').pop() || 'None'}</span>
+                </div>
+                <div class="preview-slot-card">
+                  <div class="slot-label">Gallery Slot 2</div>
+                  <div class="slot-thumb"><img src="${slots.slot2}" onerror="this.src='assets/favicon.png'"></div>
+                  <span style="font-size:0.7rem; color:#888;">${slots.slot2.split('/').pop() || 'None'}</span>
+                </div>
+                <div class="preview-slot-card">
+                  <div class="slot-label">Gallery Slot 3</div>
+                  <div class="slot-thumb"><img src="${slots.slot3}" onerror="this.src='assets/favicon.png'"></div>
+                  <span style="font-size:0.7rem; color:#888;">${slots.slot3.split('/').pop() || 'None'}</span>
+                </div>
+                <div class="preview-slot-card">
+                  <div class="slot-label">Gallery Slot 4</div>
+                  <div class="slot-thumb"><img src="${slots.slot4}" onerror="this.src='assets/favicon.png'"></div>
+                  <span style="font-size:0.7rem; color:#888;">${slots.slot4.split('/').pop() || 'None'}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ASSIGNED PHOTOS -->
+          <h3 style="font-size:1.1rem; color:var(--gold); font-family:'Outfit'; margin-top:24px;">Available Photos for ${svc.name} (${pool.length})</h3>
+          <p style="color:#A3B59D; font-size:0.85rem; margin-bottom:14px;">Click which slot to assign each photo to, or remove it from this service.</p>
+
+          <div class="assigned-photos-grid">
+            ${pool.map((img, idx) => `
+              <div class="photo-card">
+                <div class="photo-thumb-wrap">
+                  <img src="${img}" loading="lazy" onerror="this.src='assets/favicon.png'">
+                  <div class="photo-name">${img.split('/').pop()}</div>
+                </div>
+                <div class="card-actions">
+                  <button class="action-btn hero-btn" onclick="setSlot('${svc.id}', 'hero', '${img}')">⭐ Set as Hero Background</button>
+                  <div class="slot-buttons">
+                    <button class="action-btn" onclick="setSlot('${svc.id}', 'slot1', '${img}')">Slot 1</button>
+                    <button class="action-btn" onclick="setSlot('${svc.id}', 'slot2', '${img}')">Slot 2</button>
+                    <button class="action-btn" onclick="setSlot('${svc.id}', 'slot3', '${img}')">Slot 3</button>
+                    <button class="action-btn" onclick="setSlot('${svc.id}', 'slot4', '${img}')">Slot 4</button>
+                  </div>
+                  <button class="remove-btn" onclick="removePhoto('${svc.id}', '${img}')">❌ Remove from Service</button>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `;
+    }
+
+    function setSlot(serviceId, slotKey, img) {
+      layoutSlots[serviceId][slotKey] = img;
+      localStorage.setItem('sj_layout_slots', JSON.stringify(layoutSlots));
+      renderPanel();
+    }
+
+    function removePhoto(serviceId, img) {
+      servicePool[serviceId] = servicePool[serviceId].filter(i => i !== img);
+      localStorage.setItem('sj_service_pool', JSON.stringify(servicePool));
+      renderTabs();
+      renderPanel();
+    }
+
+    function exportJSON() {
+      const exportBox = document.getElementById('exportBox');
+      const output = document.getElementById('configOutput');
+      exportBox.style.display = 'block';
+
+      const config = {
+        layoutSlots: layoutSlots,
+        servicePool: servicePool
+      };
+
+      output.value = JSON.stringify(config, null, 2);
+      output.select();
+      navigator.clipboard.writeText(output.value);
+      alert('Configuration copied to clipboard! Paste it into the chat to sync across the whole website.');
+    }
+
+    renderTabs();
+    renderPanel();
+  </script>
+</body>
+</html>

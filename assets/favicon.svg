@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- Pure Circle - 100% Transparent Outside -->
+  <circle cx="256" cy="256" r="256" fill="#244D20"/>
+  <!-- Stylized Green Leaf / Tree Emblem -->
+  <path d="M256 90 C256 90 370 190 370 310 C370 365 310 405 256 425 C202 405 142 365 142 310 C142 190 256 90 256 90Z" fill="#8DC674"/>
+  <line x1="256" y1="425" x2="256" y2="220" stroke="#244D20" stroke-width="16" stroke-linecap="round"/>
+  <path d="M256 330 C256 330 205 290 195 270" stroke="#244D20" stroke-width="14" fill="none" stroke-linecap="round"/>
+  <path d="M256 290 C256 290 305 255 315 235" stroke="#244D20" stroke-width="14" fill="none" stroke-linecap="round"/>
+</svg>

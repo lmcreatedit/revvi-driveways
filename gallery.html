@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://formspree.io; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com; media-src 'self'; frame-src 'self' https://www.google.com;">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recent Projects &amp; Portfolio | Revvi Driveways Wokingham</title>
+  <meta name="description" content="Browse Revvi Driveways' portfolio of completed projects — block paving, UV-stable resin bound, tarmacadam, and porcelain patios across Wokingham and Berkshire.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Projects Portfolio | Revvi Driveways — Berkshire Paving Specialists">
+  <meta property="og:description" content="Portfolio of completed block paving, resin bound, tarmac and patio projects across Berkshire.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://revvidriveways.services/gallery.html">
+  <meta property="og:image" content="https://revvidriveways.services/assets/og-image.jpg">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://revvidriveways.services/gallery.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+
+  <!-- Google Fonts preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .gallery-filters {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 48px;
+    }
+    .filter-btn {
+      background: #111C38;
+      color: rgba(255,255,255,0.75);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 10px 22px;
+      border-radius: 50px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--gold);
+      color: #0B132B;
+      border-color: var(--gold);
+      box-shadow: 0 4px 16px rgba(217,119,6,0.35);
+    }
+    .gallery-grid-3col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 980px) {
+      .gallery-grid-3col {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 640px) {
+      .gallery-grid-3col {
+        grid-template-columns: 1fr;
+      }
+    }
+    .gallery-project-card {
+      background: #111C38;
+      border: 1.5px solid rgba(217,119,6,0.3);
+      border-radius: 18px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+    }
+    .gallery-project-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--gold);
+      box-shadow: 0 16px 36px rgba(0,0,0,0.5);
+    }
+    .gallery-project-card__image {
+      position: relative;
+      height: 220px;
+      background: linear-gradient(135deg, #1A2744 0%, #0B132B 50%, #152238 100%);
+      border-bottom: 1px solid rgba(217,119,6,0.25);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      text-align: center;
+    }
+    .gallery-project-card__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 50px;
+      background: rgba(217,119,6,0.18);
+      border: 1px solid rgba(217,119,6,0.45);
+      color: #FBBF24;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .gallery-project-card__body {
+      padding: 20px 22px 24px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+  </style>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+</head>
+<body>
+
+  <!-- ══════════════════════════════
+       NAV
+  ══════════════════════════════ -->
+  <nav class="nav scrolled" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" style="display:flex; align-items:center; gap:12px; text-decoration:none;">
+        <img src="assets/revvi-brick-transparent.png" alt="Revvi Driveways Emblem" style="height:32px; width:auto; filter:drop-shadow(0 2px 10px rgba(217,119,6,0.6)); flex-shrink:0; display:block;">
+        <span style="font-weight:900; font-size:1.25rem; letter-spacing:-0.01em; color:#FFFFFF;">REVVI <span style="color:var(--gold);">DRIVEWAYS</span></span>
+      </a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html" class="active">Recent Work</a></li>
+        <li><a href="about.html">Why Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav__cta">
+        <a href="tel:07760356450" class="nav__phone" aria-label="Call Revvi Driveways">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <span>07760 356450</span>
+        </a>
+        <a href="contact.html" class="btn btn--primary">Get Free Estimate</a>
+      </div>
+
+      <button class="nav__burger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="nav__mobile" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <button class="nav__mobile-close" aria-label="Close menu">&times;</button>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Recent Work</a>
+    <a href="about.html">Why Us</a>
+    <a href="contact.html">Contact</a>
+    <a href="tel:07760356450" class="btn btn--primary" style="margin-top:20px;">Call 07760 356450</a>
+  </div>
+
+  <!-- ══════════════════════════════
+       BLUE BIRD SUB-NAV ANNOUNCEMENT STRIP
+  ══════════════════════════════ -->
+  <div class="sub-nav-banner">
+    <span>Our Customers Rate Us</span>
+    <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+    <span>Based on 37+ Reviews on</span>
+    <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" style="vertical-align:middle;">
+      <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+      <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+      <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+      <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+    </svg>
+    <span>Google</span>
+  </div>
+
+  <main>
+
+    <!-- ══════════════════════════════
+         PAGE HERO
+    ══════════════════════════════ -->
+    <section class="gallery-hero" aria-label="Gallery hero" style="background:#080D1C; color:white; padding:48px 0 36px; border-bottom:1px solid rgba(255,255,255,0.08);">
+      <div class="container">
+        <span class="section-eyebrow" style="color:var(--gold) !important; font-weight:800;">OUR PORTFOLIO &middot; WOKINGHAM &amp; BERKSHIRE</span>
+        <h1 style="font-family:var(--font-heading); font-size:clamp(2.2rem,5vw,3.6rem); font-weight:900; color:#FFFFFF; letter-spacing:-0.02em; line-height:1.1; margin-bottom:16px; max-width:720px;">Recent Driveway &amp; Patio Projects</h1>
+        <p style="font-size:1.08rem; color:rgba(255,255,255,0.8); max-width:580px; line-height:1.75;">A showcase of recent block paving, UV-stable resin bound, tarmacadam, and porcelain patio installations across Berkshire. Filter by project type below.</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         GALLERY & FILTER TABS
+    ══════════════════════════════ -->
+    <section class="section" aria-labelledby="gallery-full-heading" style="background:#0B132B; padding:72px 0 90px;">
+      <div class="container">
+        <h2 class="visually-hidden" id="gallery-full-heading">Project gallery</h2>
+
+        <!-- Filter buttons -->
+        <div class="gallery-filters" role="group" aria-label="Filter projects by type">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="block-paving">Block Paving</button>
+          <button class="filter-btn" data-filter="resin-bound">Resin Bound</button>
+          <button class="filter-btn" data-filter="tarmac">Tarmacadam</button>
+          <button class="filter-btn" data-filter="patios">Porcelain Patios</button>
+          <button class="filter-btn" data-filter="gravel">Gravel</button>
+          <button class="filter-btn" data-filter="drainage">Drainage &amp; Kerbs</button>
+        </div>
+
+        <!-- Gallery grid (12 Full-Bleed Portfolio Manager Slots) -->
+        <div class="gallery-grid-3col stagger-group">
+
+          <!-- Item 1: Block Paving -->
+          <article class="gallery-project-card stagger-item" data-category="block-paving">
+            <div class="gallery-project-card__image">
+              <span class="gallery-project-card__badge">📸 Portfolio Manager Slot</span>
+              <div style="font-weight:800; font-size:1rem; color:#FFFFFF; margin-bottom:4px;">Project Photo #01</div>
+              <div style="font-size:0.78rem; color:rgba(255,255,255,0.65);">Wokingham, RG40</div>
+            </div>
+            <div class="gallery-project-card__body">
+              <span style="color:#D97706; font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; display:block; margin-bottom:4px;">Block Paving</span>
+              <h3 style="font-size:1.15rem; font-weight:800; color:#FFFFFF; margin-bottom:6px;">Marshalls Tegula Paved Driveway</h3>
+              <p style="font-size:0.86rem; color:rgba(255,255,255,0.72); line-height:1.5; margin-bottom:14px;">200mm excavation depth with charcoal border edging and recessed manhole covers.</p>
+              <a href="https://wa.me/447760356450?text=Hi%20Mike,%20I'd%20like%20a%20quote%20for%20a%20Tegula%20block%20paving%20driveway%20similar%20to%20your%20Wokingham%20project." class="btn btn--ghost" style="font-size:0.82rem; padding:8px 14px; border:1px solid rgba(217,119,6,0.4); color:var(--gold); margin-top:auto;" target="_blank" rel="noopener">Enquire on WhatsApp &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Item 2: Resin Bound -->
+          <article class="gallery-project-card stagger-item" data-category="resin-bound">
+            <div class="gallery-project-card__image">
+              <span class="gallery-project-card__badge">📸 Portfolio Manager Slot</span>
+              <div style="font-weight:800; font-size:1rem; color:#FFFFFF; margin-bottom:4px;">Project Photo #02</div>
+              <div style="font-size:0.78rem; color:rgba(255,255,255,0.65);">Finchampstead, Berkshire</div>
+            </div>
+            <div class="gallery-project-card__body">
+              <span style="color:#D97706; font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; display:block; margin-bottom:4px;">Resin Bound</span>
+              <h3 style="font-size:1.15rem; font-weight:800; color:#FFFFFF; margin-bottom:6px;">Amber Gold UV-Stable Resin Drive</h3>
+              <p style="font-size:0.86rem; color:rgba(255,255,255,0.72); line-height:1.5; margin-bottom:14px;">100% permeable SUDS-compliant surface with dark grey granite setts boundary line.</p>
+              <a href="https://wa.me/447760356450?text=Hi%20Mike,%20I'd%20like%20a%20quote%20for%20a%20resin%20bound%20driveway%20similar%20to%20your%20Finchampstead%20project." class="btn btn--ghost" style="font-size:0.82rem; padding:8px 14px; border:1px solid rgba(217,119,6,0.4); color:var(--gold); margin-top:auto;" target="_blank" rel="noopener">Enquire on WhatsApp &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Item 3: Tarmacadam -->
+          <article class="gallery-project-card stagger-item" data-category="tarmac">
+            <div class="gallery-project-card__image">
+              <span class="gallery-project-card__badge">📸 Portfolio Manager Slot</span>
+              <div style="font-weight:800; font-size:1rem; color:#FFFFFF; margin-bottom:4px;">Project Photo #03</div>
+              <div style="font-size:0.78rem; color:rgba(255,255,255,0.65);">Reading, Berkshire</div>
+            </div>
+            <div class="gallery-project-card__body">
+              <span style="color:#D97706; font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; display:block; margin-bottom:4px;">Tarmacadam</span>
+              <h3 style="font-size:1.15rem; font-weight:800; color:#FFFFFF; margin-bottom:6px;">Heavy-Duty SMA Tarmac &amp; Border</h3>
+              <p style="font-size:0.86rem; color:rgba(255,255,255,0.72); line-height:1.5; margin-bottom:14px;">6mm stone mastic asphalt wearing course with red brick entrance apron and kerbing.</p>
+              <a href="https://wa.me/447760356450?text=Hi%20Mike,%20I'd%20like%20a%20quote%20for%20a%20tarmac%20driveway%20similar%20to%20your%20Reading%20project." class="btn btn--ghost" style="font-size:0.82rem; padding:8px 14px; border:1px solid rgba(217,119,6,0.4); color:var(--gold); margin-top:auto;" target="_blank" rel="noopener">Enquire on WhatsApp &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Item 4: Patios -->
+          <article class="gallery-project-card stagger-item" data-category="patios">
+            <div class="gallery-project-card__image">
+              <span class="gallery-project-card__badge">📸 Portfolio Manager Slot</span>
+              <div style="font-weight:800; font-size:1rem; color:#FFFFFF; margin-bottom:4px;">Project Photo #04</div>
+              <div style="font-size:0.78rem; color:rgba(255,255,255,0.65);">Wokingham, RG41</div>
+            </div>
+            <div class="gallery-project-card__body">
+              <span style="color:#D97706; font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; display:block; margin-bottom:4px;">Porcelain Patios</span>
+              <h3 style="font-size:1.15rem; font-weight:800; color:#FFFFFF; margin-bottom:6px;">20mm Vitrified Porcelain Terrace</h3>
+              <p style="font-size:0.86rem; color:rgba(255,255,255,0.72); line-height:1.5; margin-bottom:14px;">Italian porcelain slabs laid on full slurry primer with weatherproof resin joints.</p>
+              <a href="https://wa.me/447760356450?text=Hi%20Mike,%20I'd%20like%20a%20quote%20for%20a%20porcelain%20patio%20similar%20to%20your%20Wokingham%20terrace." class="btn btn--ghost" style="font-size:0.82rem; padding:8px 14px; border:1px solid rgba(217,119,6,0.4); color:var(--gold); margin-top:auto;" target="_blank" rel="noopener">Enquire on WhatsApp &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Item 5: Block Paving -->
+          <article class="gallery-project-card stagger-item" data-category="block-paving">
+            <div class="gallery-project-card__image">
+              <span class="gallery-project-card__badge">📸 Portfolio Manager Slot</span>
+              <div style="font-weight:800; font-size:1rem; color:#FFFFFF; margin-bottom:4px;">Project Photo #05</div>
+              <div style="font-size:0.78rem; color:rgba(255,255,255,0.65);">Bracknell, RG12</div>
+            </div>
+            <div class="gallery-project-card__body">
+              <span style="color:#D97706; font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; display:block; margin-bottom:4px;">Block Paving</span>
+              <h3 style="font-size:1.15rem; font-weight:800; color:#FFFFFF; margin-bottom:6px;">45° Herringbone Paving Pattern</h3>
+              <p style="font-size:0.86rem; color:rgba(255,255,255,0.72); line-height:1.5; margin-bottom:14px;">High-interlock herringbone block paving layout with concrete haunched boundary kerbs.</p>
+              <a href="https://wa.me/447760356450?text=Hi%20Mike,%20I'd%20like%20a%20quote%20for%20a%20herringbone%20block%20paving%20driveway%20in%20Berkshire." class="btn btn--ghost" style="font-size:0.82rem; padding:8px 14px; border:1px solid rgba(217,119,6,0.4); color:var(--gold); margin-top:auto;" target="_blank" rel="noopener">Enquire on WhatsApp &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Item 6: Gravel -->
+          <article class="gallery-project-card stagger-item" data-category="gravel">
+            <div class="gallery-project-card__image">
+              <span class="gallery-project-card__badge">📸 Portfolio Manager Slot</span>
+              <div style="font-weight:800; font-size:1rem; color:#FFFFFF; margin-bottom:4px;">Project Photo #06</div>
+              <div style="font-size:0.78rem; color:rgba(255,255,255,0.65);">Crowthorne, Berkshire</div>
+            </div>
+            <div class="gallery-project-card__body">
+              <span style="color:#D97706; font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; display:block; margin-bottom:4px;">Gravel Driveways</span>
+              <h3 style="font-size:1.15rem; font-weight:800; color:#FFFFFF; margin-bottom:6px;">Stabilised Golden Flint Shingle</h3>
+              <p style="font-size:0.86rem; color:rgba(255,255,255,0.72); line-height:1.5; margin-bottom:14px;">Cellular honeycomb stabilization grids with heavy geotextile weed barrier.</p>
+              <a href="https://wa.me/447760356450?text=Hi%20Mike,%20I'd%20like%20a%20quote%20for%20a%20stabilised%20gravel%20driveway%20in%20Berkshire." class="btn btn--ghost" style="font-size:0.82rem; padding:8px 14px; border:1px solid rgba(217,119,6,0.4); color:var(--gold); margin-top:auto;" target="_blank" rel="noopener">Enquire on WhatsApp &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Item 7: Resin Bound -->
+          <article class="gallery-project-card stagger-item" data-category="resin-bound">
+            <div class="gallery-project-card__image">
+              <span class="gallery-project-card__badge">📸 Portfolio Manager Slot</span>
+              <div style="font-weight:800; font-size:1rem; color:#FFFFFF; margin-bottom:4px;">Project Photo #07</div>
+              <div style="font-size:0.78rem; color:rgba(255,255,255,0.65);">Winnersh, Berkshire</div>
+            </div>
+            <div class="gallery-project-card__body">
+              <span style="color:#D97706; font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; display:block; margin-bottom:4px;">Resin Bound</span>
+              <h3 style="font-size:1.15rem; font-weight:800; color:#FFFFFF; margin-bottom:6px;">Silver Birch Permeable Resin</h3>
+              <p style="font-size:0.86rem; color:rgba(255,255,255,0.72); line-height:1.5; margin-bottom:14px;">Contemporary silver aggregate blend with smooth non-slip power-floated finish.</p>
+              <a href="https://wa.me/447760356450?text=Hi%20Mike,%20I'd%20like%20a%20quote%20for%20a%20silver%20resin%20bound%20driveway%20in%20Berkshire." class="btn btn--ghost" style="font-size:0.82rem; padding:8px 14px; border:1px solid rgba(217,119,6,0.4); color:var(--gold); margin-top:auto;" target="_blank" rel="noopener">Enquire on WhatsApp &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Item 8: Block Paving -->
+          <article class="gallery-project-card stagger-item" data-category="block-paving">
+            <div class="gallery-project-card__image">
+              <span class="gallery-project-card__badge">📸 Portfolio Manager Slot</span>
+              <div style="font-weight:800; font-size:1rem; color:#FFFFFF; margin-bottom:4px;">Project Photo #08</div>
+              <div style="font-size:0.78rem; color:rgba(255,255,255,0.65);">Wokingham, Berkshire</div>
+            </div>
+            <div class="gallery-project-card__body">
+              <span style="color:#D97706; font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; display:block; margin-bottom:4px;">Block Paving</span>
+              <h3 style="font-size:1.15rem; font-weight:800; color:#FFFFFF; margin-bottom:6px;">Tumbled Cobblestone Driveway</h3>
+              <p style="font-size:0.86rem; color:rgba(255,255,255,0.72); line-height:1.5; margin-bottom:14px;">Rustic cobbled aesthetic with modern 200mm heavy MOT sub-base engineering.</p>
+              <a href="https://wa.me/447760356450?text=Hi%20Mike,%20I'd%20like%20a%20quote%20for%20a%20tumbled%20cobblestone%20driveway%20in%20Berkshire." class="btn btn--ghost" style="font-size:0.82rem; padding:8px 14px; border:1px solid rgba(217,119,6,0.4); color:var(--gold); margin-top:auto;" target="_blank" rel="noopener">Enquire on WhatsApp &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Item 9: Patios -->
+          <article class="gallery-project-card stagger-item" data-category="patios">
+            <div class="gallery-project-card__image">
+              <span class="gallery-project-card__badge">📸 Portfolio Manager Slot</span>
+              <div style="font-weight:800; font-size:1rem; color:#FFFFFF; margin-bottom:4px;">Project Photo #09</div>
+              <div style="font-size:0.78rem; color:rgba(255,255,255,0.65);">Earley, Reading</div>
+            </div>
+            <div class="gallery-project-card__body">
+              <span style="color:#D97706; font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; display:block; margin-bottom:4px;">Natural Stone</span>
+              <h3 style="font-size:1.15rem; font-weight:800; color:#FFFFFF; margin-bottom:6px;">Calibrated Indian Sandstone Patio</h3>
+              <p style="font-size:0.86rem; color:rgba(255,255,255,0.72); line-height:1.5; margin-bottom:14px;">Raj Green sandstone with hand-dressed edges and integrated garden step risers.</p>
+              <a href="https://wa.me/447760356450?text=Hi%20Mike,%20I'd%20like%20a%20quote%20for%20an%20Indian%20sandstone%20patio%20in%20Berkshire." class="btn btn--ghost" style="font-size:0.82rem; padding:8px 14px; border:1px solid rgba(217,119,6,0.4); color:var(--gold); margin-top:auto;" target="_blank" rel="noopener">Enquire on WhatsApp &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Item 10: Tarmac -->
+          <article class="gallery-project-card stagger-item" data-category="tarmac">
+            <div class="gallery-project-card__image">
+              <span class="gallery-project-card__badge">📸 Portfolio Manager Slot</span>
+              <div style="font-weight:800; font-size:1rem; color:#FFFFFF; margin-bottom:4px;">Project Photo #10</div>
+              <div style="font-size:0.78rem; color:rgba(255,255,255,0.65);">Wokingham, Berkshire</div>
+            </div>
+            <div class="gallery-project-card__body">
+              <span style="color:#D97706; font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; display:block; margin-bottom:4px;">Tarmacadam</span>
+              <h3 style="font-size:1.15rem; font-weight:800; color:#FFFFFF; margin-bottom:6px;">Red Asphalt Residential Driveway</h3>
+              <p style="font-size:0.86rem; color:rgba(255,255,255,0.72); line-height:1.5; margin-bottom:14px;">High-contrast red tarmacadam with precision rolled machine finish and edging.</p>
+              <a href="https://wa.me/447760356450?text=Hi%20Mike,%20I'd%20like%20a%20quote%20for%20a%20red%20tarmac%20driveway%20in%20Berkshire." class="btn btn--ghost" style="font-size:0.82rem; padding:8px 14px; border:1px solid rgba(217,119,6,0.4); color:var(--gold); margin-top:auto;" target="_blank" rel="noopener">Enquire on WhatsApp &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Item 11: Drainage -->
+          <article class="gallery-project-card stagger-item" data-category="drainage">
+            <div class="gallery-project-card__image">
+              <span class="gallery-project-card__badge">📸 Portfolio Manager Slot</span>
+              <div style="font-weight:800; font-size:1rem; color:#FFFFFF; margin-bottom:4px;">Project Photo #11</div>
+              <div style="font-size:0.78rem; color:rgba(255,255,255,0.65);">Wokingham, Berkshire</div>
+            </div>
+            <div class="gallery-project-card__body">
+              <span style="color:#D97706; font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; display:block; margin-bottom:4px;">Drainage &amp; Kerbs</span>
+              <h3 style="font-size:1.15rem; font-weight:800; color:#FFFFFF; margin-bottom:6px;">Council Dropped Kerb &amp; ACO Drains</h3>
+              <p style="font-size:0.86rem; color:rgba(255,255,255,0.72); line-height:1.5; margin-bottom:14px;">Highway-spec dropped kerb vehicle access crossover with linear slot drainage.</p>
+              <a href="https://wa.me/447760356450?text=Hi%20Mike,%20I'd%20like%20a%20quote%20for%20a%20dropped%20kerb%20or%20drainage%20in%20Berkshire." class="btn btn--ghost" style="font-size:0.82rem; padding:8px 14px; border:1px solid rgba(217,119,6,0.4); color:var(--gold); margin-top:auto;" target="_blank" rel="noopener">Enquire on WhatsApp &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Item 12: Block Paving -->
+          <article class="gallery-project-card stagger-item" data-category="block-paving">
+            <div class="gallery-project-card__image">
+              <span class="gallery-project-card__badge">📸 Portfolio Manager Slot</span>
+              <div style="font-weight:800; font-size:1rem; color:#FFFFFF; margin-bottom:4px;">Project Photo #12</div>
+              <div style="font-size:0.78rem; color:rgba(255,255,255,0.65);">Barkham, Berkshire</div>
+            </div>
+            <div class="gallery-project-card__body">
+              <span style="color:#D97706; font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; display:block; margin-bottom:4px;">Block Paving</span>
+              <h3 style="font-size:1.15rem; font-weight:800; color:#FFFFFF; margin-bottom:6px;">Charcoal Permeable Block Paving</h3>
+              <p style="font-size:0.86rem; color:rgba(255,255,255,0.72); line-height:1.5; margin-bottom:14px;">Modern permeable block paving with clean charcoal tones and integrated threshold drain.</p>
+              <a href="https://wa.me/447760356450?text=Hi%20Mike,%20I'd%20like%20a%20quote%20for%20permeable%20block%20paving%20in%20Berkshire." class="btn btn--ghost" style="font-size:0.82rem; padding:8px 14px; border:1px solid rgba(217,119,6,0.4); color:var(--gold); margin-top:auto;" target="_blank" rel="noopener">Enquire on WhatsApp &rarr;</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         PRE-FOOTER CTA ACTION BAR
+    ══════════════════════════════ -->
+    <section class="cta-section" aria-label="Get in touch prompt" style="background:#080D1C; padding:72px 0; text-align:center; border-top:1px solid rgba(255,255,255,0.1); border-bottom:1px solid rgba(255,255,255,0.1);">
+      <div class="container" style="max-width:850px; margin:0 auto;">
+        <span class="section-eyebrow" style="color:var(--gold); display:block; margin-bottom:10px;">Direct Contractor Service</span>
+        <h2 style="font-family:var(--font-heading); font-size:clamp(1.8rem,4vw,2.6rem); font-weight:800; color:#fff; letter-spacing:-0.02em; margin-bottom:12px;">Ready to Transform Your Driveway?</h2>
+        <p style="color:rgba(255,255,255,0.8); font-size:1.05rem; max-width:540px; margin-inline:auto; margin-bottom:32px; line-height:1.6;">Book a free, no-obligation site measurement with Mike. Clear written quote, honest contractor rates, and zero sales pressure.</p>
+        
+        <div class="cta-section__actions" style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-bottom:24px;">
+          <a href="tel:07760356450" class="btn btn--primary" style="font-size:0.95rem; padding:16px 36px;">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            Call 07760 356450
+          </a>
+          <a href="https://wa.me/447760356450?text=Hi%20Mike,%20I'd%20like%20to%20book%20a%20free%20site%20survey%20for%20my%20driveway/patio%20in%20Berkshire." class="btn btn--ghost" style="font-size:0.95rem; padding:16px 36px; border:1px solid rgba(255,255,255,0.4);" target="_blank" rel="noopener">
+            Get Free Estimate &rarr;
+          </a>
+        </div>
+
+        <p style="font-size:0.88rem; color:rgba(255,255,255,0.65); letter-spacing:0.02em; margin:0;">
+          Mon–Sat: 7:30am – 6:00pm &nbsp;&middot;&nbsp; Across Wokingham, Reading, Bracknell &amp; Berkshire
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════
+       FOOTER
+  ══════════════════════════════ -->
+  <footer class="footer" style="background:#060913; padding:72px 0 32px; color:rgba(255,255,255,0.75);">
+    <div class="container">
+      <div class="footer__grid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:40px; margin-bottom:56px;">
+
+        <!-- Column 1: Brand & Google Maps Widget -->
+        <div class="footer__brand">
+          <div style="margin-bottom:18px;">
+            <div class="footer-brand-card" style="width:170px; background:linear-gradient(145deg, #1E293B 0%, #0F172A 100%); border:1.5px solid rgba(217,119,6,0.45); border-radius:14px; padding:16px 14px; text-align:center; box-shadow:0 8px 24px rgba(0,0,0,0.5); display:inline-flex; flex-direction:column; align-items:center; gap:8px;">
+              <img src="assets/revvi-brick-transparent.png" alt="Revvi Driveways" style="height:36px; width:auto; filter:drop-shadow(0 2px 8px rgba(217,119,6,0.6));">
+              <div style="font-weight:900; font-size:1.05rem; letter-spacing:0.02em; color:#FFFFFF; line-height:1.1;">
+                REVVI <span style="color:#F1F5F9; font-weight:400; text-shadow:0 0 1px rgba(255,255,255,0.7);">DRIVEWAYS</span>
+              </div>
+              <div style="font-size:0.58rem; font-weight:800; color:#D97706; letter-spacing:0.06em; text-transform:uppercase; line-height:1.2;">
+                Block Paving Tarmac &amp; Patios
+              </div>
+            </div>
+          </div>
+          <p style="font-size:0.92rem; line-height:1.6; margin-bottom:16px; color:rgba(255,255,255,0.7);">
+            Berkshire's trusted driveway &amp; patio specialists. Direct local contractor pricing, heavy-duty 200mm excavation depths, and guaranteed workmanship.
+          </p>
+          <div style="border-radius:10px; overflow:hidden; border:1px solid rgba(255,255,255,0.15); height:130px;">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79836.87768564286!2d-0.793!3d51.522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876615b16f1c4e7%3A0xffebcf125b2820d8!2sWokingham!5e0!3m2!1sen!2suk!4v1700000000000!5m2!1sen!2suk" 
+              style="width:100%; height:100%; border:0; filter:invert(90%) hue-rotate(180deg);" 
+              allowfullscreen="" 
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Column 2: Specialist Trades -->
+        <div>
+          <h3 class="footer__heading" style="color:#fff; font-size:1.05rem; font-weight:700; margin-bottom:20px; text-transform:uppercase; letter-spacing:0.05em;">Our Specialist Trades</h3>
+          <ul class="footer__links" role="list" style="list-style:none; padding:0; display:flex; flex-direction:column; gap:10px; font-size:0.92rem;">
+            <li><a href="services.html#block-paving" style="color:inherit; text-decoration:none;">Block Paving &amp; Driveways</a></li>
+            <li><a href="services.html#tarmac" style="color:inherit; text-decoration:none;">Tarmacadam &amp; Asphalt</a></li>
+            <li><a href="services.html#resin-bound" style="color:inherit; text-decoration:none;">UV-Stable Resin Bound</a></li>
+            <li><a href="services.html#patios" style="color:inherit; text-decoration:none;">Porcelain &amp; Natural Stone Patios</a></li>
+            <li><a href="services.html#gravel" style="color:inherit; text-decoration:none;">Gravel &amp; Stabilised Shingle</a></li>
+            <li><a href="services.html#drainage" style="color:inherit; text-decoration:none;">Dropped Kerbs &amp; Drainage</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Navigation -->
+        <div>
+          <h3 class="footer__heading" style="color:#fff; font-size:1.05rem; font-weight:700; margin-bottom:20px; text-transform:uppercase; letter-spacing:0.05em;">Quick Links</h3>
+          <ul class="footer__links" role="list" style="list-style:none; padding:0; display:flex; flex-direction:column; gap:10px; font-size:0.92rem;">
+            <li><a href="index.html" style="color:inherit; text-decoration:none;">Home</a></li>
+            <li><a href="services.html" style="color:inherit; text-decoration:none;">All Services</a></li>
+            <li><a href="gallery.html" style="color:inherit; text-decoration:none;">Recent Work</a></li>
+            <li><a href="index.html#why-us" style="color:inherit; text-decoration:none;">Why Choose Us</a></li>
+            <li><a href="contact.html" style="color:inherit; text-decoration:none;">Contact &amp; Quotes</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Direct Contact -->
+        <div>
+          <h3 class="footer__heading" style="color:#fff; font-size:1.05rem; font-weight:700; margin-bottom:20px; text-transform:uppercase; letter-spacing:0.05em;">Direct Contact</h3>
+          <p style="font-size:0.92rem; line-height:1.6; margin-bottom:14px;">Speak directly with Mike for surveys, advice &amp; written quotes:</p>
+          <a href="tel:07760356450" style="display:block; font-size:1.15rem; font-weight:800; color:var(--gold); text-decoration:none; margin-bottom:8px;">07760 356450</a>
+          <p style="font-size:0.85rem; color:rgba(255,255,255,0.6); margin-bottom:16px;">Wokingham, RG40 &middot; Covering all Berkshire</p>
+          <a href="https://wa.me/447760356450?text=Hi%20Mike,%20I'd%20like%20to%20get%20a%20free%20quote%20for%20a%20driveway%20in%20Berkshire." class="btn btn--primary" style="font-size:0.88rem; padding:10px 20px;" target="_blank" rel="noopener">WhatsApp Mike Direct &rarr;</a>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom" style="border-top:1px solid rgba(255,255,255,0.1); padding-top:28px; text-align:center; font-size:0.84rem; color:rgba(255,255,255,0.5);">
+        &copy; 2026 Revvi Driveways. All rights reserved. &middot; Specialist Block Paving, Resin &amp; Tarmac in Berkshire.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

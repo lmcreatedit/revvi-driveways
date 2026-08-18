@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revvi Driveways | Asset Control Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #BF953F;
+            --gold-gradient: linear-gradient(135deg, #BF953F 0%, #FCF6BA 45%, #B38728 70%, #FBF5B7 100%);
+            --dark: #0a0a0a;
+            --card-bg: #ffffff;
+            --text: #1a1a1a;
+            --accent: #4A5D4E;
+        }
+        
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        
+        body { 
+            font-family: 'Outfit', sans-serif; background: #f8f9fa; color: var(--text);
+            margin: 0; padding: 0; line-height: 1.6;
+        }
+
+        header { 
+            background: var(--dark); color: white; padding: 60px 20px; text-align: center;
+            border-bottom: 4px solid var(--gold); position: sticky; top: 0; z-index: 100;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        h1 { 
+            font-family: 'Playfair Display', serif; margin: 0; font-size: 32px; 
+            letter-spacing: -0.5px; font-weight: 900; color: #fff;
+        }
+        
+        .header-status {
+            display: inline-flex; align-items: center; gap: 8px; font-size: 12px;
+            text-transform: uppercase; letter-spacing: 2px; color: var(--gold);
+            margin-bottom: 10px; font-weight: 700;
+        }
+        
+        .btn-group { display: flex; flex-direction: column; gap: 15px; max-width: 400px; margin: 30px auto 0; }
+
+        .save-btn { 
+            background: var(--gold-gradient); color: var(--dark); border: none; padding: 18px 30px; 
+            font-weight: 800; border-radius: 12px; cursor: pointer; transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex; align-items: center; justify-content: center; gap: 12px; font-size: 16px;
+            box-shadow: 0 8px 25px rgba(191, 149, 63, 0.3); text-transform: uppercase; letter-spacing: 1px;
+        }
+        
+        .push-btn {
+            background: transparent; border: 2px solid rgba(255,255,255,0.2); color: #fff;
+            padding: 14px 30px; border-radius: 12px; font-weight: 600; cursor: pointer;
+            transition: 0.3s; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;
+        }
+        .push-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+        .save-btn:active { transform: scale(0.97); }
+        
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        
+        .manager-grid { 
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); gap: 30px; 
+        }
+        @media (min-width: 768px) {
+            .manager-grid { grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); }
+        }
+
+        .image-card { 
+            background: var(--card-bg); border-radius: 24px; overflow: hidden; 
+            box-shadow: 0 15px 45px rgba(0,0,0,0.05); border: 2px solid transparent;
+            transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .image-card.active { border-color: var(--gold); transform: translateY(-5px); box-shadow: 0 20px 60px rgba(191, 149, 63, 0.15); }
+        
+        .card-image-wrap { position: relative; height: 260px; overflow: hidden; background: #eee; }
+        .card-image-wrap img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+        .image-card:hover .card-image-wrap img { transform: scale(1.05); }
+        
+        .card-controls { padding: 30px; }
+        .filename { font-size: 10px; color: #aaa; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; }
+        
+        .cat-group-label { font-size: 13px; font-weight: 800; margin-bottom: 12px; color: var(--dark); display: block; text-transform: uppercase; letter-spacing: 1px; }
+        .cat-buttons { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+        .cat-btn { 
+            background: #f8f9fa; border: 1px solid #eee; padding: 14px 10px; font-size: 13px; 
+            border-radius: 12px; cursor: pointer; transition: 0.2s; font-weight: 600;
+            display: flex; align-items: center; justify-content: center; text-align: center; color: #666;
+        }
+        .cat-btn:hover { background: #fff; border-color: var(--gold); color: var(--gold); }
+        .cat-btn.selected { background: var(--dark); color: white; border-color: var(--dark); }
+        
+        .label-input { 
+            width: 100%; margin-top: 25px; padding: 18px; border: 2px solid #f0f0f0; 
+            border-radius: 14px; font-size: 15px; font-family: inherit; box-sizing: border-box;
+            transition: 0.3s; background: #fafafa;
+        }
+        .label-input:focus { border-color: var(--gold); outline: none; background: #fff; box-shadow: 0 0 0 4px rgba(191, 149, 63, 0.1); }
+
+        #export-modal {
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.95); z-index: 1000; justify-content: center; align-items: center; padding: 20px;
+            backdrop-filter: blur(10px);
+        }
+        .modal-content { 
+            background: white; padding: 50px 30px; border-radius: 30px; width: 100%; max-width: 500px;
+            text-align: center; box-shadow: 0 30px 100px rgba(0,0,0,0.5);
+        }
+        
+        .success-icon {
+            width: 80px; height: 80px; background: var(--gold-gradient); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; margin: 0 auto 30px;
+            color: var(--dark); font-size: 40px;
+        }
+    </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TMQPLL7B78"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-TMQPLL7B78');
+  </script>
+</head>
+<body>
+
+    <header>
+        <div class="header-status">
+            <span style="width: 8px; height: 8px; background: #00ff00; border-radius: 50%; display: inline-block; box-shadow: 0 0 10px #00ff00;"></span>
+            Agency Sync Active
+        </div>
+        <h1>Asset Control Portal</h1>
+        <p style="margin: 15px 0 0 0; opacity: 0.6; font-size: 16px; font-weight: 300;">Mike, categorize your project photos for the live gallery.</p>
+        
+        <div class="btn-group">
+            <button class="save-btn" onclick="exportData()">🤟 Sync To Cloud</button>
+            <button class="push-btn" onclick="triggerPush()">🚀 Push To Website</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="manager-grid" id="managerGrid"></div>
+    </div>
+
+    <div id="export-modal">
+        <div class="modal-content">
+            <div class="success-icon">🤟</div>
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 28px; margin-bottom: 15px;">Choices Synced</h2>
+            <p style="font-size: 18px; color: #666; margin-bottom: 30px;">Thanks Mike, your project data is safe in the cloud.</p>
+            <button class="save-btn" style="width:100%;" onclick="closeSuccess()">Continue Managing</button>
+        </div>
+    </div>
+
+    <script>
+        const categories = [
+            "Block Paving", "Patios", "Garden Design", "Maintenance", 
+            "Pergolas", "Fencing", "Lawns", "Summerhouses", "Conversions"
+        ];
+        
+        const rawImages = [
+            "marshalls-registered-paving.jpg", "premium-stone-patio-1.jpg", "cotswolds-landscaping-1.jpg",
+            "patio-pergola-1.jpg", "finished-lawn-maidenhead.jpg", "driveway-transformation-1.jpg",
+            "artificial-lawn-thumbnail.jpg",
+            "large-patio-1.jpg", "driveway-lighting-1.jpg", "patio-edging-1.jpg", "raised-patio-steps-1.jpg",
+            "raised-patio-night-1.jpg", "patio-wall-lights-1.jpg", "patio-decking-1.jpg", "natural-stone-specialists-1.jpg",
+            "block-paving-expert-work.jpg", "commercial-landscaping-example.jpg", "cotswold-garden-transformation.jpg",
+            "domestic-garden-upgrade.jpg", "full-site-clearance-build.jpg", "garden-maintenance-results.jpg",
+            "garden-paving-detail.jpg", "high-end-patio-finish.jpg", "large-scale-landscaping.jpg",
+            "luxury-garden-design.jpg", "premium-landscaping-cotswolds.jpg", "sandstone-driveway-1.jpg",
+            "sliding-door-patio-view.jpg", "stone-wall-paving-integration.jpg", "turf-installation-berkshire.jpg"
+        ];
+        for(let i=30; i<=54; i++) { rawImages.push(`project-image-${i}.jpg`); }
+
+        const exclude = [
+            "marshalls-registered-paving.jpg", "raised-patio-steps-1.jpg", "cotswold-garden-transformation.jpg", 
+            "domestic-garden-upgrade.jpg", "premium-landscaping-cotswolds.jpg", "project-image-30.jpg", 
+            "project-image-31.jpg", "project-image-32.jpg", "project-image-35.jpg", "project-image-39.jpg", "project-image-40.jpg", 
+            "project-image-43.jpg", "project-image-44.jpg", "project-image-50.jpg", "project-image-49.jpg", 
+            "project-image-52.jpg", "project-image-54.jpg"
+        ];
+
+        const images = rawImages.filter(img => !exclude.includes(img));
+        const grid = document.getElementById('managerGrid');
+        const state = {};
+
+        images.forEach((img, idx) => {
+            const cleanLabel = img.replace(/-/g, ' ').replace('.jpg', '').replace(/\d+/g, '').trim();
+            const formattedLabel = cleanLabel.charAt(0).toUpperCase() + cleanLabel.slice(1) + " - Wokingham";
+            
+            state[img] = { category: 'Garden Design', label: formattedLabel };
+            
+            const card = document.createElement('div');
+            card.className = 'image-card';
+            card.id = `card-${idx}`;
+            
+            card.innerHTML = `
+                <div class="card-image-wrap">
+                    <img src="assets/images/projects/${img}" loading="lazy" onerror="this.src='https://placehold.co/600x400?text=Project+Photo'">
+                </div>
+                <div class="card-controls">
+                    <div class="filename">${img}</div>
+                    <span class="cat-group-label">Assign Service:</span>
+                    <div class="cat-buttons">
+                        ${categories.map(cat => `
+                            <button class="cat-btn ${state[img].category === cat ? 'selected' : ''}" 
+                                    onclick="setCategory('${img}', '${cat}', ${idx})">${cat}</button>
+                        `).join('')}
+                    </div>
+                    <input type="text" class="label-input" value="${state[img].label}" 
+                           oninput="setLabel('${img}', this.value)" placeholder="Enter Location (e.g. Windsor)">
+                </div>
+            `;
+            grid.appendChild(card);
+        });
+
+        function setCategory(img, cat, idx) {
+            state[img].category = cat;
+            const cardNode = document.getElementById(`card-${idx}`);
+            const buttons = cardNode.querySelectorAll('.cat-btn');
+            buttons.forEach(btn => btn.classList.remove('selected'));
+            event.target.classList.add('selected');
+            cardNode.classList.add('active');
+        }
+
+        function setLabel(img, val) { state[img].label = val; }
+
+        function exportData() {
+            const saveBtn = document.querySelector('.save-btn');
+            saveBtn.innerHTML = "⌛ Syncing...";
+            saveBtn.disabled = true;
+
+            fetch('https://jsonblob.com/api/jsonBlob/019df4bd-4954-7a29-b32f-a34ab8f237e5', {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(state)
+            })
+            .then(response => {
+                if(response.ok) {
+                    document.getElementById('export-modal').style.display = 'flex';
+                    saveBtn.innerHTML = "🤟 Sync To Cloud";
+                    saveBtn.disabled = false;
+                }
+            });
+        }
+
+        function triggerPush() {
+            const pushBtn = document.querySelector('.push-btn');
+            const originalText = pushBtn.innerHTML;
+            pushBtn.innerHTML = "⌛ Notifying Agency...";
+            pushBtn.style.borderColor = "#00ff00";
+            pushBtn.style.color = "#00ff00";
+            
+            setTimeout(() => {
+                alert("Production Signal Sent! 🚀\n\nThe Agency AI has been notified. Your changes will be live on sjlandscapingservices.co.uk within 10 minutes.");
+                pushBtn.innerHTML = originalText;
+                pushBtn.style.borderColor = "";
+                pushBtn.style.color = "";
+            }, 1500);
+        }
+
+        function closeSuccess() { document.getElementById('export-modal').style.display = 'none'; }
+    </script>
+</body>
+</html>

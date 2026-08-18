@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revvi Driveways | Project Handover & Growth Roadmap</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --surface: #121212;
+            --gold: #C9A84C;
+            --gold-light: #dfc57d;
+            --text-main: #ffffff;
+            --text-dim: #a0a0a0;
+            --border: rgba(201, 168, 76, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg);
+            background-image: radial-gradient(circle at 10% 20%, rgba(201, 168, 76, 0.05) 0%, transparent 40%),
+                              radial-gradient(circle at 90% 80%, rgba(201, 168, 76, 0.05) 0%, transparent 40%);
+            color: var(--text-main);
+            font-family: 'Outfit', sans-serif;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .report-container {
+            max-width: 900px;
+            margin: 0 auto;
+            border: 1px solid var(--border);
+            background: rgba(18, 18, 18, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+        }
+
+        header {
+            padding: 60px 40px;
+            border-bottom: 1px solid var(--border);
+            background: linear-gradient(to bottom, rgba(201, 168, 76, 0.05), transparent);
+            text-align: center;
+        }
+
+        .agency-logo {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--gold);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -0.02em;
+        }
+
+        .subtitle {
+            color: var(--text-dim);
+            font-size: 1.1rem;
+        }
+
+        .content-body {
+            padding: 60px 80px;
+        }
+
+        @media (max-width: 768px) {
+            .content-body { padding: 40px 20px; }
+            h1 { font-size: 2rem; }
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h2::after {
+            content: "";
+            height: 1px;
+            flex-grow: 1;
+            background: var(--border);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 16px;
+            transition: 0.3s;
+        }
+
+        .feature-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+            background: rgba(201, 168, 76, 0.03);
+        }
+
+        .feature-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--gold-light);
+        }
+
+        .feature-card p {
+            font-size: 0.95rem;
+            color: var(--text-dim);
+        }
+
+        .deal-box {
+            background: linear-gradient(135deg, rgba(201, 168, 76, 0.15), rgba(18, 18, 18, 0.4));
+            border: 1px solid var(--gold);
+            padding: 50px 40px;
+            border-radius: 24px;
+            position: relative;
+            margin-top: 40px;
+            box-shadow: 0 0 50px rgba(201, 168, 76, 0.1);
+            overflow: hidden;
+        }
+
+        .deal-box::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--gold), transparent);
+        }
+
+        @keyframes pulse-star {
+            0% { transform: scale(1); filter: drop-shadow(0 0 0px var(--gold)); }
+            50% { transform: scale(1.1); filter: drop-shadow(0 0 8px var(--gold)); }
+            100% { transform: scale(1); filter: drop-shadow(0 0 0px var(--gold)); }
+        }
+
+        .deal-box {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border);
+            padding: 40px;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .deal-box::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(201, 168, 76, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .deal-tag {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: rgba(201, 168, 76, 0.1);
+            padding: 6px 15px;
+            border-radius: 50px;
+            border: 1px solid rgba(201, 168, 76, 0.3);
+        }
+
+        .deal-box svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--gold);
+            animation: pulse-star 3s infinite ease-in-out;
+        }
+
+        .deal-box h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .deal-content {
+            font-size: 1.1rem;
+            color: var(--text-main);
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        .next-steps-list {
+            list-style: none;
+        }
+
+        .next-steps-list li {
+            margin-bottom: 15px;
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .next-steps-list li span {
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        footer {
+            padding: 40px;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--gold);
+            color: #000;
+            text-decoration: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            margin-top: 30px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--gold-light);
+            box-shadow: 0 0 30px rgba(201, 168, 76, 0.3);
+        }
+    </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TMQPLL7B78"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-TMQPLL7B78');
+  </script>
+</head>
+<body>
+
+<div class="report-container">
+    <header>
+        <div class="agency-logo">LM Created It</div>
+        <h1>Project Completion & Roadmap</h1>
+        <div class="subtitle">Revvi Driveways — Official Handover</div>
+    </header>
+
+    <div class="content-body">
+        <section>
+            <h2>Deliverables Built</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>Premium 6-Page Site</h3>
+                    <p>High-conversion landscape for Mike’s business authority. Desktop & Mobile optimized.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Visual Deficit Fix</h3>
+                    <p>Dark forest aesthetic designed to sell £25k-£100k projects to premium clients.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Lead Engine</h3>
+                    <p>Formspree integration and verified click-to-call phone features for instant booking.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Brand Asset Pack</h3>
+                    <p>Custom square branding logo optimized for Google Storefront and social profiles.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Performance & Visibility</h2>
+            <p style="margin-bottom: 20px; line-height: 1.6;">The site is now live at <a href="https://revvidriveways.services" target="_blank" style="color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(201, 168, 76, 0.3);">revvidriveways.services</a>. We have deployed <strong>Edge-Cache Distribution</strong> and <strong>Semantic SEO</strong> structures to ensure your business dominates local search results in Wokingham, Windsor, and Ascot.</p>
+        </section>
+
+        <section>
+            <h2>The Growth Phase</h2>
+            <p>Now that the website is a conversion machine, the next step is <strong>Paid Ad Management</strong>. We target specific high-wealth postcodes to ensure you only deal with serious inquiries.</p>
+            
+            <div class="deal-box">
+                <div class="deal-tag">
+                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    Active Offer
+                </div>
+                <h3>The Founder’s Deal</h3>
+                <div class="deal-content">
+                    Refer <strong>LM Created It</strong> to two new business owners who sign for a website build, and we will provide your <strong>first full month of Google Ads Setup & Management at ZERO COST.</strong>
+                </div>
+                <p style="font-size: 0.8rem; opacity: 0.6; color: var(--text-dim);">*Excludes ad spend. Limited to first 2 successful referrals. Valid for 7 days from launch.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Next Steps</h2>
+            <ul class="next-steps-list">
+                <li style="opacity: 0.5;"><span>01</span> <del>Sign Partnership Retainer (£££)</del></li>
+                <li><span>02</span> Sync Live Customer Reviews to Site.</li>
+                <li><span>03</span> Activation of the Founder’s Deal.</li>
+            </ul>
+        </section>
+
+        <div style="text-align: center;">
+            <a href="https://revvidriveways.services" target="_blank" class="btn">View Live Website</a>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 LM Created It. Built for high-ticket service businesses.
+    </footer>
+</div>
+
+</body>
+</html>

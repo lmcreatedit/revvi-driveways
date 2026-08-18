@@ -1,0 +1,181 @@
+# SJ Landscapes — Full Site Content
+
+> Version: April 2026
+> Source: https://sjlandscapes.services/
+
+---
+
+## Business Information
+
+**Company:** SJ Landscapes
+**Owner:** Samuel Simmonds
+**Type:** Landscaping and outdoor construction company
+**Location:** Maidenhead, Berkshire, SL6
+**Phone:** 07501 331620
+**Email:** samuel@sjlandscapes.services
+**Website:** https://sjlandscapes.services
+**Hours:** Monday–Friday 08:00–18:00 (weekends by arrangement)
+**Price range:** ££
+**Service area:** Maidenhead, Windsor, Marlow, Wokingham, Slough, Henley-on-Thames, Reading, Watford, and wider Berkshire
+
+---
+
+## Homepage (index.html)
+
+**Title:** SJ Landscapes | Landscaping Specialists in Maidenhead, Berkshire
+**Meta description:** Maidenhead's trusted landscaping and outdoor construction company. Block paving, patios, full garden design and build, pergolas, fencing and more across Berkshire. Book a free consultation.
+
+### Hero
+
+**Eyebrow:** Based in Maidenhead — Covering Berkshire & Beyond
+**Heading:** Transform Your Outdoor Space.
+**Subheading:** SJ Landscapes is Maidenhead's trusted landscaping and outdoor construction company. From block paving and patios to full garden redesigns — we build spaces that last.
+**CTAs:** Book a Free Consultation / View Our Work
+**Social proof:** 5-star rated · Trusted by homeowners across Berkshire
+
+### Services Overview
+
+Everything Your Outdoor Space Needs. From a single patio to a complete garden transformation — we cover all of it, from start to finish.
+
+Services: Block Paving · Patios · Landscape Design & Build · Pergolas · Fencing & Gates · Summerhouse Builds · Artificial & Real Turf Lawns · Garage & Loft Conversions
+
+### Why Choose SJ Landscapes
+
+**Quality Guaranteed:** Every project is built with premium materials and backed by our quality commitment. We don't cut corners.
+
+**Free Consultation:** We visit your property, understand your vision, and provide a detailed quote with no pressure and no obligation.
+
+**Local Experts:** Based in Maidenhead, we know the area and the weather. Our work is designed to last in the British climate.
+
+**Fully Managed:** From groundworks to final finish, we manage every stage of your project. One point of contact throughout.
+
+**Premium Materials:** We specify and source quality materials — natural stone, premium block paving, commercial-grade artificial turf.
+
+**5-Star Rated:** Our work speaks for itself. Trusted by homeowners and recommended across Berkshire and surrounding areas.
+
+### Stats
+
+- 150+ Projects Completed
+- 5+ Years Experience
+- 5-Star Rated
+- 100% Satisfaction
+
+### Service Area
+
+Maidenhead · Windsor · Marlow · Wokingham · Slough · Henley-on-Thames · Reading · Watford · Berkshire · and surrounding areas
+
+### Contact CTA
+
+Ready to Transform Your Garden? Book a free site visit today. We'll assess your space, discuss your vision, and provide a detailed no-obligation quote within 48 hours.
+
+---
+
+## About Page (about.html)
+
+**Title:** About Us | SJ Landscapes — Maidenhead Landscaping Specialists
+**Meta description:** Meet Samuel Simmonds, founder of SJ Landscapes. Maidenhead-based landscaping and outdoor construction specialists serving Berkshire and surrounding areas.
+
+### Content
+
+SJ Landscapes was founded by Samuel Simmonds with a simple belief — that every outdoor space deserves to be built properly, using the right materials, with the care and attention it takes to make it last.
+
+Based in Maidenhead and covering Berkshire and surrounding areas, we handle everything from single driveways and patios to complete garden transformations. Whatever the scale of your project, you get the same thing: honest advice, quality workmanship, and a result you'll be proud of.
+
+We're not a large contractor with dozens of crews — every job gets Samuel's direct involvement. That means consistent quality, clear communication, and someone who genuinely cares about the outcome from day one to handover.
+
+### Values
+
+- **Premium Materials:** We only use materials built to last in the British climate — no corners cut, no cheap substitutes.
+- **Clear Communication:** You'll always know what's happening, what's next, and how your project is progressing.
+- **Local Knowledge:** We know Maidenhead and Berkshire — the soil, the weather, the planning considerations that matter.
+- **Finish Line Focus:** The job isn't done until you're completely happy. We stay until the result is right.
+
+---
+
+## Services Page (services.html)
+
+**Title:** Services | SJ Landscapes — Block Paving, Patios & Landscaping in Maidenhead
+**Meta description:** Full landscaping and outdoor construction services in Maidenhead and Berkshire. Block paving, patios, garden design, pergolas, fencing, summerhouses, artificial lawns and more.
+
+### Block Paving (#block-paving)
+
+Transform your driveway, path, or patio with quality block paving. We work with a full range of block types — standard concrete, tegula, tumbled cobbles, and more — all professionally laid on a proper sub-base for a finish that lasts. Based in Maidenhead, we complete block paving projects across Berkshire.
+
+### Patios (#patios)
+
+A well-designed patio adds real value to your home and extends your living space outdoors. We install patios in natural stone, porcelain, sandstone, limestone, and Indian sandstone — all properly bedded and pointed. From compact seating areas to large entertaining spaces across Maidenhead and Berkshire.
+
+### Landscape Design & Build (#landscape-design)
+
+Full garden transformations from start to finish. We handle the design, groundworks, hard landscaping, planting, and finishing — everything managed under one roof. Whether you want a low-maintenance modern garden or a lush, layered outdoor space, we'll design and build it to your brief across Berkshire and surrounding areas.
+
+### Pergolas (#pergolas)
+
+A pergola creates a defined outdoor room — perfect for dining, relaxing, or entertaining. We build pergolas in timber and aluminium, freestanding or wall-mounted, with optional integrated lighting and climbing plant trellis. Fully bespoke to your garden's dimensions and style. Serving Maidenhead, Windsor, Marlow and across Berkshire.
+
+### Fencing & Gates (#fencing)
+
+Quality fencing and gate installation for privacy, security, and kerb appeal. We install close-board, feather-edge, trellis, and timber panel fencing, plus bespoke timber and metal gates. All posts are properly set in concrete for a fence that stays upright for years. Covering Maidenhead, Berkshire and surrounding areas.
+
+### Summerhouse Builds (#summerhouses)
+
+A summerhouse adds usable space to your garden — ideal as a home office, studio, gym, or relaxation space. We design and build custom summerhouses to suit your garden and budget, handling foundations, structure, cladding, roofing, and internal finishing. Built to last across Berkshire's climate.
+
+### Artificial & Real Turf Lawns (#lawns)
+
+Whether you want the low-maintenance look of premium artificial grass or the natural feel of freshly laid turf, we install both to a high standard. Artificial lawns are installed on a proper aggregate base with good drainage — not just on soil. Real turf is sourced from quality suppliers and laid on prepared topsoil. Serving Maidenhead and Berkshire.
+
+### Garage & Loft Conversions (#conversions)
+
+Make the most of the space you already have. We convert garages and lofts into usable living space — home offices, playrooms, guest bedrooms, and more. Full conversion service including structural work, insulation, plastering, and finishing. Covering Maidenhead, Berkshire and surrounding areas.
+
+---
+
+## Gallery Page (gallery.html)
+
+**Title:** Projects Gallery | SJ Landscapes — Landscaping Work in Maidenhead & Berkshire
+**Meta description:** Browse SJ Landscapes' portfolio of completed projects — block paving, patios, garden designs, pergolas, fencing and more across Maidenhead and Berkshire.
+
+Portfolio of completed landscaping and outdoor construction projects. Filterable by: Block Paving, Patios, Landscaping, Fencing, Pergolas, Lawns. Projects located across Maidenhead, Windsor, Marlow, Wokingham, Slough, Henley-on-Thames, and Berkshire.
+
+---
+
+## Contact Page (contact.html)
+
+**Title:** Get a Free Quote | SJ Landscapes — Landscaping & Paving in Maidenhead
+**Meta description:** Get a free, no-obligation quote from SJ Landscapes. We cover Maidenhead, Berkshire and surrounding areas. Call 07501 331620 or fill in our quick enquiry form.
+
+Free site visits and no-obligation quotes. We'll visit your property, understand your vision, and provide a detailed quote. Response within 24 hours.
+
+**Phone:** 07501 331620
+**Email:** samuel@sjlandscapes.services
+**Location:** Maidenhead, Berkshire
+**Hours:** Monday–Friday 08:00–18:00 (weekends by arrangement)
+
+Areas covered: Maidenhead · Windsor · Marlow · Wokingham · Slough · Henley-on-Thames · Reading · and beyond
+
+---
+
+## Key SEO Keywords
+
+**Primary:**
+- landscaping Maidenhead
+- landscaping company Berkshire
+- block paving Maidenhead
+- patio installation Maidenhead
+
+**Secondary:**
+- block paving Berkshire
+- garden design Maidenhead
+- patio installers Maidenhead
+- artificial grass Maidenhead
+- fencing Maidenhead
+- pergola builders Berkshire
+- summerhouse builds Berkshire
+- landscaping company near me Maidenhead
+
+---
+
+## Competitors (for context)
+
+Direct local competitor: Walsh Landscaping (Maidenhead) — outdated site, strong local SEO. SJ Landscapes targets the same geographic area with a superior, modern web presence.
