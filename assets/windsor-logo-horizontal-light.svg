@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goldHGradLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5C158"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#AA820A"/>
+    </linearGradient>
+    <filter id="lightShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background Shield Badge (Light Mode with Gold Rim) -->
+  <rect x="10" y="10" width="100" height="100" rx="20" fill="#080C16" stroke="url(#goldHGradLight)" stroke-width="1.5" filter="url(#lightShadow)"/>
+
+  <!-- Crown Icon inside Badge -->
+  <g transform="translate(18, 16) scale(0.84)">
+    <path d="M 22 74 L 78 74 A 2 2 0 0 1 80 76 L 80 79 A 3 3 0 0 1 77 82 L 23 82 A 3 3 0 0 1 20 79 L 20 76 A 2 2 0 0 1 22 74 Z" fill="url(#goldHGradLight)" />
+    <circle cx="32" cy="78" r="1.8" fill="#FFFFFF" opacity="0.9"/>
+    <circle cx="50" cy="78" r="2.2" fill="#FFFFFF" opacity="0.95"/>
+    <circle cx="68" cy="78" r="1.8" fill="#FFFFFF" opacity="0.9"/>
+    <path d="M 20 72 L 16 38 L 34 52 L 50 24 L 66 52 L 84 38 L 80 72 Z" fill="url(#goldHGradLight)" />
+    <circle cx="16" cy="36" r="4.2" fill="url(#goldHGradLight)"/>
+    <circle cx="16" cy="35" r="1.5" fill="#FFFFFF" opacity="0.8"/>
+    <circle cx="50" cy="22" r="5.2" fill="url(#goldHGradLight)"/>
+    <circle cx="50" cy="20.5" r="1.8" fill="#FFFFFF" opacity="0.9"/>
+    <circle cx="84" cy="36" r="4.2" fill="url(#goldHGradLight)"/>
+    <circle cx="84" cy="35" r="1.5" fill="#FFFFFF" opacity="0.8"/>
+  </g>
+
+  <!-- Typography for Light Backgrounds -->
+  <g transform="translate(130, 0)">
+    <!-- Primary Brand Name -->
+    <text x="0" y="62" font-family="'Outfit', 'Inter', -apple-system, sans-serif" font-weight="900" font-size="38" letter-spacing="0.5" fill="#080C16">
+      WINDSOR <tspan fill="#C59B27">SPRAYING</tspan>
+    </text>
+    
+    <!-- Subtitle / Specialty Category -->
+    <text x="2" y="88" font-family="'Inter', -apple-system, sans-serif" font-weight="800" font-size="13" letter-spacing="3.5" fill="#92400E" text-transform="uppercase">
+      UPVC · WINDOWS · DOORS · KITCHENS
+    </text>
+  </g>
+</svg>

@@ -163,12 +163,12 @@
       // ease out cubic
       const eased    = 1 - Math.pow(1 - progress, 3);
       const current  = Math.round(eased * target);
-      el.textContent = current + suffix;
+      el.textContent = (current >= 1000 ? current.toLocaleString() : current) + suffix;
       if (progress < 1) requestAnimationFrame(update);
     }
 
     if (prefersReduced) {
-      el.textContent = target + suffix;
+      el.textContent = (target >= 1000 ? target.toLocaleString() : target) + suffix;
     } else {
       requestAnimationFrame(update);
     }
