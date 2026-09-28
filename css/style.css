@@ -2119,12 +2119,19 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
 }
 
 /* ── HOW IT WORKS / 5-STEP PROCESS ── */
+.section--process {
+  background: #FFFFFF !important;
+  padding: 96px 0 !important;
+  position: relative !important;
+  border-top: 1px solid #F1F5F9 !important;
+  border-bottom: 1px solid #F1F5F9 !important;
+}
 .process-grid-5 {
   display: grid !important;
   grid-template-columns: repeat(5, 1fr) !important;
-  gap: 20px !important;
-  max-width: 1380px !important;
-  margin: 44px auto 0 !important;
+  gap: 24px !important;
+  max-width: 1440px !important;
+  margin: 48px auto 0 !important;
   position: relative !important;
 }
 .process-step-item {
@@ -2133,15 +2140,15 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
   align-items: center !important;
   text-align: center !important;
   position: relative !important;
-  padding: 0 8px !important;
+  padding: 0 6px !important;
 }
 @media (min-width: 1025px) {
   .process-step-item:not(:last-child)::after {
     content: '' !important;
     position: absolute !important;
-    top: 56px !important;
-    left: calc(50% + 36px) !important;
-    right: calc(-50% + 36px) !important;
+    top: 86px !important;
+    left: calc(50% + 42px) !important;
+    right: calc(-50% + 42px) !important;
     height: 2px !important;
     background: linear-gradient(90deg, #D4AF37 0%, rgba(212, 175, 55, 0.25) 100%) !important;
     z-index: 1 !important;
@@ -2149,89 +2156,101 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
 }
 .process-step-item__number {
   font-family: var(--font-heading, 'Outfit', sans-serif) !important;
-  font-size: 2.8rem !important;
+  font-size: 3.5rem !important;
   font-weight: 900 !important;
-  color: #E2E8F0 !important;
+  color: #CBD5E1 !important;
   line-height: 1 !important;
-  margin-bottom: -18px !important;
+  margin-bottom: 10px !important;
   z-index: 1 !important;
-  letter-spacing: -0.02em !important;
-  transition: color 0.3s ease !important;
+  letter-spacing: -0.03em !important;
+  transition: color 0.3s ease, transform 0.3s ease !important;
 }
 .process-step-item:hover .process-step-item__number {
-  color: #CBD5E1 !important;
+  color: #94A3B8 !important;
+  transform: translateY(-2px) !important;
 }
 .process-step-item__icon {
-  width: 56px !important;
-  height: 56px !important;
+  width: 66px !important;
+  height: 66px !important;
   background: #080C16 !important;
-  border: 1.5px solid rgba(212, 175, 55, 0.45) !important;
+  border: 2px solid #D4AF37 !important;
   border-radius: 50% !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   color: #D4AF37 !important;
-  margin-bottom: 16px !important;
+  margin-bottom: 18px !important;
   z-index: 2 !important;
-  box-shadow: 0 6px 18px rgba(8, 12, 22, 0.15) !important;
+  box-shadow: 0 8px 24px rgba(8, 12, 22, 0.18), 0 0 16px rgba(212, 175, 55, 0.22) !important;
   flex-shrink: 0 !important;
   position: relative !important;
   transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
 }
+.process-step-item__icon svg {
+  width: 28px !important;
+  height: 28px !important;
+}
 .process-step-item:hover .process-step-item__icon {
-  transform: translateY(-3px) scale(1.05) !important;
+  transform: translateY(-4px) scale(1.06) !important;
   border-color: #D4AF37 !important;
-  box-shadow: 0 10px 24px rgba(212, 175, 55, 0.25) !important;
+  box-shadow: 0 12px 28px rgba(8, 12, 22, 0.24), 0 0 24px rgba(212, 175, 55, 0.45) !important;
 }
 .process-step-item__title {
   font-family: var(--font-heading, 'Outfit', sans-serif) !important;
-  font-size: 1.05rem !important;
+  font-size: 1.12rem !important;
   font-weight: 800 !important;
   color: #0F172A !important;
-  line-height: 1.35 !important;
-  margin-bottom: 8px !important;
+  line-height: 1.3 !important;
+  margin-bottom: 10px !important;
 }
 .process-step-item__desc {
-  font-size: 0.85rem !important;
-  color: #64748B !important;
-  line-height: 1.58 !important;
-  margin: 0 !important;
+  font-size: 0.88rem !important;
+  color: #475569 !important;
+  line-height: 1.62 !important;
+  max-width: 240px !important;
+  margin: 0 auto !important;
 }
 
 @media (max-width: 1024px) and (min-width: 681px) {
   .process-grid-5 {
     grid-template-columns: repeat(3, 1fr) !important;
-    gap: 36px 20px !important;
+    gap: 40px 24px !important;
   }
 }
 
 @media (max-width: 680px) {
   .section--process {
-    padding: 56px 0 !important;
+    padding: 60px 0 !important;
   }
   .process-grid-5 {
     display: flex !important;
     flex-direction: column !important;
     gap: 36px !important;
-    margin-top: 28px !important;
+    margin-top: 32px !important;
   }
   .process-step-item {
     max-width: 320px !important;
     margin: 0 auto !important;
   }
   .process-step-item__number {
-    font-size: 2.3rem !important;
-    margin-bottom: -15px !important;
+    font-size: 2.8rem !important;
+    margin-bottom: 8px !important;
   }
   .process-step-item__icon {
-    width: 50px !important;
-    height: 50px !important;
+    width: 58px !important;
+    height: 58px !important;
+    margin-bottom: 14px !important;
+  }
+  .process-step-item__icon svg {
+    width: 24px !important;
+    height: 24px !important;
   }
   .process-step-item__title {
-    font-size: 1.0rem !important;
+    font-size: 1.05rem !important;
+    margin-bottom: 8px !important;
   }
   .process-step-item__desc {
-    font-size: 0.84rem !important;
+    font-size: 0.86rem !important;
   }
 }
 
@@ -2907,123 +2926,5 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
   background: radial-gradient(circle at center, rgba(212, 175, 55, 0.25) 0%, transparent 70%);
 }
 
-/* ── ORIGINAL WHITE AESTHETIC 5-STEP PROCESS ── */
-.section--process {
-  background: #FFFFFF !important;
-  padding: 84px 0 !important;
-}
-.process-flow {
-  display: flex !important;
-  align-items: flex-start !important;
-  justify-content: space-between !important;
-  gap: 12px !important;
-  max-width: 1320px !important;
-  margin: 0 auto !important;
-}
-.process-step {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  text-align: center !important;
-  flex: 1 1 0 !important;
-  min-width: 0 !important;
-}
-.process-step__number {
-  font-family: var(--font-heading, 'Outfit', sans-serif) !important;
-  font-size: 2.75rem !important;
-  font-weight: 900 !important;
-  color: #CBD5E1 !important;
-  line-height: 1 !important;
-  margin-bottom: -16px !important;
-  z-index: 1 !important;
-  transition: color 0.3s ease !important;
-}
-.process-step:hover .process-step__number {
-  color: #94A3B8 !important;
-}
-.process-step__icon {
-  width: 52px !important;
-  height: 52px !important;
-  background: #080C16 !important;
-  border: 1.5px solid rgba(212, 175, 55, 0.45) !important;
-  border-radius: 50% !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  color: #D4AF37 !important;
-  margin-bottom: 14px !important;
-  z-index: 2 !important;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18) !important;
-  flex-shrink: 0 !important;
-  transition: transform 0.3s ease, border-color 0.3s ease !important;
-}
-.process-step:hover .process-step__icon {
-  transform: scale(1.08) !important;
-  border-color: #D4AF37 !important;
-}
-.process-step__connector {
-  flex: 0 0 28px !important;
-  height: 2px !important;
-  background: #E2E8F0 !important;
-  margin-top: 40px !important;
-}
-.process-step__title {
-  font-family: var(--font-heading, 'Outfit', sans-serif) !important;
-  font-size: 1.02rem !important;
-  font-weight: 800 !important;
-  color: #0F172A !important;
-  line-height: 1.3 !important;
-  margin-bottom: 8px !important;
-}
-.process-step__desc {
-  font-size: 0.85rem !important;
-  color: #64748B !important;
-  line-height: 1.58 !important;
-  margin: 0 !important;
-}
-
-@media (max-width: 991px) and (min-width: 641px) {
-  .process-flow {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 32px 20px !important;
-  }
-  .process-step__connector {
-    display: none !important;
-  }
-}
-
-@media (max-width: 640px) {
-  .section--process {
-    padding: 56px 0 !important;
-  }
-  .process-flow {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 32px !important;
-  }
-  .process-step__connector {
-    display: none !important;
-  }
-  .process-step {
-    width: 100% !important;
-    max-width: 320px !important;
-    margin: 0 auto !important;
-  }
-  .process-step__number {
-    font-size: 2.4rem !important;
-    margin-bottom: -14px !important;
-  }
-  .process-step__icon {
-    width: 48px !important;
-    height: 48px !important;
-  }
-  .process-step__title {
-    font-size: 0.98rem !important;
-  }
-  .process-step__desc {
-    font-size: 0.82rem !important;
-  }
-}
 
 
