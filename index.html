@@ -21,7 +21,8 @@
   <link rel="canonical" href="https://windsorspraying.co.uk/">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/jpeg" href="assets/windsor-spraying-logo.jpg">
+  <link rel="icon" type="image/png" href="assets/windsor-crown-exact.png">
+  <link rel="apple-touch-icon" href="assets/windsor-crown-exact.png">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -156,8 +157,8 @@
       filter: drop-shadow(0 2px 8px rgba(212, 175, 55, 0.45)) !important;
     }
     .hero__feature-icon svg {
-      width: 24px !important;
-      height: 24px !important;
+      width: 29px !important;
+      height: 29px !important;
     }
     /* ── RIGHT COLUMN: QUOTE CARD (DESKTOP + TALLER BY 7%) ── */
     .hero__form-col {
@@ -390,8 +391,26 @@
       background: rgba(255, 255, 255, 0.35) !important;
     }
 
-    /* ── MOBILE VIEWPORT (HERO TEXT -> 3 BADGES -> QUOTE FORM) ── */
+    .sub-nav-mobile-text {
+      display: none;
+    }
+
+    /* ── MOBILE VIEWPORT (HERO TEXT -> 3 BADGES -> QUOTE FORM + 2x2 SECTIONS) ── */
     @media (max-width: 900px) {
+      .nav__inner {
+        padding-inline: 14px !important;
+      }
+      .nav__logo {
+        margin-right: auto !important;
+        padding-left: 4px !important;
+        gap: 10px !important;
+      }
+      .nav__logo img {
+        height: 48px !important;
+      }
+      .nav__logo span {
+        font-size: 1.30rem !important;
+      }
       .hero {
         height: auto !important;
         min-height: calc(100svh - 110px) !important;
@@ -448,6 +467,302 @@
         display: none !important;
       }
     }
+
+    @media (max-width: 768px) {
+      /* Sub-nav banner compact single line */
+      .sub-nav-banner {
+        font-size: 0.74rem !important;
+        padding: 6px 8px !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+      }
+      .sub-nav-desktop-text {
+        display: none !important;
+      }
+      .sub-nav-mobile-text {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-size: 0.76rem !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.01em !important;
+        white-space: nowrap !important;
+        color: #FFFFFF !important;
+      }
+
+      /* What We Do 2x2 on Mobile */
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+      }
+      .service-card {
+        border-radius: 12px !important;
+      }
+      .service-card .service-card__body {
+        padding: 14px 10px !important;
+      }
+      .service-card__title {
+        font-size: 0.95rem !important;
+        margin-bottom: 4px !important;
+        line-height: 1.25 !important;
+      }
+      .service-card p {
+        font-size: 0.76rem !important;
+        line-height: 1.4 !important;
+        margin-bottom: 8px !important;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 3 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+      }
+      .service-card__cta {
+        font-size: 0.74rem !important;
+      }
+      .service-card .placeholder-badge {
+        font-size: 0.62rem !important;
+        padding: 2px 7px !important;
+        top: 6px !important;
+        left: 6px !important;
+      }
+
+      /* Craftsmanship Video & Highlights */
+      .video-highlights {
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+        padding: 16px 8px 0 !important;
+      }
+      .video-highlight-item {
+        gap: 12px !important;
+      }
+      .video-highlight-item__icon svg {
+        width: 34px !important;
+        height: 34px !important;
+        min-width: 34px !important;
+      }
+      .video-highlight-item__text {
+        font-size: 0.85rem !important;
+        line-height: 1.45 !important;
+      }
+
+      /* Why Choose Us 2x2 Grid */
+      .pillars-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+      }
+      .pillar-card {
+        padding: 14px 10px !important;
+        border-radius: 12px !important;
+      }
+      .pillar-card__icon {
+        width: 36px !important;
+        height: 36px !important;
+        border-radius: 10px !important;
+        margin-bottom: 10px !important;
+      }
+      .pillar-card__icon svg {
+        width: 18px !important;
+        height: 18px !important;
+      }
+      .pillar-card__title {
+        font-size: 0.92rem !important;
+        margin-bottom: 5px !important;
+        line-height: 1.25 !important;
+      }
+      .pillar-card__text {
+        font-size: 0.76rem !important;
+        line-height: 1.38 !important;
+      }
+
+      /* Recent Projects Gallery 2x2 Grid + Micro Badges */
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+      }
+      .gallery-item {
+        grid-column: span 1 !important;
+        aspect-ratio: 16/12 !important;
+        border-radius: 12px !important;
+      }
+      .gallery-item:nth-child(1),
+      .gallery-item:nth-child(4),
+      .gallery-item:nth-child(5) {
+        grid-column: span 1 !important;
+        aspect-ratio: 16/12 !important;
+      }
+      .gallery-item .placeholder-badge {
+        font-size: 0.60rem !important;
+        padding: 2px 7px !important;
+        margin-bottom: 3px !important;
+        border-radius: 4px !important;
+        letter-spacing: 0.02em !important;
+        line-height: 1.2 !important;
+        max-width: 90% !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+      }
+      .gallery-item div[style*="font-size:1.15rem"] {
+        font-size: 0.86rem !important;
+        line-height: 1.2 !important;
+      }
+      .gallery-item div[style*="font-size:0.82rem"] {
+        font-size: 0.70rem !important;
+      }
+      .gallery-item div[style*="padding:20px"] {
+        padding: 8px 10px !important;
+      }
+
+      /* Slim Gallery Bottom CTA Bar */
+      .gallery-cta-whatsapp {
+        font-size: 0.82rem !important;
+        padding: 10px 18px !important;
+        width: 100% !important;
+        justify-content: center !important;
+      }
+      .gallery-cta-whatsapp svg {
+        width: 18px !important;
+        height: 18px !important;
+      }
+      .gallery-cta-all {
+        font-size: 0.82rem !important;
+        padding: 10px 18px !important;
+        width: 100% !important;
+        justify-content: center !important;
+      }
+
+    /* ── ORIGINAL WHITE AESTHETIC 5-STEP PROCESS (SCALED & POLISHED) ── */
+    .section--process {
+      background: #FFFFFF !important;
+      padding: 96px 0 !important;
+      position: relative !important;
+      border-top: 1px solid #F1F5F9 !important;
+      border-bottom: 1px solid #F1F5F9 !important;
+    }
+    .process-grid-5 {
+      display: grid !important;
+      grid-template-columns: repeat(5, 1fr) !important;
+      gap: 24px !important;
+      max-width: 1440px !important;
+      margin: 48px auto 0 !important;
+      position: relative !important;
+    }
+    .process-step-item {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      text-align: center !important;
+      position: relative !important;
+      padding: 0 6px !important;
+    }
+    @media (min-width: 1025px) {
+      .process-step-item:not(:last-child)::after {
+        content: '' !important;
+        position: absolute !important;
+        top: 86px !important;
+        left: calc(50% + 42px) !important;
+        right: calc(-50% + 42px) !important;
+        height: 2px !important;
+        background: linear-gradient(90deg, #D4AF37 0%, rgba(212, 175, 55, 0.25) 100%) !important;
+        z-index: 1 !important;
+      }
+    }
+    .process-step-item__number {
+      font-family: 'Outfit', sans-serif !important;
+      font-size: 3.4rem !important;
+      font-weight: 900 !important;
+      color: #CBD5E1 !important;
+      line-height: 1 !important;
+      margin-bottom: 8px !important;
+      z-index: 1 !important;
+      letter-spacing: -0.03em !important;
+      transition: color 0.3s ease, transform 0.3s ease !important;
+    }
+    .process-step-item:hover .process-step-item__number {
+      color: #94A3B8 !important;
+      transform: translateY(-2px) !important;
+    }
+    .process-step-item__icon {
+      width: 66px !important;
+      height: 66px !important;
+      background: #080C16 !important;
+      border: 2px solid #D4AF37 !important;
+      border-radius: 50% !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      color: #D4AF37 !important;
+      margin-bottom: 18px !important;
+      z-index: 2 !important;
+      box-shadow: 0 8px 24px rgba(8, 12, 22, 0.18), 0 0 16px rgba(212, 175, 55, 0.22) !important;
+      flex-shrink: 0 !important;
+      position: relative !important;
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+    }
+    .process-step-item__icon svg {
+      width: 28px !important;
+      height: 28px !important;
+    }
+    .process-step-item:hover .process-step-item__icon {
+      transform: translateY(-4px) scale(1.06) !important;
+      box-shadow: 0 12px 28px rgba(8, 12, 22, 0.24), 0 0 24px rgba(212, 175, 55, 0.45) !important;
+    }
+    .process-step-item__title {
+      font-family: 'Outfit', sans-serif !important;
+      font-size: 1.12rem !important;
+      font-weight: 800 !important;
+      color: #0F172A !important;
+      line-height: 1.3 !important;
+      margin-bottom: 10px !important;
+    }
+    .process-step-item__desc {
+      font-size: 0.88rem !important;
+      color: #475569 !important;
+      line-height: 1.62 !important;
+      max-width: 240px !important;
+      margin: 0 auto !important;
+    }
+
+    @media (max-width: 1024px) and (min-width: 681px) {
+      .process-grid-5 {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 40px 24px !important;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .section--process {
+        padding: 60px 0 !important;
+      }
+      .process-grid-5 {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 36px !important;
+        margin-top: 32px !important;
+      }
+      .process-step-item {
+        max-width: 320px !important;
+        margin: 0 auto !important;
+      }
+      .process-step-item__number {
+        font-size: 2.8rem !important;
+        margin-bottom: 6px !important;
+      }
+      .process-step-item__icon {
+        width: 58px !important;
+        height: 58px !important;
+      }
+      .process-step-item__icon svg {
+        width: 24px !important;
+        height: 24px !important;
+      }
+      .process-step-item__title {
+        font-size: 1.05rem !important;
+      }
+      .process-step-item__desc {
+        font-size: 0.86rem !important;
+      }
+    }
   </style>
 
   <!-- GSAP -->
@@ -499,13 +814,12 @@
       "@type": "OfferCatalog",
       "name": "Spraying Services",
       "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "UPVC Window Spraying", "url": "https://windsorspraying.co.uk/services.html#windows" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "UPVC Windows & Conservatories", "url": "https://windsorspraying.co.uk/services.html#windows" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Front & Composite Door Spraying", "url": "https://windsorspraying.co.uk/services.html#doors" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kitchen Cabinet Spraying", "url": "https://windsorspraying.co.uk/services.html#kitchens" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Garage Door Spraying", "url": "https://windsorspraying.co.uk/services.html#garage-doors" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conservatory Spraying", "url": "https://windsorspraying.co.uk/services.html#conservatories" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial & Shopfront Spraying", "url": "https://windsorspraying.co.uk/services.html#commercial" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial & Residential Graffiti Removal", "url": "https://windsorspraying.co.uk/services.html#graffiti" } }
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Graffiti Removal & Wall Restoration", "url": "https://windsorspraying.co.uk/services.html#graffiti" } }
       ]
     }
   }
@@ -518,8 +832,8 @@
   ══════════════════════════════ -->
   <nav class="nav" aria-label="Main navigation">
     <div class="nav__inner">
-      <a href="index.html" class="nav__logo" style="display:flex; align-items:center; gap:12px; text-decoration:none;">
-        <img src="assets/windsor-crown-mark.svg" alt="Windsor Spraying Crown Logo" style="height:54px; width:54px; object-fit:contain; filter:drop-shadow(0 2px 10px rgba(212,175,55,0.45)); flex-shrink:0; display:block;">
+      <a href="index.html" class="nav__logo" style="display:flex; align-items:center; gap:14px; text-decoration:none;">
+        <img src="assets/windsor-crown-exact.png" alt="Windsor Spraying Crown Logo" style="height:54px; width:auto; max-width:85px; object-fit:contain; filter:drop-shadow(0 3px 12px rgba(212,175,55,0.45)); flex-shrink:0; display:block;">
         <span style="font-weight:900; font-size:1.45rem; letter-spacing:-0.01em; color:#FFFFFF;">WINDSOR <span style="color:#D4AF37;">SPRAYING</span></span>
       </a>
 
@@ -559,9 +873,14 @@
        BLUE BIRD SUB-NAV ANNOUNCEMENT STRIP
   ══════════════════════════════ -->
   <div class="sub-nav-banner">
-    <span class="sub-nav-prefix" style="color:#D4AF37;">Berkshire &amp; Buckinghamshire's Spraying Specialists</span>
-    <span style="color:rgba(212,175,55,0.6);">&bull;</span>
-    <span>10-Year Anti-Fade Guarantee &middot; Save Up to 80% vs Replacement</span>
+    <span class="sub-nav-desktop-text">
+      <span class="sub-nav-prefix" style="color:#D4AF37; font-weight:800;">Specialist UPVC &amp; Kitchen Spraying</span>
+      <span style="color:rgba(212,175,55,0.6);">&bull;</span>
+      <span>10-Year Anti-Fade Guarantee &middot; Factory-Grade Finish &middot; Free Fast Photo Quotes</span>
+    </span>
+    <span class="sub-nav-mobile-text">
+      10-Yr Guarantee &middot; Factory Finish &middot; Free Fast Photo Quotes
+    </span>
   </div>
 
   <main>
@@ -590,9 +909,10 @@
           <div class="hero__feature-list">
             <div class="hero__feature-item">
               <span class="hero__feature-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <svg width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
-                  <circle cx="12" cy="13" r="4"/>
+                  <circle cx="12" cy="13" r="3.5"/>
+                  <circle cx="18" cy="10" r="0.8" fill="#D4AF37"/>
                 </svg>
               </span>
               <div>
@@ -603,9 +923,17 @@
 
             <div class="hero__feature-item">
               <span class="hero__feature-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
-                  <line x1="7" y1="7" x2="7.01" y2="7"/>
+                <svg width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <g transform="rotate(-45 12 12)">
+                    <!-- Price Tag Body -->
+                    <path d="M9 2.5H15L19 6.5V19.5C19 20.6 18.1 21.5 17 21.5H7C5.9 21.5 5 20.6 5 19.5V6.5L9 2.5Z"/>
+                    <!-- Eyelet Hole -->
+                    <circle cx="12" cy="6" r="1.2"/>
+                    <!-- Centered Percentage -->
+                    <line x1="9" y1="17.5" x2="15" y2="11.5"/>
+                    <circle cx="10" cy="12.5" r="1.3"/>
+                    <circle cx="14" cy="16.5" r="1.3"/>
+                  </g>
                 </svg>
               </span>
               <div>
@@ -616,7 +944,7 @@
 
             <div class="hero__feature-item">
               <span class="hero__feature-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <svg width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                   <polyline points="9 12 11 14 15 10"/>
                 </svg>
@@ -674,12 +1002,12 @@
                 <label class="hero-quote-card__label">Service Required <span style="color:#EF4444; font-weight:800;">*</span></label>
                 <select id="quoteService" name="service" class="hero-quote-card__input" required>
                   <option value="" disabled selected>Select Service Required...</option>
-                  <option value="UPVC Window Spraying">UPVC Window Spraying</option>
+                  <option value="UPVC Windows &amp; Conservatories">UPVC Windows &amp; Conservatories</option>
                   <option value="Front &amp; Composite Door Spraying">Front &amp; Composite Door Spraying</option>
-                  <option value="Kitchen Cabinet Spraying">Kitchen Cabinet Spraying</option>
+                  <option value="Kitchen Cabinet Respraying">Kitchen Cabinet Respraying</option>
                   <option value="Garage Door Spraying">Garage Door Spraying</option>
-                  <option value="Conservatory Spraying">Conservatory Spraying</option>
-                  <option value="Commercial / Shopfront Spraying">Commercial / Shopfront Spraying</option>
+                  <option value="Commercial &amp; Shopfront Spraying">Commercial &amp; Shopfront Spraying</option>
+                  <option value="Graffiti Removal &amp; Wall Restoration">Graffiti Removal &amp; Wall Restoration</option>
                 </select>
               </div>
 
@@ -692,16 +1020,17 @@
                 Get My Free Estimate &rarr;
               </button>
 
-              <div style="font-size:0.75rem; color:#475569; text-align:center; margin-top:4px; display:flex; align-items:center; justify-content:center; gap:6px;">
-                <span style="width:7px; height:7px; border-radius:50%; background:#D4AF37; display:inline-block; flex-shrink:0;"></span>
-                <span><strong>Note:</strong> You can send project photos directly via WhatsApp</span>
+              <div style="margin-top:10px; display:flex; flex-direction:column; align-items:center; gap:6px; text-align:center;">
+                <div style="display:inline-flex; align-items:center; justify-content:center; gap:6px; font-size:0.75rem; color:#475569; line-height:1.2;">
+                  <span style="width:6px; height:6px; border-radius:50%; background:#D4AF37; display:inline-block; flex-shrink:0;"></span>
+                  <span><strong>Note:</strong> You can send project photos directly via WhatsApp</span>
+                </div>
+                <div style="display:inline-flex; align-items:center; justify-content:center; gap:6px; font-size:0.76rem; color:#64748B; font-weight:600; line-height:1.2;">
+                  <svg width="13" height="13" fill="none" stroke="#10B981" stroke-width="2.5" viewBox="0 0 24 24" style="flex-shrink:0;"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                  <span>100% Free &middot; No Obligation &middot; Direct Specialist Quote</span>
+                </div>
               </div>
             </form>
-
-            <div class="hero-quote-card__foot">
-              <svg width="13" height="13" fill="none" stroke="#10B981" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-              <span>100% Free · No Obligation · Direct Specialist Quote</span>
-            </div>
           </div>
         </div>
       </div>
@@ -750,17 +1079,17 @@
 
         <div class="services-grid stagger-group">
 
-          <!-- 1. UPVC Windows -->
-          <a href="services.html#windows" class="service-card stagger-item" aria-label="UPVC Window Spraying" style="text-decoration:none;">
+          <!-- 1. UPVC Windows & Conservatories -->
+          <a href="services.html#windows" class="service-card stagger-item" aria-label="UPVC Windows and Conservatories" style="text-decoration:none;">
             <div style="position:relative; width:100%; aspect-ratio:16/10; overflow:hidden; background:#080C16;">
-              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=700&q=80" alt="UPVC Window Spraying in Anthracite Grey" style="width:100%; height:100%; object-fit:cover; transition:transform 0.4s ease;" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=700&q=80" alt="UPVC Window & Conservatory Spraying in Anthracite Grey" style="width:100%; height:100%; object-fit:cover; transition:transform 0.4s ease;" loading="lazy">
               <span class="placeholder-badge" style="position:absolute; top:12px; left:12px; background:#D4AF37; color:#080C16; font-weight:800; font-size:0.72rem; padding:4px 10px; border-radius:50px; z-index:2;">Anthracite Grey RAL 7016</span>
             </div>
             <div class="service-card__body" style="padding:22px; background:#080C16; color:#FFFFFF; border-top:1px solid rgba(212,175,55,0.2);">
-              <div style="font-size:0.75rem; font-weight:800; color:#D4AF37; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:6px;">Windows · Windsor &amp; Berkshire</div>
-              <h3 class="service-card__title" style="color:#FFFFFF; font-size:1.25rem; font-weight:800; margin-bottom:8px;">UPVC Window Spraying</h3>
+              <div style="font-size:0.75rem; font-weight:800; color:#D4AF37; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:6px;">Windows &amp; Conservatories · Berkshire</div>
+              <h3 class="service-card__title" style="color:#FFFFFF; font-size:1.25rem; font-weight:800; margin-bottom:8px;">UPVC Windows &amp; Conservatories</h3>
               <p style="font-size:0.88rem; color:rgba(255,255,255,0.75); line-height:1.55; margin-bottom:14px;">
-                Transform white or faded window frames to modern Anthracite Grey, Black, or custom shades. Done in 1–2 days without removing glass or damaging plaster.
+                Transform white or faded window frames &amp; conservatories to modern Anthracite Grey, Black, or custom shades. Done on-site without glass removal.
               </p>
               <span class="service-card__cta" style="color:#D4AF37; font-weight:700; font-size:0.85rem; display:inline-flex; align-items:center; gap:6px;">
                 Get Free Window Quote &rarr;
@@ -771,7 +1100,7 @@
           <!-- 2. Front & Composite Doors -->
           <a href="services.html#doors" class="service-card stagger-item" aria-label="Front & Composite Door Spraying" style="text-decoration:none;">
             <div style="position:relative; width:100%; aspect-ratio:16/10; overflow:hidden; background:#080C16;">
-              <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=700&q=80" alt="Front and Composite Door Spraying" style="width:100%; height:100%; object-fit:cover; transition:transform 0.4s ease;" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=700&q=80" alt="Front and Composite Door Spraying" style="width:100%; height:100%; object-fit:cover; transition:transform 0.4s ease;" loading="lazy">
               <span class="placeholder-badge" style="position:absolute; top:12px; left:12px; background:#D4AF37; color:#080C16; font-weight:800; font-size:0.72rem; padding:4px 10px; border-radius:50px; z-index:2;">Chartwell Green &amp; Black</span>
             </div>
             <div class="service-card__body" style="padding:22px; background:#080C16; color:#FFFFFF; border-top:1px solid rgba(212,175,55,0.2);">
@@ -789,7 +1118,7 @@
           <!-- 3. Kitchen Cabinets -->
           <a href="services.html#kitchens" class="service-card stagger-item" aria-label="Kitchen Cabinet Respraying" style="text-decoration:none;">
             <div style="position:relative; width:100%; aspect-ratio:16/10; overflow:hidden; background:#080C16;">
-              <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=700&q=80" alt="Kitchen Cabinet Spraying" style="width:100%; height:100%; object-fit:cover; transition:transform 0.4s ease;" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=700&q=80" alt="Kitchen Cabinet Spraying" style="width:100%; height:100%; object-fit:cover; transition:transform 0.4s ease;" loading="lazy">
               <span class="placeholder-badge" style="position:absolute; top:12px; left:12px; background:#D4AF37; color:#080C16; font-weight:800; font-size:0.72rem; padding:4px 10px; border-radius:50px; z-index:2;">Farrow &amp; Ball Matched</span>
             </div>
             <div class="service-card__body" style="padding:22px; background:#080C16; color:#FFFFFF; border-top:1px solid rgba(212,175,55,0.2);">
@@ -807,7 +1136,7 @@
           <!-- 4. Garage Doors -->
           <a href="services.html#garage-doors" class="service-card stagger-item" aria-label="Garage Door Spraying" style="text-decoration:none;">
             <div style="position:relative; width:100%; aspect-ratio:16/10; overflow:hidden; background:#080C16;">
-              <img src="https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=700&q=80" alt="Garage Door Spraying" style="width:100%; height:100%; object-fit:cover; transition:transform 0.4s ease;" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?w=700&q=80" alt="Garage Door Spraying" style="width:100%; height:100%; object-fit:cover; transition:transform 0.4s ease;" loading="lazy">
               <span class="placeholder-badge" style="position:absolute; top:12px; left:12px; background:#D4AF37; color:#080C16; font-weight:800; font-size:0.72rem; padding:4px 10px; border-radius:50px; z-index:2;">Colour-Matched to Windows</span>
             </div>
             <div class="service-card__body" style="padding:22px; background:#080C16; color:#FFFFFF; border-top:1px solid rgba(212,175,55,0.2);">
@@ -822,28 +1151,10 @@
             </div>
           </a>
 
-          <!-- 5. Conservatories -->
-          <a href="services.html#conservatories" class="service-card stagger-item" aria-label="Conservatory Spraying" style="text-decoration:none;">
-            <div style="position:relative; width:100%; aspect-ratio:16/10; overflow:hidden; background:#080C16;">
-              <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=700&q=80" alt="Conservatory Spraying" style="width:100%; height:100%; object-fit:cover; transition:transform 0.4s ease;" loading="lazy">
-              <span class="placeholder-badge" style="position:absolute; top:12px; left:12px; background:#D4AF37; color:#080C16; font-weight:800; font-size:0.72rem; padding:4px 10px; border-radius:50px; z-index:2;">10-Year Anti-Fade Guarantee</span>
-            </div>
-            <div class="service-card__body" style="padding:22px; background:#080C16; color:#FFFFFF; border-top:1px solid rgba(212,175,55,0.2);">
-              <div style="font-size:0.75rem; font-weight:800; color:#D4AF37; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:6px;">Conservatories · Reading &amp; Berkshire</div>
-              <h3 class="service-card__title" style="color:#FFFFFF; font-size:1.25rem; font-weight:800; margin-bottom:8px;">Conservatory Spraying</h3>
-              <p style="font-size:0.88rem; color:rgba(255,255,255,0.75); line-height:1.55; margin-bottom:14px;">
-                Modernise dated white or faded brown conservatories. Our specialist spray formulas are engineered for UPVC to withstand intense sun exposure without peeling.
-              </p>
-              <span class="service-card__cta" style="color:#D4AF37; font-weight:700; font-size:0.85rem; display:inline-flex; align-items:center; gap:6px;">
-                Get Free Conservatory Quote &rarr;
-              </span>
-            </div>
-          </a>
-
-          <!-- 6. Commercial & Shopfronts -->
+          <!-- 5. Commercial & Shopfronts -->
           <a href="services.html#commercial" class="service-card stagger-item" aria-label="Commercial & Shopfront Spraying" style="text-decoration:none;">
             <div style="position:relative; width:100%; aspect-ratio:16/10; overflow:hidden; background:#080C16;">
-              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=700&q=80" alt="Commercial & Shopfront Spraying" style="width:100%; height:100%; object-fit:cover; transition:transform 0.4s ease;" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=700&q=80" alt="Commercial & Shopfront Spraying" style="width:100%; height:100%; object-fit:cover; transition:transform 0.4s ease;" loading="lazy">
               <span class="placeholder-badge" style="position:absolute; top:12px; left:12px; background:#D4AF37; color:#080C16; font-weight:800; font-size:0.72rem; padding:4px 10px; border-radius:50px; z-index:2;">Commercial Out-of-Hours</span>
             </div>
             <div class="service-card__body" style="padding:22px; background:#080C16; color:#FFFFFF; border-top:1px solid rgba(212,175,55,0.2);">
@@ -858,10 +1169,10 @@
             </div>
           </a>
 
-          <!-- 7. Graffiti Removal & Wall Restoration -->
+          <!-- 6. Graffiti Removal & Wall Restoration -->
           <a href="services.html#graffiti" class="service-card stagger-item" aria-label="Commercial & Residential Graffiti Removal" style="text-decoration:none;">
             <div style="position:relative; width:100%; aspect-ratio:16/10; overflow:hidden; background:#080C16;">
-              <img src="https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?w=700&q=80" alt="Graffiti Removal and Wall Restoration in Berkshire" style="width:100%; height:100%; object-fit:cover; transition:transform 0.4s ease;" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1577495508048-b635879837f1?w=700&q=80" alt="Graffiti Removal and Wall Restoration in Berkshire" style="width:100%; height:100%; object-fit:cover; transition:transform 0.4s ease;" loading="lazy">
               <span class="placeholder-badge" style="position:absolute; top:12px; left:12px; background:#D4AF37; color:#080C16; font-weight:800; font-size:0.72rem; padding:4px 10px; border-radius:50px; z-index:2;">Commercial &amp; Residential</span>
             </div>
             <div class="service-card__body" style="padding:22px; background:#080C16; color:#FFFFFF; border-top:1px solid rgba(212,175,55,0.2);">
@@ -881,55 +1192,86 @@
     </section>
 
     <!-- ══════════════════════════════
-         HOW IT WORKS
+         HOW IT WORKS (5-STEP PROCESS)
     ══════════════════════════════ -->
-    <section class="section section--process" aria-labelledby="process-heading">
+    <section class="section section--process" id="process" aria-labelledby="process-heading" style="background:#FFFFFF !important; padding:88px 0 !important;">
       <div class="container">
-        <div class="section-header section-header--center reveal">
-          <span class="section-eyebrow">Simple Process</span>
-          <h2 class="section-heading" id="process-heading">How It Works</h2>
-          <p class="section-subheading">From fast WhatsApp photo quote to flawless factory finish — here's how easy it is.</p>
+        <div class="section-header section-header--center reveal" style="text-align:center; margin-bottom:48px;">
+          <span class="section-eyebrow" style="color:#D4AF37; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; font-size:0.85rem; display:block; margin-bottom:8px;">Simple Process</span>
+          <h2 class="section-heading" id="process-heading" style="color:#0F172A !important; font-family:'Outfit', sans-serif !important; font-weight:900 !important; font-size:clamp(2rem, 4vw, 2.8rem) !important; margin-bottom:12px;">How It Works</h2>
+          <p class="section-subheading" style="color:#64748B !important; max-width:600px; margin-inline:auto; font-size:1.02rem;">From fast WhatsApp photo quote to flawless factory finish — here's how easy it is.</p>
         </div>
 
-        <div class="process-grid stagger-group">
+        <div class="process-grid-5 stagger-group">
 
-          <div class="process-step stagger-item">
-            <div class="process-step__number" aria-hidden="true">01</div>
-            <div class="process-step__icon" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <!-- Step 1 -->
+          <div class="process-step-item stagger-item">
+            <div class="process-step-item__number" aria-hidden="true">01</div>
+            <div class="process-step-item__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
-                <circle cx="12" cy="13" r="4"/>
+                <circle cx="12" cy="13" r="3.5"/>
               </svg>
             </div>
-            <h3 class="process-step__title">Fast Photo Quote &amp; Colour Match</h3>
-            <p class="process-step__desc">Snap a quick photo of your windows, doors, or kitchen on WhatsApp with your desired RAL or designer shade. Receive an accurate, fixed written quote fast.</p>
+            <h3 class="process-step-item__title">Fast Photo Quote &amp; Colour Choice</h3>
+            <p class="process-step-item__desc">Snap a quick photo on WhatsApp with your desired RAL or designer shade. Receive an accurate, fixed written quote fast.</p>
           </div>
 
-          <div class="process-step__connector" aria-hidden="true"></div>
-
-          <div class="process-step stagger-item">
-            <div class="process-step__number" aria-hidden="true">02</div>
-            <div class="process-step__icon" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+          <!-- Step 2 -->
+          <div class="process-step-item stagger-item">
+            <div class="process-step-item__number" aria-hidden="true">02</div>
+            <div class="process-step-item__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
               </svg>
             </div>
-            <h3 class="process-step__title">Precision Masking &amp; Multi-Coat Spray</h3>
-            <p class="process-step__desc">We meticulously prep, degrease, and tape off all brickwork, glass, and seals before applying multiple coats of specialist weather-resistant coatings designed to never peel, crack, or fade.</p>
+            <h3 class="process-step-item__title">Surface Degrease &amp; Prep</h3>
+            <p class="process-step-item__desc">Surfaces are thoroughly cleaned with specialist degreasers, decontaminated, and abraded for an infallible mechanical bond.</p>
           </div>
 
-          <div class="process-step__connector" aria-hidden="true"></div>
+          <!-- Step 3 -->
+          <div class="process-step-item stagger-item">
+            <div class="process-step-item__number" aria-hidden="true">03</div>
+            <div class="process-step-item__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                <line x1="9" y1="3" x2="9" y2="21"/>
+                <line x1="15" y1="3" x2="15" y2="21"/>
+                <line x1="3" y1="9" x2="21" y2="9"/>
+                <line x1="3" y1="15" x2="21" y2="15"/>
+              </svg>
+            </div>
+            <h3 class="process-step-item__title">Protective Masking &amp; Shielding</h3>
+            <p class="process-step-item__desc">Over 70% of time is dedicated to masking brickwork, glass, and seals with heavy-duty sheeting for zero overspray.</p>
+          </div>
 
-          <div class="process-step stagger-item">
-            <div class="process-step__number" aria-hidden="true">03</div>
-            <div class="process-step__icon" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <!-- Step 4 -->
+          <div class="process-step-item stagger-item">
+            <div class="process-step-item__number" aria-hidden="true">04</div>
+            <div class="process-step-item__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 4h5l-1.5 4h-2L15 4z"/>
+                <path d="M4 8h11v3h-2l-1.5 3v5a1.5 1.5 0 0 1-3 0v-5L5 11V8z"/>
+                <line x1="17" y1="6" x2="22" y2="3"/>
+                <line x1="17.5" y1="8" x2="23" y2="8"/>
+                <line x1="17" y1="10" x2="22" y2="13"/>
+              </svg>
+            </div>
+            <h3 class="process-step-item__title">HVLP Multi-Coat Atomization</h3>
+            <p class="process-step-item__desc">Multiple coats of specialist weather-resistant coatings applied via commercial HVLP sprayers for a brushless finish.</p>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="process-step-item stagger-item">
+            <div class="process-step-item__number" aria-hidden="true">05</div>
+            <div class="process-step-item__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                 <polyline points="9 12 11 14 15 10"/>
               </svg>
             </div>
-            <h3 class="process-step__title">Demasking, Clean Up &amp; Guarantee Sign-Off</h3>
-            <p class="process-step__desc">We carefully demask every edge, complete a thorough quality check, leave your property spotless, and sign off your 10-year anti-fade warranty.</p>
+            <h3 class="process-step-item__title">Demasking &amp; 10-Yr Guarantee</h3>
+            <p class="process-step-item__desc">Demasked cleanly, thorough joint inspection, site left spotless, and your 10-Year Anti-Fade Guarantee signed off.</p>
           </div>
 
         </div>
@@ -939,21 +1281,21 @@
     <!-- ══════════════════════════════
          WATCH US IN ACTION (VIDEO SHOWCASE)
     ══════════════════════════════ -->
-    <section class="section" id="video-showcase" aria-labelledby="video-heading" style="background:#080C16; padding:80px 0; border-top:1px solid rgba(212,175,55,0.15); border-bottom:1px solid rgba(212,175,55,0.15);">
-      <div class="container" style="max-width:1100px; margin:0 auto;">
-        <div class="section-header section-header--center reveal" style="text-align:center; margin-bottom:40px;">
+    <section class="section" id="video-showcase" aria-labelledby="video-heading" style="background:#080C16; padding:88px 0; border-top:1px solid rgba(212,175,55,0.15); border-bottom:1px solid rgba(212,175,55,0.15);">
+      <div class="container" style="max-width:1240px; margin:0 auto;">
+        <div class="section-header section-header--center reveal" style="text-align:center; margin-bottom:44px;">
           <span class="section-eyebrow" style="color:#D4AF37; font-weight:800; letter-spacing:0.12em; display:inline-flex; align-items:center; gap:6px;">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="#D4AF37"><polygon points="5 3 19 12 5 21 5 3"/></svg>
             Craftsmanship in Action
           </span>
-          <h2 class="section-heading" id="video-heading" style="color:#FFFFFF; font-family:'Outfit', sans-serif; font-size:clamp(2rem, 3.5vw, 2.75rem); font-weight:900; margin-bottom:12px;">Watch Our Specialist Technique in Action</h2>
-          <p class="section-subheading" style="color:rgba(255,255,255,0.8); max-width:640px; margin:0 auto; line-height:1.6;">
+          <h2 class="section-heading" id="video-heading" style="color:#FFFFFF; font-family:'Outfit', sans-serif; font-size:clamp(2.2rem, 4vw, 3rem); font-weight:900; margin-bottom:14px;">Watch Our Specialist Technique in Action</h2>
+          <p class="section-subheading" style="color:rgba(255,255,255,0.85); max-width:680px; margin:0 auto; line-height:1.65; font-size:1.05rem;">
             Watch Cody on-site applying a smooth, weather-proof finish on a high-reach exterior gable end — clean lines, zero building mess, and built to last.
           </p>
         </div>
 
-        <div class="video-container-card" style="background:linear-gradient(160deg, #0F172A 0%, #080C16 100%); border:1.5px solid rgba(212,175,55,0.3); border-radius:24px; padding:20px; box-shadow:0 20px 50px -10px rgba(0,0,0,0.7); max-width:960px; margin:0 auto;">
-          <div style="position:relative; border-radius:16px; overflow:hidden; background:#000000; box-shadow:0 8px 30px rgba(0,0,0,0.6); aspect-ratio:16/9;">
+        <div class="video-container-card" style="background:linear-gradient(160deg, #0F172A 0%, #080C16 100%); border:1.5px solid rgba(212,175,55,0.35); border-radius:24px; padding:24px; box-shadow:0 24px 60px -10px rgba(0,0,0,0.8); max-width:1160px; margin:0 auto;">
+          <div style="position:relative; border-radius:18px; overflow:hidden; background:#000000; box-shadow:0 10px 36px rgba(0,0,0,0.7); aspect-ratio:16/9;">
             <video controls preload="metadata" style="width:100%; height:100%; object-fit:cover; display:block;" poster="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80">
               <source src="assets/cody-spraying.mp4" type="video/mp4">
               Your browser does not support the video tag.
@@ -961,18 +1303,69 @@
           </div>
 
           <!-- Video Highlights -->
-          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:18px; margin-top:20px; padding:10px 10px 4px;">
-            <div style="display:flex; align-items:flex-start; gap:12px;">
-              <span style="color:#D4AF37; font-size:1.1rem; line-height:1;">🛡️</span>
-              <div style="font-size:0.86rem; color:rgba(255,255,255,0.82); line-height:1.45;"><strong>Clean Edge Masking:</strong> Full protection of all brickwork, glass, and surrounding surfaces.</div>
+          <div class="video-highlights">
+            <div class="video-highlight-item">
+              <div class="video-highlight-item__icon" aria-hidden="true">
+                <svg width="42" height="42" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Outer Set Square Triangle -->
+                  <path d="M21.5 21.5H3.5a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1.7-.7l18 18a1 1 0 0 1-.7.7z" stroke="#D4AF37" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <!-- Inner Triangular Cutout -->
+                  <path d="M7 17.5h8L7 9.5v8z" stroke="#D4AF37" stroke-width="1.1" stroke-linejoin="round" fill="rgba(212,175,55,0.08)"/>
+                  <!-- Thin, Short Precision Ticks (Vertical Ruler Edge) -->
+                  <line x1="3" y1="7" x2="5" y2="7" stroke="#D4AF37" stroke-width="0.9" stroke-linecap="round"/>
+                  <line x1="3" y1="10.5" x2="4.4" y2="10.5" stroke="#D4AF37" stroke-width="0.9" stroke-linecap="round"/>
+                  <line x1="3" y1="14" x2="5" y2="14" stroke="#D4AF37" stroke-width="0.9" stroke-linecap="round"/>
+                  <line x1="3" y1="17.5" x2="4.4" y2="17.5" stroke="#D4AF37" stroke-width="0.9" stroke-linecap="round"/>
+                  <!-- Thin, Short Precision Ticks (Horizontal Ruler Edge) -->
+                  <line x1="7" y1="21" x2="7" y2="19" stroke="#D4AF37" stroke-width="0.9" stroke-linecap="round"/>
+                  <line x1="10.5" y1="21" x2="10.5" y2="19.6" stroke="#D4AF37" stroke-width="0.9" stroke-linecap="round"/>
+                  <line x1="14" y1="21" x2="14" y2="19" stroke="#D4AF37" stroke-width="0.9" stroke-linecap="round"/>
+                  <line x1="17.5" y1="21" x2="17.5" y2="19.6" stroke="#D4AF37" stroke-width="0.9" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="video-highlight-item__text">
+                <strong>Clean Edge Masking:</strong> Full protective tape shielding on brickwork, glass, and hinges before any spray begins.
+              </div>
             </div>
-            <div style="display:flex; align-items:flex-start; gap:12px;">
-              <span style="color:#D4AF37; font-size:1.1rem; line-height:1;">⚡</span>
-              <div style="font-size:0.86rem; color:rgba(255,255,255,0.82); line-height:1.45;"><strong>Brushless Spray Finish:</strong> High-precision application with zero brush marks or streaks.</div>
+
+            <div class="video-highlight-item">
+              <div class="video-highlight-item__icon" aria-hidden="true">
+                <svg width="42" height="42" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Gravity Feed Top Reservoir Cup with Lid & Collar -->
+                  <line x1="8.5" y1="1.5" x2="14.5" y2="1.5" stroke="#D4AF37" stroke-width="1.0" stroke-linecap="round"/>
+                  <path d="M9 2.5h5l-1.2 4.5h-2.6L9 2.5z" stroke="#D4AF37" stroke-width="1.0" stroke-linejoin="round" fill="rgba(212,175,55,0.12)"/>
+                  <line x1="10.8" y1="7" x2="10.8" y2="8" stroke="#D4AF37" stroke-width="1.0"/>
+                  <!-- Fluid Flow Control Adjuster Knob -->
+                  <line x1="4.5" y1="9.5" x2="6.5" y2="9.5" stroke="#D4AF37" stroke-width="1.0" stroke-linecap="round"/>
+                  <!-- Main Gun Body, Barrel, and Handle -->
+                  <path d="M6.5 8h9.5a1 1 0 0 1 1 1v1.5a1 1 0 0 1-1 1h-2.2l-1.6 2.5v4.5a1.5 1.5 0 0 1-3 0v-4L7.5 12V8z" stroke="#D4AF37" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" fill="rgba(212,175,55,0.06)"/>
+                  <!-- Ergonomic Trigger -->
+                  <path d="M8.5 11.5c0 1.8-1 2.8-2.5 2.8" stroke="#D4AF37" stroke-width="1.0" stroke-linecap="round"/>
+                  <!-- Hose Fitting Collar -->
+                  <line x1="9.5" y1="18.5" x2="11.5" y2="18.5" stroke="#D4AF37" stroke-width="1.1" stroke-linecap="round"/>
+                  <!-- Flexible Fluid / Air Supply Hose Pipe -->
+                  <path d="M10.5 18.5c0 2.6-1.8 4-4.8 4S1.5 20.8 1.5 18.8" stroke="#D4AF37" stroke-width="1.0" stroke-linecap="round"/>
+                  <!-- Precision Atomization Spray Fan -->
+                  <line x1="18" y1="7" x2="22.5" y2="4.5" stroke="#D4AF37" stroke-width="0.9" stroke-linecap="round"/>
+                  <line x1="18.5" y1="9.5" x2="23.5" y2="9.5" stroke="#D4AF37" stroke-width="0.9" stroke-linecap="round"/>
+                  <line x1="18" y1="12" x2="22.5" y2="14.5" stroke="#D4AF37" stroke-width="0.9" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="video-highlight-item__text">
+                <strong>Brushless Spray Finish:</strong> Specialist HVLP precision atomization delivering a factory-smooth showroom look.
+              </div>
             </div>
-            <div style="display:flex; align-items:flex-start; gap:12px;">
-              <span style="color:#D4AF37; font-size:1.1rem; line-height:1;">☀️</span>
-              <div style="font-size:0.86rem; color:rgba(255,255,255,0.82); line-height:1.45;"><strong>10-Year Weatherproof:</strong> UV-stable coatings designed to never flake, peel, or fade.</div>
+
+            <div class="video-highlight-item">
+              <div class="video-highlight-item__icon" aria-hidden="true">
+                <svg width="42" height="42" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 22C12 22 21 17.5 21 11V4.5L12 1.5L3 4.5V11C3 17.5 12 22 12 22Z" stroke="#D4AF37" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="rgba(212,175,55,0.08)"/>
+                  <polyline points="8 11.5 11 14.5 16 9" stroke="#D4AF37" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="video-highlight-item__text">
+                <strong>10-Year Weatherproof:</strong> UV-stable, anti-fade specialist coatings engineered to never flake, crack, or peel.
+              </div>
             </div>
           </div>
         </div>
@@ -990,50 +1383,46 @@
           <p class="section-subheading">Specialist factory-grade spray equipment, weather-shield formulas, and 10-year anti-fade guarantees.</p>
         </div>
 
-        <div class="pillars-grid stagger-group" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:24px;">
+        <div class="pillars-grid stagger-group">
 
           <!-- Pillar 1 -->
-          <div class="pillar-card stagger-item" style="background:linear-gradient(160deg, #0F172A 0%, #080C16 100%) !important; border:1.5px solid rgba(212,175,55,0.3) !important; border-radius:20px !important; padding:36px 28px !important; box-shadow:0 12px 36px rgba(0,0,0,0.5) !important; position:relative; overflow:hidden;">
-            <div style="position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg, #D4AF37, #F5D77F);"></div>
-            <div class="pillar-card__icon" aria-hidden="true" style="color:#D4AF37; background:rgba(212,175,55,0.12); border:1.5px solid rgba(212,175,55,0.35); border-radius:14px; width:56px; height:56px; display:flex; align-items:center; justify-content:center; margin-bottom:22px; box-shadow:0 4px 16px rgba(212,175,55,0.2);">
+          <div class="pillar-card stagger-item">
+            <div class="pillar-card__icon" aria-hidden="true">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
                 <line x1="7" y1="7" x2="7.01" y2="7"/>
               </svg>
             </div>
-            <h3 class="pillar-card__title" style="font-size:1.22rem; font-weight:800; color:#FFFFFF; margin-bottom:12px; letter-spacing:-0.01em;">Save Up to 80% vs Replacement</h3>
-            <p class="pillar-card__text" style="font-size:0.92rem; color:rgba(255,255,255,0.8); line-height:1.65; margin:0;">Achieve the look and durability of brand new windows and doors without the huge expense, mess, or plaster damage of ripping out old frames.</p>
+            <h3 class="pillar-card__title">Save Up to 80% vs Replacement</h3>
+            <p class="pillar-card__text">Achieve the look and durability of brand new windows and doors without the huge expense, mess, or plaster damage of ripping out old frames.</p>
           </div>
 
           <!-- Pillar 2 -->
-          <div class="pillar-card stagger-item" style="background:linear-gradient(160deg, #0F172A 0%, #080C16 100%) !important; border:1.5px solid rgba(212,175,55,0.3) !important; border-radius:20px !important; padding:36px 28px !important; box-shadow:0 12px 36px rgba(0,0,0,0.5) !important; position:relative; overflow:hidden;">
-            <div style="position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg, #D4AF37, #F5D77F);"></div>
-            <div class="pillar-card__icon" aria-hidden="true" style="color:#D4AF37; background:rgba(212,175,55,0.12); border:1.5px solid rgba(212,175,55,0.35); border-radius:14px; width:56px; height:56px; display:flex; align-items:center; justify-content:center; margin-bottom:22px; box-shadow:0 4px 16px rgba(212,175,55,0.2);">
+          <div class="pillar-card stagger-item">
+            <div class="pillar-card__icon" aria-hidden="true">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                 <polyline points="9 12 11 14 15 10"/>
               </svg>
             </div>
-            <h3 class="pillar-card__title" style="font-size:1.22rem; font-weight:800; color:#FFFFFF; margin-bottom:12px; letter-spacing:-0.01em;">10-Year Anti-Fade Guarantee</h3>
-            <p class="pillar-card__text" style="font-size:0.92rem; color:rgba(255,255,255,0.8); line-height:1.65; margin:0;">We exclusively use specialist UV-stable, weather-resistant formulas engineered for maximum adhesion so they never crack, peel, or fade.</p>
+            <h3 class="pillar-card__title">10-Year Anti-Fade Guarantee</h3>
+            <p class="pillar-card__text">We exclusively use specialist UV-stable, weather-resistant formulas engineered for maximum adhesion so they never crack, peel, or fade.</p>
           </div>
 
           <!-- Pillar 3 -->
-          <div class="pillar-card stagger-item" style="background:linear-gradient(160deg, #0F172A 0%, #080C16 100%) !important; border:1.5px solid rgba(212,175,55,0.3) !important; border-radius:20px !important; padding:36px 28px !important; box-shadow:0 12px 36px rgba(0,0,0,0.5) !important; position:relative; overflow:hidden;">
-            <div style="position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg, #D4AF37, #F5D77F);"></div>
-            <div class="pillar-card__icon" aria-hidden="true" style="color:#D4AF37; background:rgba(212,175,55,0.12); border:1.5px solid rgba(212,175,55,0.35); border-radius:14px; width:56px; height:56px; display:flex; align-items:center; justify-content:center; margin-bottom:22px; box-shadow:0 4px 16px rgba(212,175,55,0.2);">
+          <div class="pillar-card stagger-item">
+            <div class="pillar-card__icon" aria-hidden="true">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
               </svg>
             </div>
-            <h3 class="pillar-card__title" style="font-size:1.22rem; font-weight:800; color:#FFFFFF; margin-bottom:12px; letter-spacing:-0.01em;">Factory-Grade Spray Finish</h3>
-            <p class="pillar-card__text" style="font-size:0.92rem; color:rgba(255,255,255,0.8); line-height:1.65; margin:0;">Applied with high-precision HVLP spray equipment for an ultra-smooth, brushless showroom finish. Completed quickly with zero building mess.</p>
+            <h3 class="pillar-card__title">Factory-Grade Spray Finish</h3>
+            <p class="pillar-card__text">Applied with high-precision HVLP spray equipment for an ultra-smooth, brushless showroom finish. Completed quickly with zero building mess.</p>
           </div>
 
           <!-- Pillar 4 -->
-          <div class="pillar-card stagger-item" style="background:linear-gradient(160deg, #0F172A 0%, #080C16 100%) !important; border:1.5px solid rgba(212,175,55,0.3) !important; border-radius:20px !important; padding:36px 28px !important; box-shadow:0 12px 36px rgba(0,0,0,0.5) !important; position:relative; overflow:hidden;">
-            <div style="position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg, #D4AF37, #F5D77F);"></div>
-            <div class="pillar-card__icon" aria-hidden="true" style="color:#D4AF37; background:rgba(212,175,55,0.12); border:1.5px solid rgba(212,175,55,0.35); border-radius:14px; width:56px; height:56px; display:flex; align-items:center; justify-content:center; margin-bottom:22px; box-shadow:0 4px 16px rgba(212,175,55,0.2);">
+          <div class="pillar-card stagger-item">
+            <div class="pillar-card__icon" aria-hidden="true">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/>
                 <circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/>
@@ -1042,8 +1431,8 @@
                 <path d="M12 2C6.49 2 2 6.49 2 12c0 2.8 1.15 5.33 3 7.15A9.97 9.97 0 0 0 12 22c1.66 0 3-1.34 3-3 0-.78-.29-1.48-.78-2.01-.47-.53-.78-1.22-.78-1.99 0-1.66 1.34-3 3-3h2.18C20.67 12 22 10.67 22 9c0-5-4.48-7-10-7z"/>
               </svg>
             </div>
-            <h3 class="pillar-card__title" style="font-size:1.22rem; font-weight:800; color:#FFFFFF; margin-bottom:12px; letter-spacing:-0.01em;">Exact Colour Matching</h3>
-            <p class="pillar-card__text" style="font-size:0.92rem; color:rgba(255,255,255,0.8); line-height:1.65; margin:0;">Pick from standard RAL shades (like Anthracite Grey RAL 7016) or get flawless bespoke matches to Farrow &amp; Ball, Dulux, and Little Greene.</p>
+            <h3 class="pillar-card__title">Exact Colour Matching</h3>
+            <p class="pillar-card__text">Pick from standard RAL shades (like Anthracite Grey RAL 7016) or get flawless bespoke matches to Farrow &amp; Ball, Dulux, and Little Greene.</p>
           </div>
 
         </div>
@@ -1155,24 +1544,26 @@
             </div>
           </div>
 
-          <!-- 6. WhatsApp Instant Photo Quote Card -->
-          <div class="gallery-item" style="background:linear-gradient(145deg, #0F172A 0%, #080C16 100%); border:1.5px solid #D4AF37; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:32px 24px;">
-            <div style="width:54px; height:54px; border-radius:50%; background:rgba(212,175,55,0.15); border:1.5px solid #D4AF37; display:flex; align-items:center; justify-content:center; color:#D4AF37; margin-bottom:14px;">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+          <!-- 6. Conservatory & Bi-Fold Doors -->
+          <div class="gallery-item" tabindex="0" role="button" aria-label="Conservatory & Bi-Fold Spraying">
+            <div style="position:relative; width:100%; height:100%;">
+              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" alt="Conservatory and Bi-Fold Spraying" style="width:100%; height:100%; object-fit:cover; display:block;" loading="lazy">
+              <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(8,12,22,0.92) 0%, rgba(8,12,22,0.2) 60%, transparent 100%); display:flex; flex-direction:column; justify-content:flex-end; padding:20px;">
+                <span class="placeholder-badge" style="align-self:flex-start; margin-bottom:8px; background:#D4AF37; color:#080C16; font-weight:800; padding:4px 12px; border-radius:50px; font-size:0.72rem;">Anthracite Grey RAL 7016</span>
+                <div style="font-weight:900; color:#FFFFFF; font-size:1.15rem; margin-bottom:2px;">Conservatory &amp; Bi-Fold Doors</div>
+                <div style="font-size:0.82rem; color:#D4AF37; font-weight:700;">Cookham &middot; 10-Year Guarantee</div>
+              </div>
             </div>
-            <div style="font-size:1.22rem; font-weight:900; color:#FFFFFF; margin-bottom:8px; letter-spacing:-0.01em;">Your Home Next?</div>
-            <p style="font-size:0.86rem; color:rgba(255,255,255,0.8); line-height:1.5; margin-bottom:18px;">
-              Snap 3 photos of your windows, doors, or kitchen and send them on WhatsApp for a fast fixed written quote.
-            </p>
-            <a href="https://wa.me/447477510304?text=Hi%20Windsor%20Spraying,%20I'd%20like%20to%20send%20photos%20for%20a%20spraying%20quote." class="btn btn--primary" style="font-size:0.82rem; padding:12px 24px;" target="_blank" rel="noopener">
-              Send Photos on WhatsApp &rarr;
-            </a>
           </div>
 
         </div>
 
-        <div style="text-align:center; margin-top:40px;" class="reveal">
-          <a href="gallery.html" class="btn" style="display:inline-flex; align-items:center; gap:8px; border:2px solid #D4AF37; color:#FFFFFF; background:rgba(212,175,55,0.12); font-weight:800; padding:14px 34px; border-radius:10px; text-decoration:none; box-shadow:0 4px 18px rgba(0,0,0,0.4); transition:all 0.25s ease;">
+        <div style="display:flex; align-items:center; justify-content:center; gap:14px; margin-top:36px; flex-wrap:wrap;" class="reveal">
+          <a href="https://wa.me/447477510304?text=Hi%20Windsor%20Spraying,%20I'd%20like%20to%20send%20photos%20for%20a%20spraying%20quote." class="btn gallery-cta-whatsapp" style="display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:13px 22px; font-weight:800; font-size:0.92rem; background:#25D366; color:#0B100E; border:none; border-radius:10px; box-shadow:0 6px 20px rgba(37, 211, 102, 0.45); text-decoration:none; transition:all 0.25s ease;" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="flex-shrink:0;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Send Photos on WhatsApp &rarr;
+          </a>
+          <a href="gallery.html" class="btn gallery-cta-all" style="display:inline-flex; align-items:center; justify-content:center; gap:8px; border:2px solid #D4AF37; color:#FFFFFF; background:rgba(212,175,55,0.12); font-weight:800; padding:13px 22px; font-size:0.92rem; border-radius:10px; text-decoration:none; box-shadow:0 4px 18px rgba(0,0,0,0.4); transition:all 0.25s ease;">
             See All Projects &rarr;
           </a>
         </div>
@@ -1331,9 +1722,9 @@
           </details>
 
           <details class="faq-item" name="home-faq">
-            <summary class="faq-summary">How long does a typical spraying job take?<span class="faq-icon"></span></summary>
+            <summary class="faq-summary">How much disruption will there be in my home?<span class="faq-icon"></span></summary>
             <div class="faq-content">
-              Most domestic house window and door spraying projects are completed swiftly within 1 to 2 days with minimal disruption. Kitchen cabinet resprays typically take 2 to 3 days depending on cabinet count and layout.
+              We keep disruption to an absolute minimum. We do as much prep and work outside as possible, only entering your living spaces when strictly necessary. Everything is sealed with protective masking, and we leave your home tidy and spotless at the end of every day.
             </div>
           </details>
 
@@ -1392,15 +1783,9 @@
         <!-- Column 1: Brand & Mini Map -->
         <div class="footer__brand">
           <div style="margin-bottom:18px;">
-            <div class="footer-brand-card" style="width:180px; background:linear-gradient(145deg, #1E293B 0%, #0F172A 100%); border:1.5px solid rgba(212,175,55,0.45); border-radius:14px; padding:16px 14px; text-align:center; box-shadow:0 8px 24px rgba(0,0,0,0.5); display:inline-flex; flex-direction:column; align-items:center; gap:8px;">
-              <img src="assets/windsor-crown-emblem.svg" alt="Windsor Spraying Crown Logo" style="height:48px; width:48px; border-radius:10px; object-fit:contain; filter:drop-shadow(0 2px 8px rgba(212,175,55,0.4));">
-              <div style="font-weight:900; font-size:1.05rem; letter-spacing:0.02em; color:#FFFFFF; line-height:1.1;">
-                WINDSOR <span style="color:#D4AF37; font-weight:800;">SPRAYING</span>
-              </div>
-              <div style="font-size:0.58rem; font-weight:800; color:#D4AF37; letter-spacing:0.06em; text-transform:uppercase; line-height:1.2;">
-                UPVC, Windows &amp; Kitchens
-              </div>
-            </div>
+            <a href="index.html" style="display:inline-block; text-decoration:none;">
+              <img src="assets/windsor-logo-horizontal.png" alt="Windsor Spraying — UPVC &amp; Kitchen Specialists" style="height:52px; width:auto; max-width:240px; object-fit:contain; display:block; filter:drop-shadow(0 4px 14px rgba(0,0,0,0.7));">
+            </a>
           </div>
           <p style="font-size:0.92rem; line-height:1.6; margin-bottom:20px; color:rgba(255,255,255,0.7);">
             Berkshire's trusted UPVC window, door, and kitchen spraying specialists. Direct specialist pricing, 10-year anti-fade guarantees, and factory-grade finishes.
@@ -1419,12 +1804,12 @@
         <div>
           <h3 class="footer__heading" style="color:#fff; font-size:1.05rem; font-weight:700; margin-bottom:20px; text-transform:uppercase; letter-spacing:0.05em;">Our Spraying Services</h3>
           <ul class="footer__links" role="list" style="list-style:none; padding:0; display:flex; flex-direction:column; gap:10px; font-size:0.92rem;">
-            <li><a href="#services" style="color:inherit; text-decoration:none;">UPVC Window Spraying</a></li>
-            <li><a href="#services" style="color:inherit; text-decoration:none;">Front &amp; Composite Doors</a></li>
-            <li><a href="#services" style="color:inherit; text-decoration:none;">Kitchen Cabinet Respraying</a></li>
-            <li><a href="#services" style="color:inherit; text-decoration:none;">Garage Door Spraying</a></li>
-            <li><a href="#services" style="color:inherit; text-decoration:none;">Conservatory Spraying</a></li>
-            <li><a href="#services" style="color:inherit; text-decoration:none;">Commercial &amp; Shopfronts</a></li>
+            <li><a href="services.html#windows" style="color:inherit; text-decoration:none;">UPVC Windows &amp; Conservatories</a></li>
+            <li><a href="services.html#doors" style="color:inherit; text-decoration:none;">Front &amp; Composite Doors</a></li>
+            <li><a href="services.html#kitchens" style="color:inherit; text-decoration:none;">Kitchen Cabinet Respraying</a></li>
+            <li><a href="services.html#garage-doors" style="color:inherit; text-decoration:none;">Garage Door Spraying</a></li>
+            <li><a href="services.html#commercial" style="color:inherit; text-decoration:none;">Commercial &amp; Shopfronts</a></li>
+            <li><a href="services.html#graffiti" style="color:inherit; text-decoration:none;">Graffiti Removal &amp; Restoration</a></li>
           </ul>
         </div>
 

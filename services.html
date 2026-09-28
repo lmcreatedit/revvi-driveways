@@ -20,7 +20,8 @@
   <link rel="canonical" href="https://windsorspraying.co.uk/services.html">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/jpeg" href="assets/windsor-spraying-logo.jpg">
+  <link rel="icon" type="image/png" href="assets/windsor-crown-exact.png">
+  <link rel="apple-touch-icon" href="assets/windsor-crown-exact.png">
 
   <!-- Google Fonts preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,7 +34,7 @@
   <style>
     .service-card-2col {
       background: #111C38;
-      border: 1.5px solid rgba(217,119,6,0.3);
+      border: 1.5px solid rgba(212,175,55,0.25);
       border-radius: 20px;
       overflow: hidden;
       display: flex;
@@ -50,7 +51,7 @@
       width: 100%;
       height: 220px;
       background: linear-gradient(135deg, #1A2744 0%, #0B132B 50%, #152238 100%);
-      border-bottom: 1px solid rgba(217,119,6,0.25);
+      border-bottom: 1px solid rgba(212,175,55,0.2);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -64,10 +65,10 @@
       gap: 6px;
       padding: 6px 14px;
       border-radius: 50px;
-      background: #D97706;
-      border: 1.5px solid #FBBF24;
-      color: #0F172A;
-      font-size: 0.78rem;
+      background: #D4AF37;
+      border: 1px solid #F5D77F;
+      color: #080C16;
+      font-size: 0.76rem;
       font-weight: 900;
       letter-spacing: 0.05em;
       text-transform: uppercase;
@@ -99,7 +100,18 @@
       gap: 8px;
       margin: 16px 0 24px;
       font-size: 0.85rem;
-      color: rgba(255,255,255,0.85);
+      color: rgba(255,255,255,0.88);
+    }
+    .service-card-2col__specs li {
+      display: flex;
+      align-items: center;
+    }
+    .service-card-2col__specs li span.tick {
+      color: #22C55E;
+      font-weight: 900;
+      font-size: 0.95rem;
+      margin-right: 6px;
+      flex-shrink: 0;
     }
   </style>
 
@@ -112,10 +124,10 @@
   <!-- ══════════════════════════════
        NAV
   ══════════════════════════════ -->
-  <nav class="nav scrolled" aria-label="Main navigation">
+  <nav class="nav" aria-label="Main navigation">
     <div class="nav__inner">
-      <a href="index.html" class="nav__logo" style="display:flex; align-items:center; gap:12px; text-decoration:none;">
-        <img src="assets/windsor-crown-mark.svg" alt="Windsor Spraying Crown Logo" style="height:54px; width:54px; object-fit:contain; filter:drop-shadow(0 2px 10px rgba(212,175,55,0.45)); flex-shrink:0; display:block;">
+      <a href="index.html" class="nav__logo" style="display:flex; align-items:center; gap:14px; text-decoration:none;">
+        <img src="assets/windsor-crown-exact.png" alt="Windsor Spraying Crown Logo" style="height:54px; width:auto; max-width:85px; object-fit:contain; filter:drop-shadow(0 3px 12px rgba(212,175,55,0.45)); flex-shrink:0; display:block;">
         <span style="font-weight:900; font-size:1.45rem; letter-spacing:-0.01em; color:#FFFFFF;">WINDSOR <span style="color:#D4AF37;">SPRAYING</span></span>
       </a>
 
@@ -129,8 +141,8 @@
 
       <div class="nav__cta">
         <a href="tel:07477510304" class="nav__phone" aria-label="Call Windsor Spraying">
-          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-          <span>07477 510304</span>
+          <svg width="18" height="18" fill="none" stroke="#D4AF37" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true" style="flex-shrink:0;"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <span style="letter-spacing:0.02em;">07477 510304</span>
         </a>
       </div>
 
@@ -148,16 +160,15 @@
     <a href="gallery.html">Recent Work</a>
     <a href="about.html">Why Us</a>
     <a href="contact.html">Contact</a>
-    <a href="tel:07477510304" class="btn btn--primary" style="margin-top:20px;">Call 07477 510304</a>
   </div>
 
   <!-- ══════════════════════════════
        BLUE BIRD SUB-NAV ANNOUNCEMENT STRIP
   ══════════════════════════════ -->
   <div class="sub-nav-banner">
-    <span class="sub-nav-prefix">Berkshire's Spraying Specialists</span>
-    <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-    <span>10-Year Anti-Fade Guarantee &middot; Save Up to 80% vs Replacement</span>
+    <span class="sub-nav-prefix" style="color:#D4AF37; font-weight:800;">Specialist UPVC &amp; Kitchen Spraying</span>
+    <span style="color:rgba(212,175,55,0.6);">&bull;</span>
+    <span>10-Year Anti-Fade Guarantee &middot; Factory-Grade Finish &middot; Free Fast Photo Quotes</span>
   </div>
 
   <main>
@@ -167,40 +178,40 @@
     ══════════════════════════════ -->
     <section class="services-hero" aria-label="Services hero" style="background:#080D1C; color:white; padding:48px 0 36px; border-bottom:1px solid rgba(255,255,255,0.08);">
       <div class="container">
-        <span class="section-eyebrow" style="color:var(--gold) !important; font-weight:800;">WHAT WE DO &middot; WINDSOR, ASCOT, MAIDENHEAD &amp; BERKSHIRE</span>
+        <span class="section-eyebrow" style="color:var(--gold) !important; font-weight:800;">DIRECT SPECIALIST PRICING &middot; WINDSOR, ASCOT, MAIDENHEAD &amp; BERKSHIRE</span>
         <h1 style="font-family:var(--font-heading); font-size:clamp(2.2rem,5vw,3.6rem); font-weight:900; color:#FFFFFF; letter-spacing:-0.02em; line-height:1.1; margin-bottom:16px; max-width:760px;">Specialists in UPVC Window, Door &amp; Kitchen Spraying</h1>
-        <p style="font-size:1.08rem; color:rgba(255,255,255,0.8); max-width:620px; line-height:1.75;">Transform your property for up to 80% less than the cost of replacement. Factory-grade specialist coatings, exact RAL &amp; Farrow &amp; Ball colour matches, and 10-year anti-fade guarantees.</p>
+        <p style="font-size:1.08rem; color:rgba(255,255,255,0.8); max-width:620px; line-height:1.75;">Transform the look of your home for up to 80% less than replacing. Flawless factory finish in any colour, backed by our 10-year anti-fade guarantee.</p>
       </div>
     </section>
 
     <!-- ══════════════════════════════
          SERVICES GRID (SIDE-BY-SIDE 2-COLUMN)
-    ══════════════════════════════ -->
+     ══════════════════════════════ -->
     <section class="section" aria-labelledby="services-full-heading" style="background:#0B132B; padding:80px 0;">
       <div class="container">
         <h2 class="visually-hidden" id="services-full-heading">All specialist spraying services</h2>
 
         <div class="services-full-grid stagger-group">
 
-          <!-- Card 1: UPVC Windows -->
+          <!-- Card 1: UPVC Windows & Conservatories -->
           <article class="service-card-2col stagger-item" id="windows">
             <div class="service-card-2col__image">
               <span class="service-card-2col__badge">📸 Portfolio Manager Slot</span>
-              <div style="font-weight:900; font-size:1.15rem; color:#FFFFFF; margin-bottom:4px; text-shadow:0 2px 8px rgba(0,0,0,0.9);">UPVC Window Spraying</div>
-              <div style="font-size:0.85rem; color:#CBD5E1; font-weight:600; text-shadow:0 1px 4px rgba(0,0,0,0.9);">Windsor &middot; Berkshire</div>
+              <div style="font-weight:900; font-size:1.15rem; color:#FFFFFF; margin-bottom:4px; text-shadow:0 2px 8px rgba(0,0,0,0.9);">UPVC Windows &amp; Conservatories</div>
+              <div style="font-size:0.85rem; color:#CBD5E1; font-weight:600; text-shadow:0 1px 4px rgba(0,0,0,0.9);">Windsor &middot; Ascot &middot; Maidenhead</div>
             </div>
             <div class="service-card-2col__body">
-              <span style="color:#D97706; font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.1em; display:block; margin-bottom:6px;">10-Year Guarantee &middot; Any RAL Colour</span>
-              <h2 style="font-size:1.35rem; font-weight:800; color:#FFFFFF; margin-bottom:10px; line-height:1.25;">UPVC Window Frame Spraying</h2>
-              <p style="color:rgba(255,255,255,0.75); font-size:0.9rem; line-height:1.6; margin-bottom:12px;">Modernise tired white or faded UPVC window frames to stylish Anthracite Grey (RAL 7016), Jet Black, or custom colours with a flawless, brush-free factory finish.</p>
+              <span style="color:#D4AF37; font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.1em; display:block; margin-bottom:6px;">Save Up to 80% vs Replacing &middot; 10-Yr Guarantee</span>
+              <h2 style="font-size:1.35rem; font-weight:800; color:#FFFFFF; margin-bottom:10px; line-height:1.25;">UPVC Window &amp; Conservatory Spraying</h2>
+              <p style="color:rgba(255,255,255,0.75); font-size:0.9rem; line-height:1.6; margin-bottom:12px;">Turn tired white or faded UPVC frames into modern Anthracite Grey, Jet Black, or any custom colour. We spray on-site for a smooth factory finish with zero mess, no building work, and no disruption to your home.</p>
               <ul class="service-card-2col__specs">
-                <li>✓ Anthracite Grey (RAL 7016)</li>
-                <li>✓ 10-Year Anti-Fade Guarantee</li>
-                <li>✓ Swift On-Site Turnaround</li>
-                <li>✓ Complete Masking &amp; Zero Mess</li>
+                <li><span class="tick">✓</span> Anthracite Grey &amp; Any Custom Colour</li>
+                <li><span class="tick">✓</span> Windows, Conservatories &amp; Fascias</li>
+                <li><span class="tick">✓</span> 10-Year Anti-Fade Guarantee</li>
+                <li><span class="tick">✓</span> Full Glass Masking &amp; Zero Mess</li>
               </ul>
               <div style="display:flex; gap:12px; margin-top:auto; flex-wrap:wrap;">
-                <a href="https://wa.me/447477510304?text=Hi%20Windsor%20Spraying,%20I'd%20like%20a%20free%20quote%20for%20UPVC%20window%20spraying%20in%20[Your%20Area%20/%20Postcode]." class="btn btn--primary" style="font-size:0.88rem; padding:12px 20px;" target="_blank" rel="noopener">Get Window Quote &rarr;</a>
+                <a href="https://wa.me/447477510304?text=Hi%20Windsor%20Spraying,%20I'd%20like%20a%20free%20quote%20for%20UPVC%20window%20and%20conservatory%20spraying%20in%20[Your%20Area%20/%20Postcode]." class="btn btn--primary" style="font-size:0.88rem; padding:12px 20px;" target="_blank" rel="noopener">Get Window Photo Quote &rarr;</a>
                 <a href="tel:07477510304" class="btn btn--ghost" style="font-size:0.88rem; padding:12px 18px; border:1px solid rgba(255,255,255,0.3);">Call Direct</a>
               </div>
             </div>
@@ -211,20 +222,20 @@
             <div class="service-card-2col__image">
               <span class="service-card-2col__badge">📸 Portfolio Manager Slot</span>
               <div style="font-weight:900; font-size:1.15rem; color:#FFFFFF; margin-bottom:4px; text-shadow:0 2px 8px rgba(0,0,0,0.9);">Front &amp; Composite Doors</div>
-              <div style="font-size:0.85rem; color:#CBD5E1; font-weight:600; text-shadow:0 1px 4px rgba(0,0,0,0.9);">Ascot &middot; Berkshire</div>
+              <div style="font-size:0.85rem; color:#CBD5E1; font-weight:600; text-shadow:0 1px 4px rgba(0,0,0,0.9);">Ascot &middot; Sunningdale &middot; Windsor</div>
             </div>
             <div class="service-card-2col__body">
-              <span style="color:#D97706; font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.1em; display:block; margin-bottom:6px;">High Durability &middot; Factory-Grade Finish</span>
+              <span style="color:#D4AF37; font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.1em; display:block; margin-bottom:6px;">Instant Curb Appeal &middot; Done in Half a Day</span>
               <h2 style="font-size:1.35rem; font-weight:800; color:#FFFFFF; margin-bottom:10px; line-height:1.25;">Front &amp; Composite Door Spraying</h2>
-              <p style="color:rgba(255,255,255,0.75); font-size:0.9rem; line-height:1.6; margin-bottom:12px;">Boost your curb appeal with a stunning entrance transformation. Chemical bonding coatings designed for extreme weather and high everyday touch points.</p>
+              <p style="color:rgba(255,255,255,0.75); font-size:0.9rem; line-height:1.6; margin-bottom:12px;">Give your front entrance a brand new look for a fraction of the £1,500+ cost of a new door. We apply an ultra-tough, weatherproof coating that handles heavy daily use without chipping, flaking, or peeling.</p>
               <ul class="service-card-2col__specs">
-                <li>✓ UPVC &amp; Composite Doors</li>
-                <li>✓ Frames &amp; Surrounds Included</li>
-                <li>✓ Matte, Satin, or Gloss Finish</li>
-                <li>✓ Scratch &amp; Chip Resistant</li>
+                <li><span class="tick">✓</span> Composite, UPVC &amp; Timber Doors</li>
+                <li><span class="tick">✓</span> Matching Frames, Sills &amp; Thresholds</li>
+                <li><span class="tick">✓</span> Matte, Satin or High-Gloss Finishes</li>
+                <li><span class="tick">✓</span> Tough Scratch &amp; Weatherproof Bond</li>
               </ul>
               <div style="display:flex; gap:12px; margin-top:auto; flex-wrap:wrap;">
-                <a href="https://wa.me/447477510304?text=Hi%20Windsor%20Spraying,%20I'd%20like%20a%20free%20quote%20for%20door%20spraying%20in%20[Your%20Area%20/%20Postcode]." class="btn btn--primary" style="font-size:0.88rem; padding:12px 20px;" target="_blank" rel="noopener">Get Door Quote &rarr;</a>
+                <a href="https://wa.me/447477510304?text=Hi%20Windsor%20Spraying,%20I'd%20like%20a%20free%20quote%20for%20door%20spraying%20in%20[Your%20Area%20/%20Postcode]." class="btn btn--primary" style="font-size:0.88rem; padding:12px 20px;" target="_blank" rel="noopener">Get Door Photo Quote &rarr;</a>
                 <a href="tel:07477510304" class="btn btn--ghost" style="font-size:0.88rem; padding:12px 18px; border:1px solid rgba(255,255,255,0.3);">Call Direct</a>
               </div>
             </div>
@@ -235,20 +246,20 @@
             <div class="service-card-2col__image">
               <span class="service-card-2col__badge">📸 Portfolio Manager Slot</span>
               <div style="font-weight:900; font-size:1.15rem; color:#FFFFFF; margin-bottom:4px; text-shadow:0 2px 8px rgba(0,0,0,0.9);">Kitchen Cabinet Respraying</div>
-              <div style="font-size:0.85rem; color:#CBD5E1; font-weight:600; text-shadow:0 1px 4px rgba(0,0,0,0.9);">Maidenhead &middot; Berkshire</div>
+              <div style="font-size:0.85rem; color:#CBD5E1; font-weight:600; text-shadow:0 1px 4px rgba(0,0,0,0.9);">Maidenhead &middot; Marlow &middot; Beaconsfield</div>
             </div>
             <div class="service-card-2col__body">
-              <span style="color:#D97706; font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.1em; display:block; margin-bottom:6px;">Save Up to 80% vs Replacement</span>
+              <span style="color:#D4AF37; font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.1em; display:block; margin-bottom:6px;">Save £10,000+ vs A New Kitchen &middot; Minimal Disruption</span>
               <h2 style="font-size:1.35rem; font-weight:800; color:#FFFFFF; margin-bottom:10px; line-height:1.25;">Kitchen Cabinet Respraying</h2>
-              <p style="color:rgba(255,255,255,0.75); font-size:0.9rem; line-height:1.6; margin-bottom:12px;">Turn your tired wooden, MDF, or vinyl kitchen cabinets into a modern designer kitchen. Doors removed and factory sprayed; carcasses sprayed on site with zero odour.</p>
+              <p style="color:rgba(255,255,255,0.75); font-size:0.9rem; line-height:1.6; margin-bottom:12px;">Get a showroom-quality kitchen transformation without the £20,000+ bill or weeks of mess. We prep, mask, and spray on-site with full dust and extraction control, keeping disruption to your everyday routine to an absolute minimum.</p>
               <ul class="service-card-2col__specs">
-                <li>✓ Farrow &amp; Ball &amp; RAL Matches</li>
-                <li>✓ Multi-Coat Factory-Grade Finish</li>
-                <li>✓ Heat &amp; Steam Resistant</li>
-                <li>✓ Completed in 2-3 Days</li>
+                <li><span class="tick">✓</span> Exact Farrow &amp; Ball &amp; RAL Colour Matching</li>
+                <li><span class="tick">✓</span> Solid Wood, MDF &amp; Vinyl Wrapped Units</li>
+                <li><span class="tick">✓</span> Heat, Steam &amp; Wipe-Clean Durable Finish</li>
+                <li><span class="tick">✓</span> Clean On-Site Setup &amp; Zero Mess</li>
               </ul>
               <div style="display:flex; gap:12px; margin-top:auto; flex-wrap:wrap;">
-                <a href="https://wa.me/447477510304?text=Hi%20Windsor%20Spraying,%20I'd%20like%20a%20free%20quote%20for%20kitchen%20cabinet%20spraying%20in%20[Your%20Area%20/%20Postcode]." class="btn btn--primary" style="font-size:0.88rem; padding:12px 20px;" target="_blank" rel="noopener">Get Kitchen Quote &rarr;</a>
+                <a href="https://wa.me/447477510304?text=Hi%20Windsor%20Spraying,%20I'd%20like%20a%20free%20quote%20for%20kitchen%20cabinet%20spraying%20in%20[Your%20Area%20/%20Postcode]." class="btn btn--primary" style="font-size:0.88rem; padding:12px 20px;" target="_blank" rel="noopener">Get Kitchen Photo Quote &rarr;</a>
                 <a href="tel:07477510304" class="btn btn--ghost" style="font-size:0.88rem; padding:12px 18px; border:1px solid rgba(255,255,255,0.3);">Call Direct</a>
               </div>
             </div>
@@ -259,50 +270,26 @@
             <div class="service-card-2col__image">
               <span class="service-card-2col__badge">📸 Portfolio Manager Slot</span>
               <div style="font-weight:900; font-size:1.15rem; color:#FFFFFF; margin-bottom:4px; text-shadow:0 2px 8px rgba(0,0,0,0.9);">Garage Door Spraying</div>
-              <div style="font-size:0.85rem; color:#CBD5E1; font-weight:600; text-shadow:0 1px 4px rgba(0,0,0,0.9);">Bracknell &middot; Berkshire</div>
+              <div style="font-size:0.85rem; color:#CBD5E1; font-weight:600; text-shadow:0 1px 4px rgba(0,0,0,0.9);">Bracknell &middot; Windsor &middot; Berkshire</div>
             </div>
             <div class="service-card-2col__body">
-              <span style="color:#D97706; font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.1em; display:block; margin-bottom:6px;">Roller, Sectional &amp; Up-and-Over</span>
+              <span style="color:#D4AF37; font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.1em; display:block; margin-bottom:6px;">Complete Exterior Match &middot; Done in Hours</span>
               <h2 style="font-size:1.35rem; font-weight:800; color:#FFFFFF; margin-bottom:10px; line-height:1.25;">Garage Door Spraying</h2>
-              <p style="color:rgba(255,255,255,0.75); font-size:0.9rem; line-height:1.6; margin-bottom:12px;">Match your garage door seamlessly with your newly sprayed windows and entrance doors. Suitable for metal, timber, and UPVC garage doors.</p>
+              <p style="color:rgba(255,255,255,0.75); font-size:0.9rem; line-height:1.6; margin-bottom:12px;">Match your garage door to your freshly sprayed windows and front entrance for a clean, unified look. We apply a tough, weather-resistant coating that prevents rust and stands up to daily use.</p>
               <ul class="service-card-2col__specs">
-                <li>✓ Steel, Timber &amp; UPVC Doors</li>
-                <li>✓ UV &amp; Weather-Shield Coating</li>
-                <li>✓ Matching Frames &amp; Trims</li>
-                <li>✓ Swift On-Site Turnaround</li>
+                <li><span class="tick">✓</span> Roller, Sectional, Steel &amp; Up-and-Over</li>
+                <li><span class="tick">✓</span> Exact Colour Match to Windows &amp; Doors</li>
+                <li><span class="tick">✓</span> Rust-Proof &amp; Weather-Shield Coating</li>
+                <li><span class="tick">✓</span> Sprayed On-Site in Half a Day</li>
               </ul>
               <div style="display:flex; gap:12px; margin-top:auto; flex-wrap:wrap;">
-                <a href="https://wa.me/447477510304?text=Hi%20Windsor%20Spraying,%20I'd%20like%20a%20free%20quote%20for%20garage%20door%20spraying%20in%20[Your%20Area%20/%20Postcode]." class="btn btn--primary" style="font-size:0.88rem; padding:12px 20px;" target="_blank" rel="noopener">Get Garage Quote &rarr;</a>
+                <a href="https://wa.me/447477510304?text=Hi%20Windsor%20Spraying,%20I'd%20like%20a%20free%20quote%20for%20garage%20door%20spraying%20in%20[Your%20Area%20/%20Postcode]." class="btn btn--primary" style="font-size:0.88rem; padding:12px 20px;" target="_blank" rel="noopener">Get Garage Photo Quote &rarr;</a>
                 <a href="tel:07477510304" class="btn btn--ghost" style="font-size:0.88rem; padding:12px 18px; border:1px solid rgba(255,255,255,0.3);">Call Direct</a>
               </div>
             </div>
           </article>
 
-          <!-- Card 5: Conservatory Spraying -->
-          <article class="service-card-2col stagger-item" id="conservatories">
-            <div class="service-card-2col__image">
-              <span class="service-card-2col__badge">📸 Portfolio Manager Slot</span>
-              <div style="font-weight:900; font-size:1.15rem; color:#FFFFFF; margin-bottom:4px; text-shadow:0 2px 8px rgba(0,0,0,0.9);">Conservatory Spraying</div>
-              <div style="font-size:0.85rem; color:#CBD5E1; font-weight:600; text-shadow:0 1px 4px rgba(0,0,0,0.9);">Reading &middot; Berkshire</div>
-            </div>
-            <div class="service-card-2col__body">
-              <span style="color:#D97706; font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.1em; display:block; margin-bottom:6px;">Internal &amp; External Transformations</span>
-              <h2 style="font-size:1.35rem; font-weight:800; color:#FFFFFF; margin-bottom:10px; line-height:1.25;">Conservatory Spraying</h2>
-              <p style="color:rgba(255,255,255,0.75); font-size:0.9rem; line-height:1.6; margin-bottom:12px;">Revitalise discoloured and yellowing conservatories inside and out. Chemical bonding prevents UV degrade and seals against weathering.</p>
-              <ul class="service-card-2col__specs">
-                <li>✓ Roof Bars, Gutters &amp; Panels</li>
-                <li>✓ Complete Internal / External</li>
-                <li>✓ 10-Year Weatherproof Guarantee</li>
-                <li>✓ Thousands Saved vs New Build</li>
-              </ul>
-              <div style="display:flex; gap:12px; margin-top:auto; flex-wrap:wrap;">
-                <a href="https://wa.me/447477510304?text=Hi%20Windsor%20Spraying,%20I'd%20like%20a%20free%20quote%20for%20conservatory%20spraying%20in%20[Your%20Area%20/%20Postcode]." class="btn btn--primary" style="font-size:0.88rem; padding:12px 20px;" target="_blank" rel="noopener">Get Conservatory Quote &rarr;</a>
-                <a href="tel:07477510304" class="btn btn--ghost" style="font-size:0.88rem; padding:12px 18px; border:1px solid rgba(255,255,255,0.3);">Call Direct</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 6: Commercial Spraying -->
+          <!-- Card 5: Commercial Spraying -->
           <article class="service-card-2col stagger-item" id="commercial">
             <div class="service-card-2col__image">
               <span class="service-card-2col__badge">📸 Portfolio Manager Slot</span>
@@ -310,14 +297,14 @@
               <div style="font-size:0.85rem; color:#CBD5E1; font-weight:600; text-shadow:0 1px 4px rgba(0,0,0,0.9);">Berkshire &amp; Surrey</div>
             </div>
             <div class="service-card-2col__body">
-              <span style="color:#D97706; font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.1em; display:block; margin-bottom:6px;">High-Traffic Architectural Coatings</span>
+              <span style="color:#D4AF37; font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.1em; display:block; margin-bottom:6px;">Zero Business Downtime &middot; Out-of-Hours Work</span>
               <h2 style="font-size:1.35rem; font-weight:800; color:#FFFFFF; margin-bottom:10px; line-height:1.25;">Commercial &amp; Shopfront Spraying</h2>
-              <p style="color:rgba(255,255,255,0.75); font-size:0.9rem; line-height:1.6; margin-bottom:12px;">Fast, out-of-hours on-site spraying for retail shops, offices, cladding, and commercial properties. Zero downtime for your business operations.</p>
+              <p style="color:rgba(255,255,255,0.75); font-size:0.9rem; line-height:1.6; margin-bottom:12px;">Refresh retail shopfronts, cladding, and office entrances without disrupting trade. We work evenings and weekends so your business operates as normal throughout.</p>
               <ul class="service-card-2col__specs">
-                <li>✓ Shopfronts &amp; Curtain Walling</li>
-                <li>✓ Cladding &amp; Commercial Units</li>
-                <li>✓ Out-of-Hours / Weekend Work</li>
-                <li>✓ Exact Corporate Brand Colors</li>
+                <li><span class="tick">✓</span> Aluminium Shopfronts &amp; Curtain Walling</li>
+                <li><span class="tick">✓</span> Cladding, Shutters &amp; Office Entrances</li>
+                <li><span class="tick">✓</span> Overnight &amp; Weekend Spraying Available</li>
+                <li><span class="tick">✓</span> Exact Brand &amp; RAL Colour Matching</li>
               </ul>
               <div style="display:flex; gap:12px; margin-top:auto; flex-wrap:wrap;">
                 <a href="https://wa.me/447477510304?text=Hi%20Windsor%20Spraying,%20I'd%20like%20a%20free%20quote%20for%20commercial%20spraying%20in%20[Your%20Area%20/%20Postcode]." class="btn btn--primary" style="font-size:0.88rem; padding:12px 20px;" target="_blank" rel="noopener">Get Commercial Quote &rarr;</a>
@@ -326,7 +313,7 @@
             </div>
           </article>
 
-          <!-- Card 7: Commercial & Residential Graffiti Removal -->
+          <!-- Card 6: Commercial & Residential Graffiti Removal -->
           <article class="service-card-2col stagger-item" id="graffiti">
             <div class="service-card-2col__image">
               <span class="service-card-2col__badge">📸 Portfolio Manager Slot</span>
@@ -334,14 +321,14 @@
               <div style="font-size:0.85rem; color:#CBD5E1; font-weight:600; text-shadow:0 1px 4px rgba(0,0,0,0.9);">Berkshire, Buckinghamshire &amp; Surrey</div>
             </div>
             <div class="service-card-2col__body">
-              <span style="color:#D97706; font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.1em; display:block; margin-bottom:6px;">Fast Jet Clean &amp; Protective Seal</span>
+              <span style="color:#D4AF37; font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.1em; display:block; margin-bottom:6px;">Fast Response &middot; Safe on Brick &amp; Stone</span>
               <h2 style="font-size:1.35rem; font-weight:800; color:#FFFFFF; margin-bottom:10px; line-height:1.25;">Graffiti Removal &amp; Wall Restoration</h2>
-              <p style="color:rgba(255,255,255,0.75); font-size:0.9rem; line-height:1.6; margin-bottom:12px;">Fast, non-destructive removal of spray paint, tagging, and stains from brickwork, render, masonry walls, and commercial shopfronts. Includes optional anti-graffiti protective barrier to stop paint from sticking in the future.</p>
+              <p style="color:rgba(255,255,255,0.75); font-size:0.9rem; line-height:1.6; margin-bottom:12px;">Fast, safe removal of spray paint and stains from brick, stone, render, and shutters without damaging the underlying surface. Optional protective coating allows future paint to wipe off easily.</p>
               <ul class="service-card-2col__specs">
-                <li>✓ Brickwork, Render, Stone &amp; Metal Shutters</li>
-                <li>✓ Non-Damaging Specialist Chemical &amp; Jet Wash</li>
-                <li>✓ Protective Anti-Graffiti Barrier Coating</li>
-                <li>✓ Same-Day / 24-Hour Fast Response</li>
+                <li><span class="tick">✓</span> Brick, Stone, Render &amp; Metal Shutters</li>
+                <li><span class="tick">✓</span> Safe, Non-Damaging Specialist Cleaning</li>
+                <li><span class="tick">✓</span> Optional Anti-Graffiti Protective Barrier</li>
+                <li><span class="tick">✓</span> Fast Turnaround Across Berkshire</li>
               </ul>
               <div style="display:flex; gap:12px; margin-top:auto; flex-wrap:wrap;">
                 <a href="https://wa.me/447477510304?text=Hi%20Windsor%20Spraying,%20I'd%20like%20a%20free%20quote%20for%20graffiti%20removal%20and%20wall%20restoration%20in%20[Your%20Area%20/%20Postcode]." class="btn btn--primary" style="font-size:0.88rem; padding:12px 20px;" target="_blank" rel="noopener">Get Graffiti Quote &rarr;</a>
@@ -361,7 +348,7 @@
       <div class="container" style="max-width:850px; margin:0 auto;">
         <span class="section-eyebrow" style="color:var(--gold); display:block; margin-bottom:10px;">Direct Specialist Service</span>
         <h2 style="font-family:var(--font-heading); font-size:clamp(1.8rem,4vw,2.6rem); font-weight:800; color:#fff; letter-spacing:-0.02em; margin-bottom:12px;">Not Sure What You Need?</h2>
-        <p style="color:rgba(255,255,255,0.8); font-size:1.05rem; max-width:540px; margin-inline:auto; margin-bottom:32px; line-height:1.6;">Send us a photo of your windows, doors, or kitchen on WhatsApp — get a fixed price estimate in 15 minutes with zero sales pressure.</p>
+        <p style="color:rgba(255,255,255,0.8); font-size:1.05rem; max-width:540px; margin-inline:auto; margin-bottom:32px; line-height:1.6;">Send us a photo of your windows, doors, or kitchen on WhatsApp — get a fast, fixed price estimate with zero sales pressure.</p>
         
         <div class="cta-section__actions" style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-bottom:24px;">
           <a href="tel:07477510304" class="btn btn--primary" style="font-size:0.95rem; padding:16px 36px;">
@@ -384,22 +371,16 @@
   <!-- ══════════════════════════════
        FOOTER
   ══════════════════════════════ -->
-  <footer class="footer" style="background:#060913; padding:72px 0 32px; color:rgba(255,255,255,0.75);">
+  <footer class="footer" aria-label="Site footer" style="background:#050810; border-top:1px solid rgba(212,175,55,0.25); color:rgba(255,255,255,0.8); padding:70px 0 30px;">
     <div class="container">
-      <div class="footer__grid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:40px; margin-bottom:56px;">
-
-        <!-- Column 1: Brand & Google Maps Widget -->
-        <div class="footer__brand">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:40px; margin-bottom:50px;">
+        
+        <!-- Column 1: Brand & Map -->
+        <div>
           <div style="margin-bottom:18px;">
-            <div class="footer-brand-card" style="width:180px; background:linear-gradient(145deg, #1E293B 0%, #0F172A 100%); border:1.5px solid rgba(2,132,199,0.45); border-radius:14px; padding:16px 14px; text-align:center; box-shadow:0 8px 24px rgba(0,0,0,0.5); display:inline-flex; flex-direction:column; align-items:center; gap:8px;">
-              <img src="assets/windsor-spraying-logo.jpg" alt="Windsor Spraying Logo" style="height:40px; width:40px; border-radius:8px; object-fit:cover; filter:drop-shadow(0 2px 8px rgba(2,132,199,0.5));">
-              <div style="font-weight:900; font-size:1.05rem; letter-spacing:0.02em; color:#FFFFFF; line-height:1.1;">
-                WINDSOR <span style="color:#38BDF8; font-weight:800;">SPRAYING</span>
-              </div>
-              <div style="font-size:0.58rem; font-weight:800; color:#D97706; letter-spacing:0.06em; text-transform:uppercase; line-height:1.2;">
-                UPVC, Windows &amp; Kitchens
-              </div>
-            </div>
+            <a href="index.html" style="display:inline-block; text-decoration:none;">
+              <img src="assets/windsor-logo-horizontal.png" alt="Windsor Spraying — UPVC &amp; Kitchen Specialists" style="height:52px; width:auto; max-width:240px; object-fit:contain; display:block; filter:drop-shadow(0 4px 14px rgba(0,0,0,0.7));">
+            </a>
           </div>
           <p style="font-size:0.92rem; line-height:1.6; margin-bottom:16px; color:rgba(255,255,255,0.7);">
             Berkshire's trusted UPVC window, door, and kitchen spraying specialists. Direct specialist pricing, 10-year anti-fade guarantees, and factory-grade finishes.
@@ -418,44 +399,81 @@
         <div>
           <h3 class="footer__heading" style="color:#fff; font-size:1.05rem; font-weight:700; margin-bottom:20px; text-transform:uppercase; letter-spacing:0.05em;">Our Spraying Services</h3>
           <ul class="footer__links" role="list" style="list-style:none; padding:0; display:flex; flex-direction:column; gap:10px; font-size:0.92rem;">
-            <li><a href="services.html#windows" style="color:inherit; text-decoration:none;">UPVC Window Spraying</a></li>
+            <li><a href="services.html#windows" style="color:inherit; text-decoration:none;">UPVC Windows &amp; Conservatories</a></li>
             <li><a href="services.html#doors" style="color:inherit; text-decoration:none;">Front &amp; Composite Doors</a></li>
             <li><a href="services.html#kitchens" style="color:inherit; text-decoration:none;">Kitchen Cabinet Respraying</a></li>
             <li><a href="services.html#garage-doors" style="color:inherit; text-decoration:none;">Garage Door Spraying</a></li>
-            <li><a href="services.html#conservatories" style="color:inherit; text-decoration:none;">Conservatory Spraying</a></li>
             <li><a href="services.html#commercial" style="color:inherit; text-decoration:none;">Commercial &amp; Shopfronts</a></li>
+            <li><a href="services.html#graffiti" style="color:inherit; text-decoration:none;">Graffiti Removal &amp; Restoration</a></li>
           </ul>
         </div>
 
-        <!-- Column 3: Navigation -->
+        <!-- Column 3: Quick Links -->
         <div>
           <h3 class="footer__heading" style="color:#fff; font-size:1.05rem; font-weight:700; margin-bottom:20px; text-transform:uppercase; letter-spacing:0.05em;">Quick Links</h3>
           <ul class="footer__links" role="list" style="list-style:none; padding:0; display:flex; flex-direction:column; gap:10px; font-size:0.92rem;">
             <li><a href="index.html" style="color:inherit; text-decoration:none;">Home</a></li>
-            <li><a href="services.html" style="color:inherit; text-decoration:none;">All Services</a></li>
-            <li><a href="index.html#projects" style="color:inherit; text-decoration:none;">Recent Work</a></li>
-            <li><a href="index.html#why-us" style="color:inherit; text-decoration:none;">Why Choose Us</a></li>
-            <li><a href="contact.html" style="color:inherit; text-decoration:none;">Contact &amp; Quotes</a></li>
+            <li><a href="services.html" style="color:inherit; text-decoration:none;">Services</a></li>
+            <li><a href="gallery.html" style="color:inherit; text-decoration:none;">Recent Work</a></li>
+            <li><a href="about.html" style="color:inherit; text-decoration:none;">Why Choose Us</a></li>
+            <li><a href="contact.html" style="color:inherit; text-decoration:none;">Get Free Quote</a></li>
           </ul>
         </div>
 
-        <!-- Column 4: Direct Contact -->
+        <!-- Column 4: Contact & Service Areas -->
         <div>
           <h3 class="footer__heading" style="color:#fff; font-size:1.05rem; font-weight:700; margin-bottom:20px; text-transform:uppercase; letter-spacing:0.05em;">Direct Contact</h3>
-          <p style="font-size:0.92rem; line-height:1.6; margin-bottom:14px;">Speak directly with our spraying specialists for quotes and advice:</p>
-          <a href="tel:07477510304" style="display:block; font-size:1.15rem; font-weight:800; color:var(--gold); text-decoration:none; margin-bottom:8px;">07477 510304</a>
-          <p style="font-size:0.85rem; color:rgba(255,255,255,0.6); margin-bottom:16px;">Windsor, SL4 &middot; Covering all Berkshire &amp; Surrey</p>
-          <a href="https://wa.me/447477510304?text=Hi%20Windsor%20Spraying,%20I've%20come%20from%20the%20website%20and%20would%20like%20to%20get%20a%20free%20quote%20for%20spraying%20in%20Berkshire." class="btn btn--primary" style="font-size:0.88rem; padding:10px 20px;" target="_blank" rel="noopener">WhatsApp Us Direct &rarr;</a>
+          <div style="display:flex; flex-direction:column; gap:10px; font-size:0.92rem; margin-bottom:24px;">
+            <div style="display:flex; align-items:center; gap:10px;">
+              <svg width="18" height="18" fill="none" stroke="var(--gold)" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              <a href="tel:07477510304" style="color:#fff; text-decoration:none; font-weight:700; font-size:1.1rem; letter-spacing:0.5px;">07477 510304</a>
+            </div>
+          </div>
+
+          <h4 style="color:#fff; font-size:0.85rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:8px;">Service Areas:</h4>
+          <p style="font-size:0.82rem; line-height:1.6; color:rgba(255,255,255,0.6);">
+            Windsor &middot; Ascot &middot; Maidenhead &middot; Bracknell &middot; Slough &middot; Reading &middot; Egham &middot; Staines &middot; Berkshire &amp; Surrey
+          </p>
         </div>
 
       </div>
 
-      <div class="footer__bottom" style="border-top:1px solid rgba(255,255,255,0.1); padding-top:28px; text-align:center; font-size:0.84rem; color:rgba(255,255,255,0.5);">
-        &copy; 2026 Windsor Spraying. All rights reserved. &middot; Specialist UPVC Window, Door &amp; Kitchen Spraying in Berkshire.
+      <div class="footer__bottom" style="border-top:1px solid rgba(255,255,255,0.1); padding-top:28px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; font-size:0.85rem; color:rgba(255,255,255,0.5);">
+        <span>&copy; 2026 Windsor Spraying. All rights reserved.</span>
+        <span>Website by <a href="https://lmcreated.it" target="_blank" rel="noopener noreferrer" style="color:var(--gold); text-decoration:none; font-weight:600;">lm created it</a></span>
+        <span>Windsor &amp; Berkshire &nbsp;&middot;&nbsp; <a href="contact.html" style="color:inherit;">Get Fast Quote</a></span>
       </div>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <!-- JS -->
+  <script src="js/main.js" defer></script>
+
+  <!-- ══════════════════════════════
+       WHATSAPP FLOATING BUTTON
+  ══════════════════════════════ -->
+  <a href="https://wa.me/447477510304?text=Hi%20Windsor%20Spraying,%20I've%20come%20from%20the%20website%20and%20would%20like%20to%20enquire%20about%20a%20spraying%20quote."
+     class="whatsapp-float"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span>WhatsApp Us</span>
+  </a>
+
+  <!-- Floating Bottom Action Bar (Mobile Only) -->
+  <div class="floating-bottom-bar" aria-label="Quick Actions">
+    <a href="tel:07477510304" class="btn-call">
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call Now
+    </a>
+    <a href="https://wa.me/447477510304?text=Hi%20Windsor%20Spraying,%20I've%20come%20from%20the%20website%20and%20would%20like%20a%20free%20quote%20in%20[Your%20Area%20/%20Postcode]." class="btn-quote" target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span>Get Free Estimate</span>
+  </a>
+  </div>
 </body>
 </html>

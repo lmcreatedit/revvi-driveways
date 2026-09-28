@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+  <defs>
+    <linearGradient id="goldGradSeal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF2A1"/>
+      <stop offset="25%" stop-color="#E5C158"/>
+      <stop offset="55%" stop-color="#D4AF37"/>
+      <stop offset="85%" stop-color="#B8860B"/>
+      <stop offset="100%" stop-color="#805F04"/>
+    </linearGradient>
+    <linearGradient id="goldGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCE592"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#AA820A"/>
+    </linearGradient>
+    <filter id="sealShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#000000" flood-opacity="0.9"/>
+    </filter>
+    
+    <!-- Smooth Circle Paths for Top and Bottom Text -->
+    <!-- Top Arc (starts at 9 o'clock goes clockwise over top to 3 o'clock) -->
+    <path id="topCirclePath" d="M 130,500 A 370,370 0 1,1 870,500" fill="none"/>
+    <!-- Bottom Arc (starts at 9 o'clock goes counter-clockwise/clockwise under bottom to 3 o'clock) -->
+    <path id="bottomCirclePath" d="M 870,500 A 370,370 0 0,1 130,500" fill="none"/>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="1000" fill="#080C16"/>
+
+  <g filter="url(#sealShadow)">
+    <!-- Outer Dual Gold Rings -->
+    <circle cx="500" cy="500" r="465" fill="none" stroke="url(#goldGradSeal)" stroke-width="8"/>
+    <circle cx="500" cy="500" r="448" fill="none" stroke="url(#goldGradSeal)" stroke-width="2.5" opacity="0.7"/>
+    
+    <!-- Inner Chamber Rings -->
+    <circle cx="500" cy="500" r="298" fill="none" stroke="url(#goldGradSeal)" stroke-width="5"/>
+    <circle cx="500" cy="500" r="282" fill="none" stroke="url(#goldGradSeal)" stroke-width="2" opacity="0.6"/>
+
+    <!-- Left & Right Divider Stars -->
+    <g transform="translate(130, 500) scale(1.6)">
+      <polygon points="0,-12 3.5,-3.5 12,-3.5 5,2.5 7.5,11 0,6 -7.5,11 -5,2.5 -12,-3.5 -3.5,-3.5" fill="url(#goldGradSeal)"/>
+    </g>
+    <g transform="translate(870, 500) scale(1.6)">
+      <polygon points="0,-12 3.5,-3.5 12,-3.5 5,2.5 7.5,11 0,6 -7.5,11 -5,2.5 -12,-3.5 -3.5,-3.5" fill="url(#goldGradSeal)"/>
+    </g>
+
+    <!-- Top Curved Text: WINDSOR SPRAYING -->
+    <text font-family="'Outfit', 'Montserrat', 'Inter', sans-serif" font-weight="900" font-size="58" letter-spacing="8" dy="-10">
+      <textPath href="#topCirclePath" startOffset="50%" text-anchor="middle">
+        <tspan fill="#FFFFFF">WINDSOR </tspan><tspan fill="url(#goldGradSeal)">SPRAYING</tspan>
+      </textPath>
+    </text>
+
+    <!-- Bottom Curved Text: 10-YEAR GUARANTEE -->
+    <text font-family="'Outfit', 'Montserrat', 'Inter', sans-serif" font-weight="900" font-size="46" fill="url(#goldGradSeal)" letter-spacing="10" dy="32">
+      <textPath href="#bottomCirclePath" startOffset="50%" text-anchor="middle">
+        10-YEAR GUARANTEE
+      </textPath>
+    </text>
+
+    <!-- Center Exact Crown (Majestic Scale) -->
+    <g transform="translate(290, 375) scale(1.05)">
+      <path d="M 200 15 L 248 95 L 226 125 L 272 192 L 338 142 L 328 98 L 388 48 L 348 252 Q 200 224 52 252 L 12 48 L 72 98 L 62 142 L 128 192 L 174 125 L 152 95 Z" fill="url(#goldGradSeal)"/>
+      <path d="M 58 268 Q 200 240 342 268 L 336 290 Q 200 262 64 290 Z" fill="url(#goldGradSeal)"/>
+    </g>
+  </g>
+</svg>

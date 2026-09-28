@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <linearGradient id="goldGradSeal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCE592"/>
+      <stop offset="25%" stop-color="#E5C158"/>
+      <stop offset="55%" stop-color="#D4AF37"/>
+      <stop offset="85%" stop-color="#B8860B"/>
+      <stop offset="100%" stop-color="#805F04"/>
+    </linearGradient>
+    <filter id="sealShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.9"/>
+    </filter>
+    <path id="topCirclePath" d="M 60,250 A 190,190 0 1,1 440,250" fill="none"/>
+    <path id="bottomCirclePath" d="M 440,250 A 190,190 0 0,1 60,250" fill="none"/>
+  </defs>
+  <g filter="url(#sealShadow)">
+    <circle cx="250" cy="250" r="236" fill="none" stroke="url(#goldGradSeal)" stroke-width="3.5"/>
+    <circle cx="250" cy="250" r="222" fill="none" stroke="url(#goldGradSeal)" stroke-width="1.8" stroke-dasharray="8 6" opacity="0.6"/>
+    <circle cx="250" cy="250" r="148" fill="none" stroke="url(#goldGradSeal)" stroke-width="2"/>
+    <text font-family="'Outfit', sans-serif" font-weight="900" font-size="28" fill="#FFFFFF" letter-spacing="9">
+      <textPath href="#topCirclePath" startOffset="50%" text-anchor="middle">
+        WINDSOR SPRAYING
+      </textPath>
+    </text>
+    <text font-family="'Inter', sans-serif" font-weight="800" font-size="16" fill="url(#goldGradSeal)" letter-spacing="5">
+      <textPath href="#bottomCirclePath" startOffset="50%" text-anchor="middle">
+        ★ 10-YEAR GUARANTEE ★
+      </textPath>
+    </text>
+    <g transform="translate(155, 175) scale(0.48)">
+      <path d="M 200 15 L 248 95 L 226 125 L 272 192 L 338 142 L 328 98 L 388 48 L 348 252 Q 200 224 52 252 L 12 48 L 72 98 L 62 142 L 128 192 L 174 125 L 152 95 Z" fill="url(#goldGradSeal)"/>
+      <path d="M 58 268 Q 200 240 342 268 L 336 290 Q 200 262 64 290 Z" fill="url(#goldGradSeal)"/>
+    </g>
+  </g>
+</svg>

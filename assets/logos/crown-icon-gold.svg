@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <linearGradient id="crownGoldExact" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCE592"/>
+      <stop offset="25%" stop-color="#E5C158"/>
+      <stop offset="55%" stop-color="#D4AF37"/>
+      <stop offset="85%" stop-color="#B8860B"/>
+      <stop offset="100%" stop-color="#805F04"/>
+    </linearGradient>
+    <radialGradient id="bgDark" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#080C16"/>
+    </radialGradient>
+    <filter id="crownAvatarGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#D4AF37" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+  <rect width="500" height="500" rx="90" fill="url(#bgDark)"/>
+  <g transform="translate(60, 95) scale(0.95)" filter="url(#crownAvatarGlow)">
+    <path d="M 200 15 L 248 95 L 226 125 L 272 192 L 338 142 L 328 98 L 388 48 L 348 252 Q 200 224 52 252 L 12 48 L 72 98 L 62 142 L 128 192 L 174 125 L 152 95 Z" fill="url(#crownGoldExact)"/>
+    <path d="M 58 268 Q 200 240 342 268 L 336 290 Q 200 262 64 290 Z" fill="url(#crownGoldExact)"/>
+  </g>
+</svg>

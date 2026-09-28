@@ -119,6 +119,7 @@
       duration: 0.6,
       stagger: 0.1,
       ease: 'power2.out',
+      clearProps: 'all',
       scrollTrigger: {
         trigger: group,
         start: 'top 85%',

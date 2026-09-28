@@ -11,7 +11,7 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="Contact Us &amp; Free Photo Quotes | Windsor Spraying">
-  <meta property="og:description" content="Get a fixed-price photo quote in 15 minutes. UPVC windows, kitchen cabinets, composite doors, and conservatories across Berkshire.">
+  <meta property="og:description" content="Get a fast, fixed-price photo estimate. UPVC windows, kitchen cabinets, composite doors, and conservatories across Berkshire.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://windsorspraying.co.uk/contact.html">
   <meta property="og:image" content="https://windsorspraying.co.uk/assets/og-image.jpg">
@@ -20,7 +20,8 @@
   <link rel="canonical" href="https://windsorspraying.co.uk/contact.html">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/jpeg" href="assets/windsor-spraying-logo.jpg">
+  <link rel="icon" type="image/png" href="assets/windsor-crown-exact.png">
+  <link rel="apple-touch-icon" href="assets/windsor-crown-exact.png">
 
   <!-- Google Fonts preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,11 +52,55 @@
       box-shadow: 0 24px 60px rgba(0,0,0,0.5);
     }
     .contact-info-card {
-      background: #111C38;
-      border: 1.5px solid rgba(217,119,6,0.35);
+      background: linear-gradient(180deg, #111C38 0%, #0C152B 100%);
+      border: 1.5px solid rgba(212,175,55,0.32);
       border-radius: 24px;
       padding: 38px 32px;
-      box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.08);
+      position: relative;
+    }
+    .contact-info-card::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: 30px;
+      right: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(212,175,55,0.8), transparent);
+    }
+    .contact-row-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 16px;
+      padding: 16px 18px;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .contact-row-card:hover {
+      background: rgba(212,175,55,0.05);
+      border-color: rgba(212,175,55,0.35);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+    .contact-icon-box {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: radial-gradient(circle at center, rgba(212,175,55,0.2) 0%, rgba(212,175,55,0.05) 100%);
+      border: 1px solid rgba(212,175,55,0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
+    .contact-icon-box--wa {
+      background: radial-gradient(circle at center, rgba(37,211,102,0.22) 0%, rgba(37,211,102,0.06) 100%);
+      border-color: rgba(37,211,102,0.4);
+      color: #25D366;
     }
     .contact-label {
       display: block;
@@ -83,13 +128,21 @@
     .contact-input:focus,
     .contact-select:focus,
     .contact-textarea:focus {
-      border-color: #D97706;
+      border-color: #D4AF37;
       background: #FFFFFF;
-      box-shadow: 0 0 0 3px rgba(217,119,6,0.15);
+      box-shadow: 0 0 0 3px rgba(212,175,55,0.18);
     }
     .contact-textarea {
       min-height: 96px;
       resize: vertical;
+    }
+    .contact-map-frame {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1.5px solid rgba(212,175,55,0.25);
+      height: 175px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+      position: relative;
     }
   </style>
 
@@ -102,10 +155,10 @@
   <!-- ══════════════════════════════
        NAV
   ══════════════════════════════ -->
-  <nav class="nav scrolled" aria-label="Main navigation">
+  <nav class="nav" aria-label="Main navigation">
     <div class="nav__inner">
-      <a href="index.html" class="nav__logo" style="display:flex; align-items:center; gap:12px; text-decoration:none;">
-        <img src="assets/windsor-crown-mark.svg" alt="Windsor Spraying Crown Logo" style="height:54px; width:54px; object-fit:contain; filter:drop-shadow(0 2px 10px rgba(212,175,55,0.45)); flex-shrink:0; display:block;">
+      <a href="index.html" class="nav__logo" style="display:flex; align-items:center; gap:14px; text-decoration:none;">
+        <img src="assets/windsor-crown-exact.png" alt="Windsor Spraying Crown Logo" style="height:54px; width:auto; max-width:85px; object-fit:contain; filter:drop-shadow(0 3px 12px rgba(212,175,55,0.45)); flex-shrink:0; display:block;">
         <span style="font-weight:900; font-size:1.45rem; letter-spacing:-0.01em; color:#FFFFFF;">WINDSOR <span style="color:#D4AF37;">SPRAYING</span></span>
       </a>
 
@@ -119,8 +172,8 @@
 
       <div class="nav__cta">
         <a href="tel:07477510304" class="nav__phone" aria-label="Call Windsor Spraying">
-          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-          <span>07477 510304</span>
+          <svg width="18" height="18" fill="none" stroke="#D4AF37" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true" style="flex-shrink:0;"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <span style="letter-spacing:0.02em;">07477 510304</span>
         </a>
       </div>
 
@@ -138,16 +191,15 @@
     <a href="gallery.html">Recent Work</a>
     <a href="about.html">Why Us</a>
     <a href="contact.html">Contact</a>
-    <a href="tel:07477510304" class="btn btn--primary" style="margin-top:20px;">Call 07477 510304</a>
   </div>
 
   <!-- ══════════════════════════════
        BLUE BIRD SUB-NAV ANNOUNCEMENT STRIP
   ══════════════════════════════ -->
   <div class="sub-nav-banner">
-    <span class="sub-nav-prefix">Berkshire's Spraying Specialists</span>
-    <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-    <span>10-Year Anti-Fade Guarantee &middot; Save Up to 80% vs Replacement</span>
+    <span class="sub-nav-prefix" style="color:#D4AF37; font-weight:800;">Specialist UPVC &amp; Kitchen Spraying</span>
+    <span style="color:rgba(212,175,55,0.6);">&bull;</span>
+    <span>10-Year Anti-Fade Guarantee &middot; Factory-Grade Finish &middot; Free Fast Photo Quotes</span>
   </div>
 
   <main>
@@ -159,7 +211,7 @@
       <div class="container">
         <span class="section-eyebrow" style="color:var(--gold) !important; font-weight:800;">GET IN TOUCH &middot; WINDSOR, ASCOT, MAIDENHEAD &amp; BERKSHIRE</span>
         <h1 style="font-family:var(--font-heading); font-size:clamp(2.2rem,5vw,3.6rem); font-weight:900; color:#FFFFFF; letter-spacing:-0.02em; line-height:1.1; margin-bottom:16px; max-width:760px;">Let's Talk About Your Spray Transformation</h1>
-        <p style="font-size:1.08rem; color:rgba(255,255,255,0.8); max-width:620px; line-height:1.75;">Send photos of your windows, kitchen, or doors for a rapid fixed price written quote in 15 minutes. 10-year guarantee and 1,500+ colours available.</p>
+        <p style="font-size:1.08rem; color:rgba(255,255,255,0.8); max-width:620px; line-height:1.75;">Send photos of your windows, kitchen, or doors for a fast, fixed price written quote. 10-year guarantee and 1,500+ colours available.</p>
       </div>
     </section>
 
@@ -174,16 +226,25 @@
 
           <!-- Left: Instant WhatsApp Form Card -->
           <div class="contact-form-card">
-            <h2 style="font-size:1.6rem; font-weight:900; color:#0F172A; margin-bottom:8px; line-height:1.2; text-align:center;">Get Your Free Photo Quote Today</h2>
-            
-            <!-- Proof badge formatted identically to homepage -->
-            <div style="display:flex; justify-content:center; align-items:center; gap:8px; margin-bottom:24px; font-size:0.86rem; color:#475569;">
-              <span style="color:#F59E0B; font-size:0.92rem; letter-spacing:1px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-              <span style="display:inline-flex; align-items:center; gap:5px;">
-                <svg width="15" height="15" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                <span>Rated <strong>5.0</strong> on Google &amp; Facebook</span>
-              </span>
+            <div style="text-align:center; padding-bottom:16px; margin-bottom:18px; border-bottom:1px solid #F1F5F9;">
+              <div style="display:inline-flex; align-items:center; gap:8px; background:linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 100%); border:1px solid #E2E8F0; padding:6px 16px; border-radius:50px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.05); flex-wrap:wrap; justify-content:center;">
+                <span style="display:inline-flex; align-items:center; gap:5px; font-size:0.76rem; font-weight:800; color:#0F172A;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                  Fast Photo Quote
+                </span>
+                <span style="color:#CBD5E1; font-weight:300;">&bull;</span>
+                <span style="display:inline-flex; align-items:center; gap:5px; font-size:0.76rem; font-weight:800; color:#0F172A;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+                  10-Year Guarantee
+                </span>
+                <span style="color:#CBD5E1; font-weight:300;">&bull;</span>
+                <span style="display:inline-flex; align-items:center; gap:5px; font-size:0.76rem; font-weight:800; color:#0F172A;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg>
+                  Direct Pricing
+                </span>
+              </div>
+              <h2 style="font-size:1.6rem; font-weight:900; color:#0F172A; margin-bottom:6px; letter-spacing:-0.02em;">Get Your Free Estimate Today</h2>
+              <p style="font-size:0.86rem; color:#64748B; font-weight:600; margin:0;">Direct specialist pricing &middot; Zero sales pressure</p>
             </div>
 
             <form onsubmit="handleContactPageSubmit(event)">
@@ -239,71 +300,86 @@
 
           <!-- Right: Contact Information & Map Card -->
           <div class="contact-info-card">
-            <span class="section-eyebrow" style="color:var(--gold); display:block; margin-bottom:8px;">Direct Specialist Details</span>
-            <h3 style="font-size:1.5rem; font-weight:800; color:#FFFFFF; margin-bottom:18px;">Talk Directly with Our Team</h3>
+            <span class="section-eyebrow" style="color:var(--gold); display:block; margin-bottom:8px; font-weight:800; letter-spacing:0.08em;">DIRECT SPECIALIST DETAILS</span>
+            
+            <h3 style="font-size:1.6rem; font-weight:900; color:#FFFFFF; margin-bottom:14px; letter-spacing:-0.01em; line-height:1.2;">
+              Speak Directly With Our Craftsmen
+            </h3>
 
-            <p style="font-size:0.95rem; color:rgba(255,255,255,0.78); line-height:1.65; margin-bottom:24px;">
-              No call centres, salesmen, or middleman fees. Speak directly with our master spraying technicians for colour matching, advice, and guaranteed quotes.
+            <p style="font-size:0.94rem; color:rgba(255,255,255,0.78); line-height:1.65; margin-bottom:24px;">
+              No pushy salesmen, call centres, or middleman markups. Deal directly with our experienced spraying technicians for exact colour matching, honest advice, and fixed written pricing.
             </p>
 
-            <div style="display:flex; flex-direction:column; gap:18px; margin-bottom:28px;">
+            <div style="display:flex; flex-direction:column; gap:14px; margin-bottom:26px;">
               
-              <!-- Item 1: Phone -->
-              <div style="display:flex; align-items:center; gap:14px;">
-                <div style="width:44px; height:44px; border-radius:12px; background:rgba(217,119,6,0.18); border:1px solid rgba(217,119,6,0.35); display:flex; align-items:center; justify-content:center; color:var(--gold); flex-shrink:0;">
-                  <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              <!-- Row 1: Direct Phone -->
+              <a href="tel:07477510304" class="contact-row-card" style="text-decoration:none; color:inherit;" aria-label="Call Windsor Spraying directly">
+                <div class="contact-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                </div>
+                <div style="flex-grow:1;">
+                  <div style="font-size:0.72rem; color:#94A3B8; text-transform:uppercase; font-weight:800; letter-spacing:0.06em; margin-bottom:2px;">Direct Specialist Line</div>
+                  <div style="font-size:1.18rem; font-weight:900; color:#FFFFFF; letter-spacing:0.01em;">07477 510304</div>
+                </div>
+                <span style="color:var(--gold); font-size:1.1rem; font-weight:800; opacity:0.7;">&rarr;</span>
+              </a>
+
+              <!-- Row 2: Instant WhatsApp Button -->
+              <a href="https://wa.me/447477510304?text=Hi%20Windsor%20Spraying,%20I've%20come%20from%20the%20website%20and%20would%20like%20to%20get%20a%20free%20photo%20estimate." target="_blank" rel="noopener" class="contact-row-card" style="text-decoration:none; color:inherit;" aria-label="Send photos on WhatsApp">
+                <div class="contact-icon-box contact-icon-box--wa">
+                  <svg width="23" height="23" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                  </svg>
+                </div>
+                <div style="flex-grow:1;">
+                  <div style="font-size:0.72rem; color:#86EFAC; text-transform:uppercase; font-weight:800; letter-spacing:0.06em; margin-bottom:2px;">Fast WhatsApp Photo Estimates</div>
+                  <div style="font-size:0.95rem; font-weight:800; color:#FFFFFF;">Tap to Send Photos &rarr;</div>
+                </div>
+                <span style="background:rgba(37,211,102,0.18); border:1px solid rgba(37,211,102,0.4); color:#25D366; font-size:0.74rem; font-weight:800; padding:4px 10px; border-radius:50px;">ONLINE</span>
+              </a>
+
+              <!-- Row 3: Operating Hours -->
+              <div class="contact-row-card">
+                <div class="contact-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
                 </div>
                 <div>
-                  <div style="font-size:0.75rem; color:#94A3B8; text-transform:uppercase; font-weight:700; letter-spacing:0.05em;">Phone</div>
-                  <a href="tel:07477510304" style="font-size:1.15rem; font-weight:800; color:#FFFFFF; text-decoration:none;">07477 510304</a>
+                  <div style="font-size:0.72rem; color:#94A3B8; text-transform:uppercase; font-weight:800; letter-spacing:0.06em; margin-bottom:2px;">Working Hours</div>
+                  <div style="font-size:0.98rem; font-weight:800; color:#FFFFFF;">Monday &ndash; Saturday: 7:30am &ndash; 6:00pm</div>
+                  <div style="font-size:0.78rem; color:rgba(255,255,255,0.65); margin-top:1px;">WhatsApp messages monitored daily</div>
                 </div>
               </div>
 
-              <!-- Item 2: Instant WhatsApp Button -->
-              <div style="display:flex; align-items:center; gap:14px;">
-                <div style="width:44px; height:44px; border-radius:12px; background:rgba(37,211,102,0.18); border:1px solid rgba(37,211,102,0.35); display:flex; align-items:center; justify-content:center; color:#25D366; flex-shrink:0;">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              <!-- Row 4: Base & Coverage -->
+              <div class="contact-row-card">
+                <div class="contact-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
                 </div>
                 <div>
-                  <div style="font-size:0.75rem; color:#94A3B8; text-transform:uppercase; font-weight:700; letter-spacing:0.05em; margin-bottom:4px;">Instant WhatsApp</div>
-                  <a href="https://wa.me/447477510304?text=Hi%20Windsor%20Spraying,%20I've%20come%20from%20the%20website%20and%20would%20like%20to%20get%20a%20free%20photo%20estimate." style="display:inline-flex; align-items:center; gap:6px; background:#25D366; color:#0B100E; font-size:0.88rem; font-weight:800; padding:6px 14px; border-radius:6px; text-decoration:none;" target="_blank" rel="noopener">
-                    Chat to Us on WhatsApp &rarr;
-                  </a>
-                </div>
-              </div>
-
-              <!-- Item 3: Operating Hours -->
-              <div style="display:flex; align-items:center; gap:14px;">
-                <div style="width:44px; height:44px; border-radius:12px; background:rgba(217,119,6,0.18); border:1px solid rgba(217,119,6,0.35); display:flex; align-items:center; justify-content:center; color:var(--gold); flex-shrink:0;">
-                  <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                </div>
-                <div>
-                  <div style="font-size:0.75rem; color:#94A3B8; text-transform:uppercase; font-weight:700; letter-spacing:0.05em;">Operating Hours</div>
-                  <div style="font-size:0.95rem; font-weight:700; color:#FFFFFF;">Mon–Sat: 7:30am – 6:00pm</div>
-                </div>
-              </div>
-
-              <!-- Item 4: Location / Base -->
-              <div style="display:flex; align-items:center; gap:14px;">
-                <div style="width:44px; height:44px; border-radius:12px; background:rgba(217,119,6,0.18); border:1px solid rgba(217,119,6,0.35); display:flex; align-items:center; justify-content:center; color:var(--gold); flex-shrink:0;">
-                  <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                </div>
-                <div>
-                  <div style="font-size:0.75rem; color:#94A3B8; text-transform:uppercase; font-weight:700; letter-spacing:0.05em;">Location</div>
-                  <div style="font-size:0.95rem; font-weight:700; color:#FFFFFF;">Based in Windsor, SL4</div>
-                  <div style="font-size:0.78rem; color:rgba(255,255,255,0.65);">Covering all Berkshire &amp; Surrey</div>
+                  <div style="font-size:0.72rem; color:#94A3B8; text-transform:uppercase; font-weight:800; letter-spacing:0.06em; margin-bottom:2px;">Service Coverage</div>
+                  <div style="font-size:0.98rem; font-weight:800; color:#FFFFFF;">Based in Windsor, SL4</div>
+                  <div style="font-size:0.78rem; color:rgba(255,255,255,0.65); margin-top:1px;">Mobile on-site service across all Berkshire &amp; Surrey</div>
                 </div>
               </div>
 
             </div>
 
-            <!-- Mini Map Embed -->
-            <div style="border-radius:14px; overflow:hidden; border:1px solid rgba(255,255,255,0.15); height:160px; box-shadow:0 8px 24px rgba(0,0,0,0.4);">
+            <!-- Mini Map Frame with Luxury Border -->
+            <div class="contact-map-frame">
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39768.956784400494!2d-0.640!3d51.483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487679fcb060d4b5%3A0xb6ee9a4f6cf755d9!2sWindsor!5e0!3m2!1sen!2suk!4v1700000000000!5m2!1sen!2suk" 
                 style="width:100%; height:100%; border:0; filter:invert(90%) hue-rotate(180deg);" 
                 allowfullscreen="" 
-                loading="lazy">
+                loading="lazy"
+                title="Windsor Spraying Berkshire service area">
               </iframe>
             </div>
 
@@ -318,71 +394,138 @@
   <!-- ══════════════════════════════
        FOOTER
   ══════════════════════════════ -->
-  <footer class="footer" style="background:#060913; padding:72px 0 32px; color:rgba(255,255,255,0.75);">
+  <!-- ══════════════════════════════
+       FOOTER
+  ══════════════════════════════ -->
+  <footer class="footer" aria-label="Site footer" style="background:#050810; border-top:1px solid rgba(212,175,55,0.25); color:rgba(255,255,255,0.8); padding:70px 0 30px;">
     <div class="container">
-      <div class="footer__grid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:40px; margin-bottom:56px;">
-
-        <!-- Column 1: Brand & Google Maps Widget -->
-        <div class="footer__brand">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:40px; margin-bottom:50px;">
+        
+        <!-- Column 1: Brand & Map -->
+        <div>
           <div style="margin-bottom:18px;">
-            <div class="footer-brand-card" style="width:190px; background:linear-gradient(145deg, #1E293B 0%, #0F172A 100%); border:1.5px solid rgba(217,119,6,0.45); border-radius:14px; padding:16px 14px; text-align:center; box-shadow:0 8px 24px rgba(0,0,0,0.5); display:inline-flex; flex-direction:column; align-items:center; gap:8px;">
-              <img src="assets/windsor-spraying-logo.jpg" alt="Windsor Spraying Crown Logo" style="height:44px; width:auto; border-radius:6px; box-shadow:0 2px 8px rgba(217,119,6,0.6);">
-              <div style="font-weight:900; font-size:1.05rem; letter-spacing:0.02em; color:#FFFFFF; line-height:1.1;">
-                WINDSOR <span style="color:#F1F5F9; font-weight:400; text-shadow:0 0 1px rgba(255,255,255,0.7);">SPRAYING</span>
-              </div>
-              <div style="font-size:0.58rem; font-weight:800; color:#D97706; letter-spacing:0.06em; text-transform:uppercase; line-height:1.2;">
-                UPVC &bull; Kitchens &bull; Doors &bull; Conservatories
-              </div>
-            </div>
+            <a href="index.html" style="display:inline-block; text-decoration:none;">
+              <img src="assets/windsor-logo-horizontal.png" alt="Windsor Spraying — UPVC &amp; Kitchen Specialists" style="height:52px; width:auto; max-width:240px; object-fit:contain; display:block; filter:drop-shadow(0 4px 14px rgba(0,0,0,0.7));">
+            </a>
           </div>
           <p style="font-size:0.92rem; line-height:1.6; margin-bottom:16px; color:rgba(255,255,255,0.7);">
-            Berkshire's specialist architectural spray painters. Save up to 80% vs replacement with our 10-year anti-fade guarantee and factory-grade finish.
+            Berkshire's trusted UPVC window, door, and kitchen spraying specialists. Direct specialist pricing, 10-year anti-fade guarantees, and factory-grade finishes.
           </p>
+          <div style="border-radius:10px; overflow:hidden; border:1px solid rgba(255,255,255,0.15); height:130px;">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39768.956784400494!2d-0.640!3d51.483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487679fcb060d4b5%3A0xb6ee9a4f6cf755d9!2sWindsor!5e0!3m2!1sen!2suk!4v1700000000000!5m2!1sen!2suk" 
+              style="width:100%; height:100%; border:0; filter:invert(90%) hue-rotate(180deg);" 
+              allowfullscreen="" 
+              loading="lazy">
+            </iframe>
+          </div>
         </div>
 
-        <!-- Column 2: Specialist Services -->
+        <!-- Column 2: Specialist Trades -->
         <div>
-          <h3 class="footer__heading" style="color:#fff; font-size:1.05rem; font-weight:700; margin-bottom:20px; text-transform:uppercase; letter-spacing:0.05em;">Our Specialist Services</h3>
+          <h3 class="footer__heading" style="color:#fff; font-size:1.05rem; font-weight:700; margin-bottom:20px; text-transform:uppercase; letter-spacing:0.05em;">Our Spraying Services</h3>
           <ul class="footer__links" role="list" style="list-style:none; padding:0; display:flex; flex-direction:column; gap:10px; font-size:0.92rem;">
-            <li><a href="services.html#upvc-windows" style="color:inherit; text-decoration:none;">UPVC Window Spraying</a></li>
-            <li><a href="services.html#kitchens" style="color:inherit; text-decoration:none;">Kitchen Cabinet Resprays</a></li>
-            <li><a href="services.html#doors" style="color:inherit; text-decoration:none;">Composite &amp; Front Doors</a></li>
-            <li><a href="services.html#conservatories" style="color:inherit; text-decoration:none;">Conservatories &amp; Orangeries</a></li>
-            <li><a href="services.html#garage-doors" style="color:inherit; text-decoration:none;">Garage Doors &amp; Surrounds</a></li>
-            <li><a href="services.html#commercial" style="color:inherit; text-decoration:none;">Commercial &amp; Shopfront Spraying</a></li>
+            <li><a href="services.html#windows" style="color:inherit; text-decoration:none;">UPVC Windows &amp; Conservatories</a></li>
+            <li><a href="services.html#doors" style="color:inherit; text-decoration:none;">Front &amp; Composite Doors</a></li>
+            <li><a href="services.html#kitchens" style="color:inherit; text-decoration:none;">Kitchen Cabinet Respraying</a></li>
+            <li><a href="services.html#garage-doors" style="color:inherit; text-decoration:none;">Garage Door Spraying</a></li>
+            <li><a href="services.html#commercial" style="color:inherit; text-decoration:none;">Commercial &amp; Shopfronts</a></li>
+            <li><a href="services.html#graffiti" style="color:inherit; text-decoration:none;">Graffiti Removal &amp; Restoration</a></li>
           </ul>
         </div>
 
-        <!-- Column 3: Navigation -->
+        <!-- Column 3: Quick Links -->
         <div>
           <h3 class="footer__heading" style="color:#fff; font-size:1.05rem; font-weight:700; margin-bottom:20px; text-transform:uppercase; letter-spacing:0.05em;">Quick Links</h3>
           <ul class="footer__links" role="list" style="list-style:none; padding:0; display:flex; flex-direction:column; gap:10px; font-size:0.92rem;">
             <li><a href="index.html" style="color:inherit; text-decoration:none;">Home</a></li>
-            <li><a href="services.html" style="color:inherit; text-decoration:none;">All Services</a></li>
+            <li><a href="services.html" style="color:inherit; text-decoration:none;">Services</a></li>
             <li><a href="gallery.html" style="color:inherit; text-decoration:none;">Recent Work</a></li>
             <li><a href="about.html" style="color:inherit; text-decoration:none;">Why Choose Us</a></li>
-            <li><a href="contact.html" style="color:inherit; text-decoration:none;">Contact &amp; Quotes</a></li>
+            <li><a href="contact.html" style="color:inherit; text-decoration:none;">Get Free Quote</a></li>
           </ul>
         </div>
 
-        <!-- Column 4: Direct Contact -->
+        <!-- Column 4: Contact & Service Areas -->
         <div>
           <h3 class="footer__heading" style="color:#fff; font-size:1.05rem; font-weight:700; margin-bottom:20px; text-transform:uppercase; letter-spacing:0.05em;">Direct Contact</h3>
-          <p style="font-size:0.92rem; line-height:1.6; margin-bottom:14px;">Speak directly with our team for photo quotes, advice &amp; colour matching:</p>
-          <a href="tel:07477510304" style="display:block; font-size:1.15rem; font-weight:800; color:var(--gold); text-decoration:none; margin-bottom:8px;">07477 510304</a>
-          <p style="font-size:0.85rem; color:rgba(255,255,255,0.6); margin-bottom:16px;">Windsor, SL4 &middot; Covering all Berkshire &amp; Surrey</p>
-          <a href="https://wa.me/447477510304?text=Hi%20Windsor%20Spraying,%20I've%20come%20from%20the%20website%20and%20would%20like%20to%20get%20a%20free%20quote%20for%20spraying%20in%20Berkshire." class="btn btn--primary" style="font-size:0.88rem; padding:10px 20px;" target="_blank" rel="noopener">WhatsApp Us Direct &rarr;</a>
+          <div style="display:flex; flex-direction:column; gap:10px; font-size:0.92rem; margin-bottom:24px;">
+            <div style="display:flex; align-items:center; gap:10px;">
+              <svg width="18" height="18" fill="none" stroke="var(--gold)" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              <a href="tel:07477510304" style="color:#fff; text-decoration:none; font-weight:700; font-size:1.1rem; letter-spacing:0.5px;">07477 510304</a>
+            </div>
+          </div>
+
+          <h4 style="color:#fff; font-size:0.85rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:8px;">Service Areas:</h4>
+          <p style="font-size:0.82rem; line-height:1.6; color:rgba(255,255,255,0.6);">
+            Windsor &middot; Ascot &middot; Maidenhead &middot; Bracknell &middot; Slough &middot; Reading &middot; Egham &middot; Staines &middot; Berkshire &amp; Surrey
+          </p>
         </div>
 
       </div>
 
-      <div class="footer__bottom" style="border-top:1px solid rgba(255,255,255,0.1); padding-top:28px; text-align:center; font-size:0.84rem; color:rgba(255,255,255,0.5);">
-        &copy; 2026 Windsor Spraying. All rights reserved. &middot; Specialist UPVC, Kitchen &amp; Architectural Spraying in Berkshire.
+      <div class="footer__bottom" style="border-top:1px solid rgba(255,255,255,0.1); padding-top:28px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; font-size:0.85rem; color:rgba(255,255,255,0.5);">
+        <span>&copy; 2026 Windsor Spraying. All rights reserved.</span>
+        <span>Website by <a href="https://lmcreated.it" target="_blank" rel="noopener noreferrer" style="color:var(--gold); text-decoration:none; font-weight:600;">lm created it</a></span>
+        <span>Windsor &amp; Berkshire &nbsp;&middot;&nbsp; <a href="contact.html" style="color:inherit;">Get Fast Quote</a></span>
       </div>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <!-- JS -->
+  <script src="js/main.js" defer></script>
+
+  <!-- ══════════════════════════════
+       WHATSAPP FLOATING BUTTON
+  ══════════════════════════════ -->
+  <a href="https://wa.me/447477510304?text=Hi%20Windsor%20Spraying,%20I've%20come%20from%20the%20website%20and%20would%20like%20to%20enquire%20about%20a%20spraying%20quote."
+     class="whatsapp-float"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span>WhatsApp Us</span>
+  </a>
+
+  <!-- Floating Bottom Action Bar (Mobile Only) -->
+  <div class="floating-bottom-bar" aria-label="Quick Actions">
+    <a href="tel:07477510304" class="btn-call">
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call Now
+    </a>
+    <a href="https://wa.me/447477510304?text=Hi%20Windsor%20Spraying,%20I've%20come%20from%20the%20website%20and%20would%20like%20a%20free%20quote%20in%20[Your%20Area%20/%20Postcode]." class="btn-quote" target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span>WhatsApp Us</span>
+  </a>
+
+  <!-- Floating Bottom Action Bar (Mobile Only) -->
+  <div class="floating-bottom-bar" aria-label="Quick Actions">
+    <a href="tel:07477510304" class="btn-call">
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call Now
+    </a>
+    <a href="https://wa.me/447477510304?text=Hi%20Windsor%20Spraying,%20I've%20come%20from%20the%20website%20and%20would%20like%20a%20free%20quote%20in%20[Your%20Area%20/%20Postcode]." class="btn-quote" target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span>WhatsApp Us</span>
+  </a>
+
+  <!-- Floating Bottom Action Bar (Mobile Only) -->
+  <div class="floating-bottom-bar" aria-label="Quick Actions">
+    <a href="tel:07477510304" class="btn-call">
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call Now
+    </a>
+    <a href="https://wa.me/447477510304?text=Hi%20Windsor%20Spraying,%20I've%20come%20from%20the%20website%20and%20would%20like%20a%20free%20quote%20in%20[Your%20Area%20/%20Postcode]." class="btn-quote" target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span>WhatsApp Us</span>
+  </a>
+  </div>
+
   <script>
     function handleContactPageSubmit(event) {
       event.preventDefault();

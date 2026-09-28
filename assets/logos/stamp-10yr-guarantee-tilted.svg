@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+  <defs>
+    <linearGradient id="goldGradSeal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF2A1"/>
+      <stop offset="25%" stop-color="#E5C158"/>
+      <stop offset="55%" stop-color="#D4AF37"/>
+      <stop offset="85%" stop-color="#B8860B"/>
+      <stop offset="100%" stop-color="#805F04"/>
+    </linearGradient>
+    <path id="topCirclePath" d="M 140,500 A 360,360 0 1,1 860,500" fill="none"/>
+    <path id="bottomCirclePath" d="M 860,500 A 360,360 0 0,1 140,500" fill="none"/>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="1000" fill="#080C16"/>
+
+  <g transform="rotate(28 500 500)">
+    <!-- Stamp Edge Notches -->
+    <line x1="980.0" y1="500.0" x2="958.0" y2="500.0" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="978.2" y1="541.8" x2="956.3" y2="539.9" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="972.7" y1="583.4" x2="951.0" y2="579.5" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="963.6" y1="624.2" x2="942.4" y2="618.5" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="951.1" y1="664.2" x2="930.4" y2="656.6" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="935.0" y1="702.9" x2="915.1" y2="693.6" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="915.7" y1="740.0" x2="896.6" y2="729.0" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="893.2" y1="775.3" x2="875.2" y2="762.7" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="867.7" y1="808.5" x2="850.8" y2="794.4" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="839.4" y1="839.4" x2="823.9" y2="823.9" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="808.5" y1="867.7" x2="794.4" y2="850.8" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="775.3" y1="893.2" x2="762.7" y2="875.2" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="740.0" y1="915.7" x2="729.0" y2="896.6" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="702.9" y1="935.0" x2="693.6" y2="915.1" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="664.2" y1="951.1" x2="656.6" y2="930.4" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="624.2" y1="963.6" x2="618.5" y2="942.4" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="583.4" y1="972.7" x2="579.5" y2="951.0" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="541.8" y1="978.2" x2="539.9" y2="956.3" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="500.0" y1="980.0" x2="500.0" y2="958.0" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="458.2" y1="978.2" x2="460.1" y2="956.3" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="416.6" y1="972.7" x2="420.5" y2="951.0" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="375.8" y1="963.6" x2="381.5" y2="942.4" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="335.8" y1="951.1" x2="343.4" y2="930.4" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="297.1" y1="935.0" x2="306.4" y2="915.1" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="260.0" y1="915.7" x2="271.0" y2="896.6" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="224.7" y1="893.2" x2="237.3" y2="875.2" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="191.5" y1="867.7" x2="205.6" y2="850.8" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="160.6" y1="839.4" x2="176.1" y2="823.9" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="132.3" y1="808.5" x2="149.2" y2="794.4" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="106.8" y1="775.3" x2="124.8" y2="762.7" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="84.3" y1="740.0" x2="103.4" y2="729.0" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="65.0" y1="702.9" x2="84.9" y2="693.6" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="48.9" y1="664.2" x2="69.6" y2="656.6" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="36.4" y1="624.2" x2="57.6" y2="618.5" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="27.3" y1="583.4" x2="49.0" y2="579.5" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="21.8" y1="541.8" x2="43.7" y2="539.9" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="20.0" y1="500.0" x2="42.0" y2="500.0" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="21.8" y1="458.2" x2="43.7" y2="460.1" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="27.3" y1="416.6" x2="49.0" y2="420.5" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="36.4" y1="375.8" x2="57.6" y2="381.5" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="48.9" y1="335.8" x2="69.6" y2="343.4" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="65.0" y1="297.1" x2="84.9" y2="306.4" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="84.3" y1="260.0" x2="103.4" y2="271.0" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="106.8" y1="224.7" x2="124.8" y2="237.3" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="132.3" y1="191.5" x2="149.2" y2="205.6" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="160.6" y1="160.6" x2="176.1" y2="176.1" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="191.5" y1="132.3" x2="205.6" y2="149.2" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="224.7" y1="106.8" x2="237.3" y2="124.8" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="260.0" y1="84.3" x2="271.0" y2="103.4" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="297.1" y1="65.0" x2="306.4" y2="84.9" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="335.8" y1="48.9" x2="343.4" y2="69.6" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="375.8" y1="36.4" x2="381.5" y2="57.6" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="416.6" y1="27.3" x2="420.5" y2="49.0" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="458.2" y1="21.8" x2="460.1" y2="43.7" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="500.0" y1="20.0" x2="500.0" y2="42.0" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="541.8" y1="21.8" x2="539.9" y2="43.7" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="583.4" y1="27.3" x2="579.5" y2="49.0" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="624.2" y1="36.4" x2="618.5" y2="57.6" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="664.2" y1="48.9" x2="656.6" y2="69.6" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="702.9" y1="65.0" x2="693.6" y2="84.9" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="740.0" y1="84.3" x2="729.0" y2="103.4" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="775.3" y1="106.8" x2="762.7" y2="124.8" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="808.5" y1="132.3" x2="794.4" y2="149.2" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="839.4" y1="160.6" x2="823.9" y2="176.1" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="867.7" y1="191.5" x2="850.8" y2="205.6" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="893.2" y1="224.7" x2="875.2" y2="237.3" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="915.7" y1="260.0" x2="896.6" y2="271.0" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="935.0" y1="297.1" x2="915.1" y2="306.4" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="951.1" y1="335.8" x2="930.4" y2="343.4" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="963.6" y1="375.8" x2="942.4" y2="381.5" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="972.7" y1="416.6" x2="951.0" y2="420.5" stroke="url(#goldGradSeal)" stroke-width="4"/>
+    <line x1="978.2" y1="458.2" x2="956.3" y2="460.1" stroke="url(#goldGradSeal)" stroke-width="4"/>
+
+    <!-- Concentric Rings -->
+    <circle cx="500" cy="500" r="458" fill="none" stroke="url(#goldGradSeal)" stroke-width="7"/>
+    <circle cx="500" cy="500" r="435" fill="none" stroke="url(#goldGradSeal)" stroke-width="2.5" opacity="0.7"/>
+    <circle cx="500" cy="500" r="285" fill="none" stroke="url(#goldGradSeal)" stroke-width="5"/>
+    <circle cx="500" cy="500" r="270" fill="none" stroke="url(#goldGradSeal)" stroke-width="2" opacity="0.6"/>
+
+    <!-- Divider Stars -->
+    <g transform="translate(140, 500) scale(1.6)">
+      <polygon points="0,-12 3.5,-3.5 12,-3.5 5,2.5 7.5,11 0,6 -7.5,11 -5,2.5 -12,-3.5 -3.5,-3.5" fill="url(#goldGradSeal)"/>
+    </g>
+    <g transform="translate(860, 500) scale(1.6)">
+      <polygon points="0,-12 3.5,-3.5 12,-3.5 5,2.5 7.5,11 0,6 -7.5,11 -5,2.5 -12,-3.5 -3.5,-3.5" fill="url(#goldGradSeal)"/>
+    </g>
+
+    <!-- Top Text: WINDSOR SPRAYING -->
+    <text font-family="'DIN Condensed', 'Outfit', 'Montserrat', sans-serif" font-weight="900" font-size="64" letter-spacing="8" dy="-10">
+      <textPath href="#topCirclePath" startOffset="50%" text-anchor="middle">
+        <tspan fill="#FFFFFF">WINDSOR </tspan><tspan fill="url(#goldGradSeal)">SPRAYING</tspan>
+      </textPath>
+    </text>
+
+    <!-- Bottom Text: 10-YEAR ANTI-FADE GUARANTEE -->
+    <text font-family="'DIN Condensed', 'Outfit', 'Montserrat', sans-serif" font-weight="900" font-size="48" fill="url(#goldGradSeal)" letter-spacing="6" dy="32">
+      <textPath href="#bottomCirclePath" startOffset="50%" text-anchor="middle">
+        10-YEAR ANTI-FADE GUARANTEE
+      </textPath>
+    </text>
+
+    <!-- Center Crown -->
+    <g transform="translate(325, 340) scale(0.88)">
+      <path d="M 200 15 L 248 95 L 226 125 L 272 192 L 338 142 L 328 98 L 388 48 L 348 252 Q 200 224 52 252 L 12 48 L 72 98 L 62 142 L 128 192 L 174 125 L 152 95 Z" fill="url(#goldGradSeal)"/>
+      <path d="M 58 268 Q 200 240 342 268 L 336 290 Q 200 262 64 290 Z" fill="url(#goldGradSeal)"/>
+    </g>
+
+    <!-- 10-YEAR & ANTI-FADE VERIFIED -->
+    <text x="500" y="585" text-anchor="middle" font-family="'DIN Condensed', sans-serif" font-weight="900" font-size="66" fill="#FFFFFF" letter-spacing="4">10-YEAR</text>
+    <text x="500" y="640" text-anchor="middle" font-family="'Futura', 'Montserrat', sans-serif" font-weight="800" font-size="14" fill="url(#goldGradSeal)" letter-spacing="3">ANTI-FADE VERIFIED</text>
+    <line x1="320" y1="635" x2="390" y2="635" stroke="url(#goldGradSeal)" stroke-width="1.5"/>
+    <line x1="610" y1="635" x2="680" y2="635" stroke="url(#goldGradSeal)" stroke-width="1.5"/>
+  </g>
+</svg>

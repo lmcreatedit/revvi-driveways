@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <linearGradient id="goldGradStacked" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCE592"/>
+      <stop offset="25%" stop-color="#E5C158"/>
+      <stop offset="55%" stop-color="#D4AF37"/>
+      <stop offset="85%" stop-color="#B8860B"/>
+      <stop offset="100%" stop-color="#805F04"/>
+    </linearGradient>
+    <filter id="glowStacked" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#D4AF37" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <g transform="translate(145, 30) scale(0.53)" filter="url(#glowStacked)">
+    <path d="M 200 15 L 248 95 L 226 125 L 272 192 L 338 142 L 328 98 L 388 48 L 348 252 Q 200 224 52 252 L 12 48 L 72 98 L 62 142 L 128 192 L 174 125 L 152 95 Z" fill="url(#goldGradStacked)"/>
+    <path d="M 58 268 Q 200 240 342 268 L 336 290 Q 200 262 64 290 Z" fill="url(#goldGradStacked)"/>
+  </g>
+  <text x="250" y="275" text-anchor="middle" font-family="'Outfit', sans-serif" font-weight="900" font-size="66" fill="#FFFFFF" letter-spacing="6">WINDSOR</text>
+  <text x="250" y="340" text-anchor="middle" font-family="'Outfit', sans-serif" font-weight="900" font-size="52" fill="url(#goldGradStacked)" letter-spacing="10">SPRAYING</text>
+  <line x1="120" y1="375" x2="380" y2="375" stroke="url(#goldGradStacked)" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+  <text x="250" y="415" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="800" font-size="14.5" fill="#D4AF37" letter-spacing="4">UPVC &amp; KITCHEN SPECIALISTS</text>
+</svg>

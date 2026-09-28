@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 180" width="760" height="180">
+  <defs>
+    <linearGradient id="goldGradDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCE592"/>
+      <stop offset="25%" stop-color="#E5C158"/>
+      <stop offset="55%" stop-color="#D4AF37"/>
+      <stop offset="85%" stop-color="#B8860B"/>
+      <stop offset="100%" stop-color="#805F04"/>
+    </linearGradient>
+    <filter id="crownGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#D4AF37" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <g transform="translate(25, 20) scale(0.46)" filter="url(#crownGlow)">
+    <path d="M 200 15 L 248 95 L 226 125 L 272 192 L 338 142 L 328 98 L 388 48 L 348 252 Q 200 224 52 252 L 12 48 L 72 98 L 62 142 L 128 192 L 174 125 L 152 95 Z" fill="url(#goldGradDark)"/>
+    <path d="M 58 268 Q 200 240 342 268 L 336 290 Q 200 262 64 290 Z" fill="url(#goldGradDark)"/>
+  </g>
+  <g transform="translate(230, 26)">
+    <text x="0" y="62" font-family="'Outfit', 'Montserrat', 'Inter', sans-serif" font-weight="900" font-size="68" fill="#FFFFFF" letter-spacing="4">WINDSOR</text>
+    <text x="2" y="112" font-family="'Outfit', 'Montserrat', 'Inter', sans-serif" font-weight="900" font-size="50" fill="url(#goldGradDark)" letter-spacing="8">SPRAYING</text>
+    <text x="4" y="142" font-family="'Inter', -apple-system, sans-serif" font-weight="800" font-size="14.5" fill="#D4AF37" letter-spacing="4">UPVC &amp; KITCHEN SPECIALISTS</text>
+  </g>
+</svg>
